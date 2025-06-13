@@ -25,7 +25,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_97967ef378f3080dbe643b8b0befa98d {
+                #map_6f4f700f5e957bcc2ad6a0f46e56173e {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -43,12 +43,12 @@
     
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap" rel="stylesheet">
 <!-- Title at the top center -->
-<div style="position: fixed; top: 10px; left: 60%; transform: translateX(-50%);
-     z-index: 9999; font-size: 15px; font-weight: bold; background-color: white;
-     padding: 5px; opacity: 0.9; text-align: center;  font-family: 'Noto Serif', serif;">
+<div style="position: fixed; top: 10px; left: 75%; transform: translateX(-50%);
+     z-index: 9999; font-size: 20px; font-weight: bold; background-color: white;
+     padding: 5px; opacity: 0.9; font-family: 'Noto Serif', serif;">
      The Sacred Journey   <br>
-     <span style="font-size: 10px; font-weight: normal;">
-         Route Connecting Sites of Sati’s Story Across Indian Subcontinent
+     <span style="font-size: 12px; font-weight: normal;">
+         Approximate mythological route of Shiva's journey derived using a Traveling Salesman Problem (TSP) algorithm. This sequence connects Shakti Pithas based on minimized geodesic distance, reflecting a spatial interpretation of the sacred narrative.
      </span>
 </div>
 
@@ -60,14 +60,14 @@
      <b>Data:</b> <a href="https://en.wikipedia.org/wiki/Shakta_pithas" target="_blank">Wikipedia: Shakta pithas</a> (accessed June 2025).
 </div>
     
-            <div class="folium-map" id="map_97967ef378f3080dbe643b8b0befa98d" ></div>
+            <div class="folium-map" id="map_6f4f700f5e957bcc2ad6a0f46e56173e" ></div>
         
 </body>
 <script>
     
     
-            var map_97967ef378f3080dbe643b8b0befa98d = L.map(
-                "map_97967ef378f3080dbe643b8b0befa98d",
+            var map_6f4f700f5e957bcc2ad6a0f46e56173e = L.map(
+                "map_6f4f700f5e957bcc2ad6a0f46e56173e",
                 {
                     center: [25.0, 85.0],
                     crs: L.CRS.EPSG3857,
@@ -84,7 +84,7 @@
 
         
     
-            var tile_layer_268a9ac469f2c6c12e6ba187f7fd8a27 = L.tileLayer(
+            var tile_layer_41cf0b30ba70be4af94951750bd1a875 = L.tileLayer(
                 "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
                 {
   "minZoom": 0,
@@ -101,16 +101,16 @@
             );
         
     
-            tile_layer_268a9ac469f2c6c12e6ba187f7fd8a27.addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            tile_layer_41cf0b30ba70be4af94951750bd1a875.addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var poly_line_ae90fa350f4079e60ea9ff75b490e1f1 = L.polyline(
+            var poly_line_4afc42ed8bd3b59cf9e5e60d0dfadaa6 = L.polyline(
                 [[34.0144858, 75.3285164], [33.277839, 75.341218], [32.9924858, 74.9318127], [32.0768665, 76.2985872], [32.085182, 76.511784], [31.8025756, 76.1046491], [31.2922311, 75.5678878], [31.3380959, 76.7611631], [29.9693747, 76.8482787], [29.235032, 80.1023068], [31.0678394, 81.3119303], [28.9481332, 83.900569], [27.6939205, 85.3255087], [26.727514, 85.925666], [25.560317, 84.6632139], [25.3719338, 82.9414272], [25.4426926, 81.8691114], [22.670465, 81.7588417], [24.260444, 80.7592749], [27.2154447, 77.4986962], [27.633333, 77.583333], [26.4876472, 74.5578484], [22.6466537, 75.9926784], [22.46378, 73.515694], [24.3332794, 72.8496191], [25.5148718, 65.5193626], [20.9101099, 70.365279], [20.0112475, 73.7902364], [18.0086617, 76.0707924], [12.9481954, 77.4944019], [8.1571873, 77.4661628], [8.0879641, 77.5467414], [8.6286105, 81.2007375], [9.75, 80.166667], [12.9647163, 79.9839686], [16.0737808, 78.8727065], [16.791445, 82.059782], [17.120459, 82.1842504], [18.9247414, 81.4819364], [19.2415887, 84.5215237], [19.8343066, 85.6853295], [20.8522696, 86.3385714], [22.2905507, 87.9158659], [22.7300386, 87.8684678], [22.600002, 88.361268], [22.5153313, 88.3477052], [22.295552, 89.103878], [22.83713, 90.273742], [22.4225445, 91.7312913], [23.5416162, 91.4917593], [23.5416162, 91.4917593], [25.5, 92.25], [26.167514, 91.71107], [26.5241586, 88.7197513], [24.932011, 88.795077], [24.6354046, 89.4281833], [24.098644, 88.255929], [24.2966075, 87.835306], [24.1763069, 87.7859569], [23.8152993, 87.8000825], [23.7008699, 88.0473103], [23.2495714, 87.8681751], [23.4926217, 87.7371023], [23.661154, 87.6962424], [23.9496876, 87.6829354], [23.9080538, 87.5277255], [24.3284257, 86.7182506]],
                 {"bubblingMouseEvents": true, "color": "#2E86AB", "dashArray": "5, 10", "dashOffset": null, "fill": false, "fillColor": "#2E86AB", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.8, "smoothFactor": 25.0, "stroke": true, "weight": 2.0}
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            poly_line_ae90fa350f4079e60ea9ff75b490e1f1.bindTooltip(
+            poly_line_4afc42ed8bd3b59cf9e5e60d0dfadaa6.bindTooltip(
                 `<div>
                      Approx Route - Total Distance: 12652.2 km
                  </div>`,
@@ -120,14 +120,14 @@
             );
         
     
-            var marker_b8cd3f7d73e98c2eb5d728ba6a231183 = L.marker(
+            var marker_37396cd28f6a51b786766800744b8f50 = L.marker(
                 [34.0144858, 75.3285164],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_b34a67bd568499cb7926ccc3ddbe7665 = new L.BeautifyIcon.icon(
+            var beautify_icon_46bf22377d6d2ece87dfceb32f6fea6e = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -140,34 +140,34 @@
   "text": "1",
 }
             )
-            marker_b8cd3f7d73e98c2eb5d728ba6a231183.setIcon(beautify_icon_b34a67bd568499cb7926ccc3ddbe7665);
+            marker_37396cd28f6a51b786766800744b8f50.setIcon(beautify_icon_46bf22377d6d2ece87dfceb32f6fea6e);
         
     
-        var popup_5b16d1fa31b4cf2c84789380bf430bfc = L.popup({
+        var popup_c9ad41fd3545bfd9b79add2ab1db09d3 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_64c198c8dcf5e20475b614cf9c768fa0 = $(`<div id="html_64c198c8dcf5e20475b614cf9c768fa0" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahamaya Devi<br>     <b>Bhairava:</b> Trisandhyeshwar (Amarnath)<br>     <b>Body Part:</b> Throat<br>     <b>Location:</b> Pahalgam, Jammu and Kashmir, India     </div>`)[0];
-                popup_5b16d1fa31b4cf2c84789380bf430bfc.setContent(html_64c198c8dcf5e20475b614cf9c768fa0);
+                var html_72139be7a0b273397a6c266376a2ed05 = $(`<div id="html_72139be7a0b273397a6c266376a2ed05" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahamaya Devi<br>     <b>Bhairava:</b> Trisandhyeshwar (Amarnath)<br>     <b>Body Part:</b> Throat<br>     <b>Location:</b> Pahalgam, Jammu and Kashmir, India     </div>`)[0];
+                popup_c9ad41fd3545bfd9b79add2ab1db09d3.setContent(html_72139be7a0b273397a6c266376a2ed05);
             
         
 
-        marker_b8cd3f7d73e98c2eb5d728ba6a231183.bindPopup(popup_5b16d1fa31b4cf2c84789380bf430bfc)
+        marker_37396cd28f6a51b786766800744b8f50.bindPopup(popup_c9ad41fd3545bfd9b79add2ab1db09d3)
         ;
 
         
     
     
-            var marker_e3e979284079fc713fee8e88316dca4d = L.marker(
+            var marker_e5031c3dca3a2bbc92e4c244ef3fccf0 = L.marker(
                 [33.277839, 75.341218],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_2cfbe9f6090f6e65e5603cabe6e428bc = new L.BeautifyIcon.icon(
+            var beautify_icon_991debc9883e19a8003b2ccf887b8ed4 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -180,34 +180,34 @@
   "text": "2",
 }
             )
-            marker_e3e979284079fc713fee8e88316dca4d.setIcon(beautify_icon_2cfbe9f6090f6e65e5603cabe6e428bc);
+            marker_e5031c3dca3a2bbc92e4c244ef3fccf0.setIcon(beautify_icon_991debc9883e19a8003b2ccf887b8ed4);
         
     
-        var popup_a2e530e4ea067d0ae45ba4ef94c7642e = L.popup({
+        var popup_9aab06919d1bc4bd3299aa7316d9746b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_43bc2841dd996f0cfa32023eff1dadd0 = $(`<div id="html_43bc2841dd996f0cfa32023eff1dadd0" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahamaya Devi<br>     <b>Bhairava:</b> Trisandhyeshwar (Amarnath)<br>     <b>Body Part:</b> Anklet<br>     <b>Location:</b> Ladakh, Jammu and Kashmir, India     </div>`)[0];
-                popup_a2e530e4ea067d0ae45ba4ef94c7642e.setContent(html_43bc2841dd996f0cfa32023eff1dadd0);
+                var html_097e5b46cf73d209cc6b417cbb916b39 = $(`<div id="html_097e5b46cf73d209cc6b417cbb916b39" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahamaya Devi<br>     <b>Bhairava:</b> Trisandhyeshwar (Amarnath)<br>     <b>Body Part:</b> Anklet<br>     <b>Location:</b> Ladakh, Jammu and Kashmir, India     </div>`)[0];
+                popup_9aab06919d1bc4bd3299aa7316d9746b.setContent(html_097e5b46cf73d209cc6b417cbb916b39);
             
         
 
-        marker_e3e979284079fc713fee8e88316dca4d.bindPopup(popup_a2e530e4ea067d0ae45ba4ef94c7642e)
+        marker_e5031c3dca3a2bbc92e4c244ef3fccf0.bindPopup(popup_9aab06919d1bc4bd3299aa7316d9746b)
         ;
 
         
     
     
-            var marker_34a0f70a0ec165a0b012cc90da76064e = L.marker(
+            var marker_5bfd6287f2e45b48fb756caedd87ed33 = L.marker(
                 [32.9924858, 74.9318127],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_db3eb94348376cddb74ca948f513752e = new L.BeautifyIcon.icon(
+            var beautify_icon_44645d1896084ae9d42de590d2f66015 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -220,34 +220,34 @@
   "text": "3",
 }
             )
-            marker_34a0f70a0ec165a0b012cc90da76064e.setIcon(beautify_icon_db3eb94348376cddb74ca948f513752e);
+            marker_5bfd6287f2e45b48fb756caedd87ed33.setIcon(beautify_icon_44645d1896084ae9d42de590d2f66015);
         
     
-        var popup_fd4e4e6302a9989ef678fed7149ac093 = L.popup({
+        var popup_0aad111a1f4f792d4f54cdb7123d4284 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_d606b01fd80c7a1338f9be3d181a73aa = $(`<div id="html_d606b01fd80c7a1338f9be3d181a73aa" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Vaishno Devi<br>     <b>Bhairava:</b> Bhairava Baba<br>     <b>Body Part:</b> Skull/Right arm<br>     <b>Location:</b> Reasi, Jammu and Kashmir, India     </div>`)[0];
-                popup_fd4e4e6302a9989ef678fed7149ac093.setContent(html_d606b01fd80c7a1338f9be3d181a73aa);
+                var html_eea814d3d6e133bcc672508434bccf92 = $(`<div id="html_eea814d3d6e133bcc672508434bccf92" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Vaishno Devi<br>     <b>Bhairava:</b> Bhairava Baba<br>     <b>Body Part:</b> Skull/Right arm<br>     <b>Location:</b> Reasi, Jammu and Kashmir, India     </div>`)[0];
+                popup_0aad111a1f4f792d4f54cdb7123d4284.setContent(html_eea814d3d6e133bcc672508434bccf92);
             
         
 
-        marker_34a0f70a0ec165a0b012cc90da76064e.bindPopup(popup_fd4e4e6302a9989ef678fed7149ac093)
+        marker_5bfd6287f2e45b48fb756caedd87ed33.bindPopup(popup_0aad111a1f4f792d4f54cdb7123d4284)
         ;
 
         
     
     
-            var marker_0f53cc384679cb2a6cf18730871f3abb = L.marker(
+            var marker_7f28f3794feb76cb39b7a1eda84cd264 = L.marker(
                 [32.0768665, 76.2985872],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_b871fe90bba7c041ee6c0d9b121b3f0c = new L.BeautifyIcon.icon(
+            var beautify_icon_856c7e8344978890bb2188d949f6b8c9 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -260,34 +260,34 @@
   "text": "4",
 }
             )
-            marker_0f53cc384679cb2a6cf18730871f3abb.setIcon(beautify_icon_b871fe90bba7c041ee6c0d9b121b3f0c);
+            marker_7f28f3794feb76cb39b7a1eda84cd264.setIcon(beautify_icon_856c7e8344978890bb2188d949f6b8c9);
         
     
-        var popup_4849e4b59b72a679c108fe1b64673113 = L.popup({
+        var popup_fc22750a72d8eb7fcfd51ef19ea065ab = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_682a0751a124e325d6f9128a717fb222 = $(`<div id="html_682a0751a124e325d6f9128a717fb222" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jwalamukhi (Ambika)<br>     <b>Bhairava:</b> Unmatta Bhairaveshwar<br>     <b>Body Part:</b> Tongue<br>     <b>Location:</b> Kangra, Himachal Pradesh, India     </div>`)[0];
-                popup_4849e4b59b72a679c108fe1b64673113.setContent(html_682a0751a124e325d6f9128a717fb222);
+                var html_fb6715b9024a678f1f59834a1e0182a7 = $(`<div id="html_fb6715b9024a678f1f59834a1e0182a7" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jwalamukhi (Ambika)<br>     <b>Bhairava:</b> Unmatta Bhairaveshwar<br>     <b>Body Part:</b> Tongue<br>     <b>Location:</b> Kangra, Himachal Pradesh, India     </div>`)[0];
+                popup_fc22750a72d8eb7fcfd51ef19ea065ab.setContent(html_fb6715b9024a678f1f59834a1e0182a7);
             
         
 
-        marker_0f53cc384679cb2a6cf18730871f3abb.bindPopup(popup_4849e4b59b72a679c108fe1b64673113)
+        marker_7f28f3794feb76cb39b7a1eda84cd264.bindPopup(popup_fc22750a72d8eb7fcfd51ef19ea065ab)
         ;
 
         
     
     
-            var marker_d26d4bdb038040e677c57efeb616deaa = L.marker(
+            var marker_8ff9e478929b1488ba7d1d621de4f8a8 = L.marker(
                 [32.085182, 76.511784],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_7efb4d3f3eae9e25d6aaed98d942f8cd = new L.BeautifyIcon.icon(
+            var beautify_icon_0c39aad94f74b2a4e088d0ed2acfd8ad = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -300,34 +300,34 @@
   "text": "5",
 }
             )
-            marker_d26d4bdb038040e677c57efeb616deaa.setIcon(beautify_icon_7efb4d3f3eae9e25d6aaed98d942f8cd);
+            marker_8ff9e478929b1488ba7d1d621de4f8a8.setIcon(beautify_icon_0c39aad94f74b2a4e088d0ed2acfd8ad);
         
     
-        var popup_c404275043ff770b9f1c5039ba3f9ca0 = L.popup({
+        var popup_45c2023249339848d1444f1ed3a0fd5e = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_95f53c669f498e8fbe763f301b1b7588 = $(`<div id="html_95f53c669f498e8fbe763f301b1b7588" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jayadurga Devi<br>     <b>Bhairava:</b> Abhirunatheshwar<br>     <b>Body Part:</b> left Breast<br>     <b>Location:</b> Kangra, Himachal Pradesh, India     </div>`)[0];
-                popup_c404275043ff770b9f1c5039ba3f9ca0.setContent(html_95f53c669f498e8fbe763f301b1b7588);
+                var html_2f9b4bd3415ed413b7d48b6516241664 = $(`<div id="html_2f9b4bd3415ed413b7d48b6516241664" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jayadurga Devi<br>     <b>Bhairava:</b> Abhirunatheshwar<br>     <b>Body Part:</b> left Breast<br>     <b>Location:</b> Kangra, Himachal Pradesh, India     </div>`)[0];
+                popup_45c2023249339848d1444f1ed3a0fd5e.setContent(html_2f9b4bd3415ed413b7d48b6516241664);
             
         
 
-        marker_d26d4bdb038040e677c57efeb616deaa.bindPopup(popup_c404275043ff770b9f1c5039ba3f9ca0)
+        marker_8ff9e478929b1488ba7d1d621de4f8a8.bindPopup(popup_45c2023249339848d1444f1ed3a0fd5e)
         ;
 
         
     
     
-            var marker_ac0f4f5940c7ee7128b1b8fdee0993ba = L.marker(
+            var marker_03422939efb7c408cd0ed642794f3920 = L.marker(
                 [31.8025756, 76.1046491],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_795d3eca019faa2b5d83ab332b3644bb = new L.BeautifyIcon.icon(
+            var beautify_icon_ecc3896e969c81a026483b05a878813c = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -340,34 +340,34 @@
   "text": "6",
 }
             )
-            marker_ac0f4f5940c7ee7128b1b8fdee0993ba.setIcon(beautify_icon_795d3eca019faa2b5d83ab332b3644bb);
+            marker_03422939efb7c408cd0ed642794f3920.setIcon(beautify_icon_ecc3896e969c81a026483b05a878813c);
         
     
-        var popup_02440119fa9d9a9a50c117a2eba78531 = L.popup({
+        var popup_4e081bad5bd5a7bb82ff6a1652416e6c = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_866b310af5dd39149daba831daa92a1e = $(`<div id="html_866b310af5dd39149daba831daa92a1e" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Chhinnamastika Devi<br>     <b>Bhairava:</b> Rudra Mahadeva<br>     <b>Body Part:</b> Foot<br>     <b>Location:</b> Una, Himachal Pradesh, India     </div>`)[0];
-                popup_02440119fa9d9a9a50c117a2eba78531.setContent(html_866b310af5dd39149daba831daa92a1e);
+                var html_72cd305e471b294eaabcfb666874d263 = $(`<div id="html_72cd305e471b294eaabcfb666874d263" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Chhinnamastika Devi<br>     <b>Bhairava:</b> Rudra Mahadeva<br>     <b>Body Part:</b> Foot<br>     <b>Location:</b> Una, Himachal Pradesh, India     </div>`)[0];
+                popup_4e081bad5bd5a7bb82ff6a1652416e6c.setContent(html_72cd305e471b294eaabcfb666874d263);
             
         
 
-        marker_ac0f4f5940c7ee7128b1b8fdee0993ba.bindPopup(popup_02440119fa9d9a9a50c117a2eba78531)
+        marker_03422939efb7c408cd0ed642794f3920.bindPopup(popup_4e081bad5bd5a7bb82ff6a1652416e6c)
         ;
 
         
     
     
-            var marker_ee563d8bd1419c5ccbe9c8a73dbff6ed = L.marker(
+            var marker_b66c983c3b58bda5a9d1cbc88c3dfe05 = L.marker(
                 [31.2922311, 75.5678878],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_0f0a294e4c048fe6580be2a0dec30ec6 = new L.BeautifyIcon.icon(
+            var beautify_icon_bd533ceebb23954bf2367b24ef38c6a1 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -380,34 +380,34 @@
   "text": "7",
 }
             )
-            marker_ee563d8bd1419c5ccbe9c8a73dbff6ed.setIcon(beautify_icon_0f0a294e4c048fe6580be2a0dec30ec6);
+            marker_b66c983c3b58bda5a9d1cbc88c3dfe05.setIcon(beautify_icon_bd533ceebb23954bf2367b24ef38c6a1);
         
     
-        var popup_52618e913cf60d1d0e140d436ce9a965 = L.popup({
+        var popup_f4b44ff0049606010a4e0b80824c1f8c = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_889be6a0c95b09f808ccbe4ade50dd25 = $(`<div id="html_889be6a0c95b09f808ccbe4ade50dd25" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Tripuramalini Devi<br>     <b>Bhairava:</b> Bhishaneshwar<br>     <b>Body Part:</b> Left Breast<br>     <b>Location:</b> Jalandhar, Punjab, India     </div>`)[0];
-                popup_52618e913cf60d1d0e140d436ce9a965.setContent(html_889be6a0c95b09f808ccbe4ade50dd25);
+                var html_db7b78914322af3bbc108117bafe748a = $(`<div id="html_db7b78914322af3bbc108117bafe748a" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Tripuramalini Devi<br>     <b>Bhairava:</b> Bhishaneshwar<br>     <b>Body Part:</b> Left Breast<br>     <b>Location:</b> Jalandhar, Punjab, India     </div>`)[0];
+                popup_f4b44ff0049606010a4e0b80824c1f8c.setContent(html_db7b78914322af3bbc108117bafe748a);
             
         
 
-        marker_ee563d8bd1419c5ccbe9c8a73dbff6ed.bindPopup(popup_52618e913cf60d1d0e140d436ce9a965)
+        marker_b66c983c3b58bda5a9d1cbc88c3dfe05.bindPopup(popup_f4b44ff0049606010a4e0b80824c1f8c)
         ;
 
         
     
     
-            var marker_85caf577b974ad40a6993775a8ff0f12 = L.marker(
+            var marker_7461b29fc1b03f5dc57533221e71dd2b = L.marker(
                 [31.3380959, 76.7611631],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_c8381356d53dc17873869ce7fcc9c5f3 = new L.BeautifyIcon.icon(
+            var beautify_icon_0346ae414112bf50160f9e2f24f13fa7 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -420,34 +420,34 @@
   "text": "8",
 }
             )
-            marker_85caf577b974ad40a6993775a8ff0f12.setIcon(beautify_icon_c8381356d53dc17873869ce7fcc9c5f3);
+            marker_7461b29fc1b03f5dc57533221e71dd2b.setIcon(beautify_icon_0346ae414112bf50160f9e2f24f13fa7);
         
     
-        var popup_e7dfe8f17302cd6330be063a0d07fa19 = L.popup({
+        var popup_c2063fedb7332b7735456da3dbdc0812 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_5e3ac0d94a18a2b6231d27073e6cad5b = $(`<div id="html_5e3ac0d94a18a2b6231d27073e6cad5b" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahishamardini Devi<br>     <b>Bhairava:</b> Krodhishwar<br>     <b>Body Part:</b> Right eye<br>     <b>Location:</b> Bilaspur, Himachal Pradesh, India     </div>`)[0];
-                popup_e7dfe8f17302cd6330be063a0d07fa19.setContent(html_5e3ac0d94a18a2b6231d27073e6cad5b);
+                var html_05e2b2a1c44cf20b87bfc83a0179081b = $(`<div id="html_05e2b2a1c44cf20b87bfc83a0179081b" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahishamardini Devi<br>     <b>Bhairava:</b> Krodhishwar<br>     <b>Body Part:</b> Right eye<br>     <b>Location:</b> Bilaspur, Himachal Pradesh, India     </div>`)[0];
+                popup_c2063fedb7332b7735456da3dbdc0812.setContent(html_05e2b2a1c44cf20b87bfc83a0179081b);
             
         
 
-        marker_85caf577b974ad40a6993775a8ff0f12.bindPopup(popup_e7dfe8f17302cd6330be063a0d07fa19)
+        marker_7461b29fc1b03f5dc57533221e71dd2b.bindPopup(popup_c2063fedb7332b7735456da3dbdc0812)
         ;
 
         
     
     
-            var marker_c4c2172ab47b6676274b36b3230d6c99 = L.marker(
+            var marker_0ef1415458e6264d55419074d9c4b500 = L.marker(
                 [29.9693747, 76.8482787],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_9b59d85e5535294e868eb5fe2d304acc = new L.BeautifyIcon.icon(
+            var beautify_icon_464238cbb3083b1f7130075550d7b9db = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -460,34 +460,34 @@
   "text": "9",
 }
             )
-            marker_c4c2172ab47b6676274b36b3230d6c99.setIcon(beautify_icon_9b59d85e5535294e868eb5fe2d304acc);
+            marker_0ef1415458e6264d55419074d9c4b500.setIcon(beautify_icon_464238cbb3083b1f7130075550d7b9db);
         
     
-        var popup_4f4f0666af1437f255881d65a9421a40 = L.popup({
+        var popup_6c69389c0343015dab888bcf66c14b07 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_7494d4e9beb9438454982e5e3746c14e = $(`<div id="html_7494d4e9beb9438454982e5e3746c14e" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Bhadrakali Devi<br>     <b>Bhairava:</b> Sthanu<br>     <b>Body Part:</b> Ankle bone<br>     <b>Location:</b> Kurukshetra, Haryana, India     </div>`)[0];
-                popup_4f4f0666af1437f255881d65a9421a40.setContent(html_7494d4e9beb9438454982e5e3746c14e);
+                var html_c38776c6ab99e62e6027a69215865588 = $(`<div id="html_c38776c6ab99e62e6027a69215865588" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Bhadrakali Devi<br>     <b>Bhairava:</b> Sthanu<br>     <b>Body Part:</b> Ankle bone<br>     <b>Location:</b> Kurukshetra, Haryana, India     </div>`)[0];
+                popup_6c69389c0343015dab888bcf66c14b07.setContent(html_c38776c6ab99e62e6027a69215865588);
             
         
 
-        marker_c4c2172ab47b6676274b36b3230d6c99.bindPopup(popup_4f4f0666af1437f255881d65a9421a40)
+        marker_0ef1415458e6264d55419074d9c4b500.bindPopup(popup_6c69389c0343015dab888bcf66c14b07)
         ;
 
         
     
     
-            var marker_518e9bcd9129f1e6d3f40ef9ccbcba58 = L.marker(
+            var marker_7ea7e3fc06dbd3c0a3c732e3e8c92ff5 = L.marker(
                 [29.235032, 80.1023068],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_a7b0b559a08f4af767bd11d32ad91924 = new L.BeautifyIcon.icon(
+            var beautify_icon_5ebe1fa354b39ef9f74d00c0df98be75 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -500,34 +500,34 @@
   "text": "10",
 }
             )
-            marker_518e9bcd9129f1e6d3f40ef9ccbcba58.setIcon(beautify_icon_a7b0b559a08f4af767bd11d32ad91924);
+            marker_7ea7e3fc06dbd3c0a3c732e3e8c92ff5.setIcon(beautify_icon_5ebe1fa354b39ef9f74d00c0df98be75);
         
     
-        var popup_6b8a59bedcbd2f9e91ec7149a4361c38 = L.popup({
+        var popup_59ed98051b4f6e56720e859da8a2927a = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_5ce815e63dceab3946886e4d5d1fc5c6 = $(`<div id="html_5ce815e63dceab3946886e4d5d1fc5c6" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Varahi Devi<br>     <b>Bhairava:</b> Maharudra<br>     <b>Body Part:</b> Lower teeth/ Navel<br>     <b>Location:</b> Champawat, Uttarakhand, India     </div>`)[0];
-                popup_6b8a59bedcbd2f9e91ec7149a4361c38.setContent(html_5ce815e63dceab3946886e4d5d1fc5c6);
+                var html_d5b68fe7a7e1d214c3529eea52a6037f = $(`<div id="html_d5b68fe7a7e1d214c3529eea52a6037f" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Varahi Devi<br>     <b>Bhairava:</b> Maharudra<br>     <b>Body Part:</b> Lower teeth/ Navel<br>     <b>Location:</b> Champawat, Uttarakhand, India     </div>`)[0];
+                popup_59ed98051b4f6e56720e859da8a2927a.setContent(html_d5b68fe7a7e1d214c3529eea52a6037f);
             
         
 
-        marker_518e9bcd9129f1e6d3f40ef9ccbcba58.bindPopup(popup_6b8a59bedcbd2f9e91ec7149a4361c38)
+        marker_7ea7e3fc06dbd3c0a3c732e3e8c92ff5.bindPopup(popup_59ed98051b4f6e56720e859da8a2927a)
         ;
 
         
     
     
-            var marker_e4899463a79c4785939e2f3ce67acba0 = L.marker(
+            var marker_72204ab10fe0ce3702a98bfe1f25dc1f = L.marker(
                 [31.0678394, 81.3119303],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_a73e1442a3da13863ee8699a2829cd36 = new L.BeautifyIcon.icon(
+            var beautify_icon_7482b4f97d2e2928c67540df9a2dd546 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -540,34 +540,34 @@
   "text": "11",
 }
             )
-            marker_e4899463a79c4785939e2f3ce67acba0.setIcon(beautify_icon_a73e1442a3da13863ee8699a2829cd36);
+            marker_72204ab10fe0ce3702a98bfe1f25dc1f.setIcon(beautify_icon_7482b4f97d2e2928c67540df9a2dd546);
         
     
-        var popup_64182b1665704ad25e807ff52ddf9dbb = L.popup({
+        var popup_38098b5be01aae221bf4b1110219ec27 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_1ccea265d64afe1f311fe81341e36294 = $(`<div id="html_1ccea265d64afe1f311fe81341e36294" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Dakshayani Devi<br>     <b>Bhairava:</b> Amareshwar<br>     <b>Body Part:</b> Right hand<br>     <b>Location:</b>  Mount Kailash, Tibet, China     </div>`)[0];
-                popup_64182b1665704ad25e807ff52ddf9dbb.setContent(html_1ccea265d64afe1f311fe81341e36294);
+                var html_6d08881a2335f6119e606e9045cb3964 = $(`<div id="html_6d08881a2335f6119e606e9045cb3964" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Dakshayani Devi<br>     <b>Bhairava:</b> Amareshwar<br>     <b>Body Part:</b> Right hand<br>     <b>Location:</b>  Mount Kailash, Tibet, China     </div>`)[0];
+                popup_38098b5be01aae221bf4b1110219ec27.setContent(html_6d08881a2335f6119e606e9045cb3964);
             
         
 
-        marker_e4899463a79c4785939e2f3ce67acba0.bindPopup(popup_64182b1665704ad25e807ff52ddf9dbb)
+        marker_72204ab10fe0ce3702a98bfe1f25dc1f.bindPopup(popup_38098b5be01aae221bf4b1110219ec27)
         ;
 
         
     
     
-            var marker_ea8bcbc1329e969afc66aa7a3460c818 = L.marker(
+            var marker_42a7ef569655caef260582530b0fd94f = L.marker(
                 [28.9481332, 83.900569],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_f67e3ff476f957f1fe61779d44d54f93 = new L.BeautifyIcon.icon(
+            var beautify_icon_04da7428f6e274b99b5338831830f7c6 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -580,34 +580,34 @@
   "text": "12",
 }
             )
-            marker_ea8bcbc1329e969afc66aa7a3460c818.setIcon(beautify_icon_f67e3ff476f957f1fe61779d44d54f93);
+            marker_42a7ef569655caef260582530b0fd94f.setIcon(beautify_icon_04da7428f6e274b99b5338831830f7c6);
         
     
-        var popup_a791a1a6e81bc6cfab8dfbe088f491c9 = L.popup({
+        var popup_1afc15ce7dfe1dc357c6dfe443c6fd79 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_b9905e6143dc50f5d11a7bc823aa7145 = $(`<div id="html_b9905e6143dc50f5d11a7bc823aa7145" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Gandaki Chandi<br>     <b>Bhairava:</b> Chakrapani<br>     <b>Body Part:</b> Head<br>     <b>Location:</b> Mustang, Nepal     </div>`)[0];
-                popup_a791a1a6e81bc6cfab8dfbe088f491c9.setContent(html_b9905e6143dc50f5d11a7bc823aa7145);
+                var html_ffb439d9d63c7ff2d0364e1478536d20 = $(`<div id="html_ffb439d9d63c7ff2d0364e1478536d20" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Gandaki Chandi<br>     <b>Bhairava:</b> Chakrapani<br>     <b>Body Part:</b> Head<br>     <b>Location:</b> Mustang, Nepal     </div>`)[0];
+                popup_1afc15ce7dfe1dc357c6dfe443c6fd79.setContent(html_ffb439d9d63c7ff2d0364e1478536d20);
             
         
 
-        marker_ea8bcbc1329e969afc66aa7a3460c818.bindPopup(popup_a791a1a6e81bc6cfab8dfbe088f491c9)
+        marker_42a7ef569655caef260582530b0fd94f.bindPopup(popup_1afc15ce7dfe1dc357c6dfe443c6fd79)
         ;
 
         
     
     
-            var marker_0bdd5c32d41376671e3bd9d5d004d357 = L.marker(
+            var marker_468c4215ed4e2847d77563a5dde18c57 = L.marker(
                 [27.6939205, 85.3255087],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_25177c22309da86b88289af2cf2c99a0 = new L.BeautifyIcon.icon(
+            var beautify_icon_0cd2ecc0f0b8a00cd137cff2fe6ca9d2 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -620,34 +620,34 @@
   "text": "13",
 }
             )
-            marker_0bdd5c32d41376671e3bd9d5d004d357.setIcon(beautify_icon_25177c22309da86b88289af2cf2c99a0);
+            marker_468c4215ed4e2847d77563a5dde18c57.setIcon(beautify_icon_0cd2ecc0f0b8a00cd137cff2fe6ca9d2);
         
     
-        var popup_9d2cefe74d1ca2f1fa9d1f0e6e9b95e5 = L.popup({
+        var popup_292c138e844eceb124918e6f8cd3e2cf = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_1218266b12d67dc3aebf722f13e39108 = $(`<div id="html_1218266b12d67dc3aebf722f13e39108" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahashira Devi<br>     <b>Bhairava:</b> Kapalishwar<br>     <b>Body Part:</b> Both knees<br>     <b>Location:</b> Kathmandu, Nepal     </div>`)[0];
-                popup_9d2cefe74d1ca2f1fa9d1f0e6e9b95e5.setContent(html_1218266b12d67dc3aebf722f13e39108);
+                var html_59f5e0f6d48e7980cfcde35163e94bf9 = $(`<div id="html_59f5e0f6d48e7980cfcde35163e94bf9" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahashira Devi<br>     <b>Bhairava:</b> Kapalishwar<br>     <b>Body Part:</b> Both knees<br>     <b>Location:</b> Kathmandu, Nepal     </div>`)[0];
+                popup_292c138e844eceb124918e6f8cd3e2cf.setContent(html_59f5e0f6d48e7980cfcde35163e94bf9);
             
         
 
-        marker_0bdd5c32d41376671e3bd9d5d004d357.bindPopup(popup_9d2cefe74d1ca2f1fa9d1f0e6e9b95e5)
+        marker_468c4215ed4e2847d77563a5dde18c57.bindPopup(popup_292c138e844eceb124918e6f8cd3e2cf)
         ;
 
         
     
     
-            var marker_984474da5dcbbbd554c7434be15fbc01 = L.marker(
+            var marker_f2e3fe5e45220fec39bfe915065bfc8f = L.marker(
                 [26.727514, 85.925666],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_422a196ae27654b8c1e077450fcfbdc1 = new L.BeautifyIcon.icon(
+            var beautify_icon_ea8eff948ed7b16169ad18069d6c7296 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -660,34 +660,34 @@
   "text": "14",
 }
             )
-            marker_984474da5dcbbbd554c7434be15fbc01.setIcon(beautify_icon_422a196ae27654b8c1e077450fcfbdc1);
+            marker_f2e3fe5e45220fec39bfe915065bfc8f.setIcon(beautify_icon_ea8eff948ed7b16169ad18069d6c7296);
         
     
-        var popup_bcefadc3eace1bea9a546276022347f7 = L.popup({
+        var popup_5ad0b7fddbf79865237d31c381ccc728 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_4008580ce6e56e1aab42b305d411638e = $(`<div id="html_4008580ce6e56e1aab42b305d411638e" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Uma Devi<br>     <b>Bhairava:</b> Mahodareshwar<br>     <b>Body Part:</b> Left shoulder<br>     <b>Location:</b> Janakpur, Madhesh Province, Nepal     </div>`)[0];
-                popup_bcefadc3eace1bea9a546276022347f7.setContent(html_4008580ce6e56e1aab42b305d411638e);
+                var html_a02d7741f72355841b8efca39835d6eb = $(`<div id="html_a02d7741f72355841b8efca39835d6eb" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Uma Devi<br>     <b>Bhairava:</b> Mahodareshwar<br>     <b>Body Part:</b> Left shoulder<br>     <b>Location:</b> Janakpur, Madhesh Province, Nepal     </div>`)[0];
+                popup_5ad0b7fddbf79865237d31c381ccc728.setContent(html_a02d7741f72355841b8efca39835d6eb);
             
         
 
-        marker_984474da5dcbbbd554c7434be15fbc01.bindPopup(popup_bcefadc3eace1bea9a546276022347f7)
+        marker_f2e3fe5e45220fec39bfe915065bfc8f.bindPopup(popup_5ad0b7fddbf79865237d31c381ccc728)
         ;
 
         
     
     
-            var marker_63f0bedebc5efda9130b91836dd72ba6 = L.marker(
+            var marker_4b1f9a0d7acd6b96ab7bded0415d1b2e = L.marker(
                 [25.560317, 84.6632139],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_782f1c6e32b1af4909c3df4948cf271f = new L.BeautifyIcon.icon(
+            var beautify_icon_532bc0d87075fec4e97e258c2f51b978 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -700,34 +700,34 @@
   "text": "15",
 }
             )
-            marker_63f0bedebc5efda9130b91836dd72ba6.setIcon(beautify_icon_782f1c6e32b1af4909c3df4948cf271f);
+            marker_4b1f9a0d7acd6b96ab7bded0415d1b2e.setIcon(beautify_icon_532bc0d87075fec4e97e258c2f51b978);
         
     
-        var popup_98f33d97a641d9e7a37b3a43f05799c3 = L.popup({
+        var popup_de3aaefce3e54b91992fdeab4a83dbf6 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_cedca7ba6d287413f2f11dfbeab16a2d = $(`<div id="html_cedca7ba6d287413f2f11dfbeab16a2d" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Aranyani<br>     <b>Bhairava:</b> Bhuma Bhairava<br>     <b>Body Part:</b> Right thigh<br>     <b>Location:</b> Bhojpur, Bihar, India     </div>`)[0];
-                popup_98f33d97a641d9e7a37b3a43f05799c3.setContent(html_cedca7ba6d287413f2f11dfbeab16a2d);
+                var html_92837bc67ead6bf4542b0cabce923740 = $(`<div id="html_92837bc67ead6bf4542b0cabce923740" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Aranyani<br>     <b>Bhairava:</b> Bhuma Bhairava<br>     <b>Body Part:</b> Right thigh<br>     <b>Location:</b> Bhojpur, Bihar, India     </div>`)[0];
+                popup_de3aaefce3e54b91992fdeab4a83dbf6.setContent(html_92837bc67ead6bf4542b0cabce923740);
             
         
 
-        marker_63f0bedebc5efda9130b91836dd72ba6.bindPopup(popup_98f33d97a641d9e7a37b3a43f05799c3)
+        marker_4b1f9a0d7acd6b96ab7bded0415d1b2e.bindPopup(popup_de3aaefce3e54b91992fdeab4a83dbf6)
         ;
 
         
     
     
-            var marker_26cd59bf6f270654d0d81777d2ad1c7b = L.marker(
+            var marker_d4bd16e6cc8cb37250c7900adabd0dbf = L.marker(
                 [25.3719338, 82.9414272],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_df74501ce7a9f7c8dffb9c1911273bd7 = new L.BeautifyIcon.icon(
+            var beautify_icon_de0152bdb5a2915e9e3258a43faa9c4b = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -740,34 +740,34 @@
   "text": "16",
 }
             )
-            marker_26cd59bf6f270654d0d81777d2ad1c7b.setIcon(beautify_icon_df74501ce7a9f7c8dffb9c1911273bd7);
+            marker_d4bd16e6cc8cb37250c7900adabd0dbf.setIcon(beautify_icon_de0152bdb5a2915e9e3258a43faa9c4b);
         
     
-        var popup_e568806054b3cb4cd307d1f2bce3d5b1 = L.popup({
+        var popup_e2e1c1415951c7c21e05ec22ab6c0a5a = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_beb8e60b101a8db190aa63068fcb0954 = $(`<div id="html_beb8e60b101a8db190aa63068fcb0954" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Vishalakshi Devi<br>     <b>Bhairava:</b> Kala Bhairaveshwar<br>     <b>Body Part:</b> Earring<br>     <b>Location:</b> Varanasi, Uttar Pradesh, India     </div>`)[0];
-                popup_e568806054b3cb4cd307d1f2bce3d5b1.setContent(html_beb8e60b101a8db190aa63068fcb0954);
+                var html_ec4d9a118c73d071c0a9f55936b525c5 = $(`<div id="html_ec4d9a118c73d071c0a9f55936b525c5" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Vishalakshi Devi<br>     <b>Bhairava:</b> Kala Bhairaveshwar<br>     <b>Body Part:</b> Earring<br>     <b>Location:</b> Varanasi, Uttar Pradesh, India     </div>`)[0];
+                popup_e2e1c1415951c7c21e05ec22ab6c0a5a.setContent(html_ec4d9a118c73d071c0a9f55936b525c5);
             
         
 
-        marker_26cd59bf6f270654d0d81777d2ad1c7b.bindPopup(popup_e568806054b3cb4cd307d1f2bce3d5b1)
+        marker_d4bd16e6cc8cb37250c7900adabd0dbf.bindPopup(popup_e2e1c1415951c7c21e05ec22ab6c0a5a)
         ;
 
         
     
     
-            var marker_e66060e07fe7afa24f92fafaea1b5aca = L.marker(
+            var marker_e46c5760f6dd960c2b6553f3b3a232bf = L.marker(
                 [25.4426926, 81.8691114],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_3c56136a8a546a4932a9781567a16334 = new L.BeautifyIcon.icon(
+            var beautify_icon_369273f5bfff1894ad130661def8ca63 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -780,34 +780,34 @@
   "text": "17",
 }
             )
-            marker_e66060e07fe7afa24f92fafaea1b5aca.setIcon(beautify_icon_3c56136a8a546a4932a9781567a16334);
+            marker_e46c5760f6dd960c2b6553f3b3a232bf.setIcon(beautify_icon_369273f5bfff1894ad130661def8ca63);
         
     
-        var popup_49b136c43f147d1cfce58aec0c8cd653 = L.popup({
+        var popup_099aa1ef31620b1ae865c1763e2899a5 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_79544c810b922cefac3bae83f10f2924 = $(`<div id="html_79544c810b922cefac3bae83f10f2924" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Lalita Devi<br>     <b>Bhairava:</b> Bhaveshwar<br>     <b>Body Part:</b> Finger<br>     <b>Location:</b> Prayagraj, Uttar Pradesh, India     </div>`)[0];
-                popup_49b136c43f147d1cfce58aec0c8cd653.setContent(html_79544c810b922cefac3bae83f10f2924);
+                var html_8813e283c38c6cb7d55f17f15d1a87bc = $(`<div id="html_8813e283c38c6cb7d55f17f15d1a87bc" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Lalita Devi<br>     <b>Bhairava:</b> Bhaveshwar<br>     <b>Body Part:</b> Finger<br>     <b>Location:</b> Prayagraj, Uttar Pradesh, India     </div>`)[0];
+                popup_099aa1ef31620b1ae865c1763e2899a5.setContent(html_8813e283c38c6cb7d55f17f15d1a87bc);
             
         
 
-        marker_e66060e07fe7afa24f92fafaea1b5aca.bindPopup(popup_49b136c43f147d1cfce58aec0c8cd653)
+        marker_e46c5760f6dd960c2b6553f3b3a232bf.bindPopup(popup_099aa1ef31620b1ae865c1763e2899a5)
         ;
 
         
     
     
-            var marker_a3546ec5db53898e97db937a3aae1e24 = L.marker(
+            var marker_b81d83f160aabbfba2548b61085a1129 = L.marker(
                 [22.670465, 81.7588417],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_b7525708b85c5f1de6efd22b75fbc434 = new L.BeautifyIcon.icon(
+            var beautify_icon_918fb65f2ec54ff01a78079f939fc26c = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -820,34 +820,34 @@
   "text": "18",
 }
             )
-            marker_a3546ec5db53898e97db937a3aae1e24.setIcon(beautify_icon_b7525708b85c5f1de6efd22b75fbc434);
+            marker_b81d83f160aabbfba2548b61085a1129.setIcon(beautify_icon_918fb65f2ec54ff01a78079f939fc26c);
         
     
-        var popup_5f2629f7c785ba21aa9008024e9e1dd4 = L.popup({
+        var popup_cce3f5939f2b71b9ae9e864c2b789b35 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_be67336ea3b9845da952915b31e122a8 = $(`<div id="html_be67336ea3b9845da952915b31e122a8" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Narmada<br>     <b>Bhairava:</b> Bhadraseneshwar<br>     <b>Body Part:</b> Right buttock<br>     <b>Location:</b> Anuppur, Madhya Pradesh, India     </div>`)[0];
-                popup_5f2629f7c785ba21aa9008024e9e1dd4.setContent(html_be67336ea3b9845da952915b31e122a8);
+                var html_bc4fa509c3a91aed2d15c8819794926d = $(`<div id="html_bc4fa509c3a91aed2d15c8819794926d" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Narmada<br>     <b>Bhairava:</b> Bhadraseneshwar<br>     <b>Body Part:</b> Right buttock<br>     <b>Location:</b> Anuppur, Madhya Pradesh, India     </div>`)[0];
+                popup_cce3f5939f2b71b9ae9e864c2b789b35.setContent(html_bc4fa509c3a91aed2d15c8819794926d);
             
         
 
-        marker_a3546ec5db53898e97db937a3aae1e24.bindPopup(popup_5f2629f7c785ba21aa9008024e9e1dd4)
+        marker_b81d83f160aabbfba2548b61085a1129.bindPopup(popup_cce3f5939f2b71b9ae9e864c2b789b35)
         ;
 
         
     
     
-            var marker_ec6ac3ab87547db680817679e3c4e720 = L.marker(
+            var marker_413f5bb80238cc6302c993b65d882afe = L.marker(
                 [24.260444, 80.7592749],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_222e7bfee314b9ff68dfefe798dc3804 = new L.BeautifyIcon.icon(
+            var beautify_icon_76469c5a5240dfaedfcc4f15664e5e5e = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -860,34 +860,34 @@
   "text": "19",
 }
             )
-            marker_ec6ac3ab87547db680817679e3c4e720.setIcon(beautify_icon_222e7bfee314b9ff68dfefe798dc3804);
+            marker_413f5bb80238cc6302c993b65d882afe.setIcon(beautify_icon_76469c5a5240dfaedfcc4f15664e5e5e);
         
     
-        var popup_c26f2550b629d4fff47bc13d7543fa48 = L.popup({
+        var popup_b54c3439c05844f29e79513f4cb77dee = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_973a2b78542e4f991e926942d88c2cf3 = $(`<div id="html_973a2b78542e4f991e926942d88c2cf3" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Shivani Devi<br>     <b>Bhairava:</b> Chandeshwar<br>     <b>Body Part:</b> nan<br>     <b>Location:</b> Maihar, Madhya Pradesh, India     </div>`)[0];
-                popup_c26f2550b629d4fff47bc13d7543fa48.setContent(html_973a2b78542e4f991e926942d88c2cf3);
+                var html_359875032e2f7cbf0669ac4bf785df33 = $(`<div id="html_359875032e2f7cbf0669ac4bf785df33" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Shivani Devi<br>     <b>Bhairava:</b> Chandeshwar<br>     <b>Body Part:</b> nan<br>     <b>Location:</b> Maihar, Madhya Pradesh, India     </div>`)[0];
+                popup_b54c3439c05844f29e79513f4cb77dee.setContent(html_359875032e2f7cbf0669ac4bf785df33);
             
         
 
-        marker_ec6ac3ab87547db680817679e3c4e720.bindPopup(popup_c26f2550b629d4fff47bc13d7543fa48)
+        marker_413f5bb80238cc6302c993b65d882afe.bindPopup(popup_b54c3439c05844f29e79513f4cb77dee)
         ;
 
         
     
     
-            var marker_8e759827babc970cd508dc94703604c5 = L.marker(
+            var marker_87666c2d13aff75acb8f7a297c72de24 = L.marker(
                 [27.2154447, 77.4986962],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_be20c5e25bd885a502389f5a0a92426c = new L.BeautifyIcon.icon(
+            var beautify_icon_876d8af790104a640b1646374e4df9be = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -900,34 +900,34 @@
   "text": "20",
 }
             )
-            marker_8e759827babc970cd508dc94703604c5.setIcon(beautify_icon_be20c5e25bd885a502389f5a0a92426c);
+            marker_87666c2d13aff75acb8f7a297c72de24.setIcon(beautify_icon_876d8af790104a640b1646374e4df9be);
         
     
-        var popup_21cb85e8a2c830e01a67fa52c6193673 = L.popup({
+        var popup_1b38b97e7c24f858aedd933d004f368f = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_cee3955ea31c8d35b89af8776c527115 = $(`<div id="html_cee3955ea31c8d35b89af8776c527115" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Ambika Devi<br>     <b>Bhairava:</b> Amritaksheshwar<br>     <b>Body Part:</b> Fingers of Left Leg<br>     <b>Location:</b> Bharatpur, Rajasthan, India     </div>`)[0];
-                popup_21cb85e8a2c830e01a67fa52c6193673.setContent(html_cee3955ea31c8d35b89af8776c527115);
+                var html_1dfd02d09ca715bd42783d9e91b2d20b = $(`<div id="html_1dfd02d09ca715bd42783d9e91b2d20b" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Ambika Devi<br>     <b>Bhairava:</b> Amritaksheshwar<br>     <b>Body Part:</b> Fingers of Left Leg<br>     <b>Location:</b> Bharatpur, Rajasthan, India     </div>`)[0];
+                popup_1b38b97e7c24f858aedd933d004f368f.setContent(html_1dfd02d09ca715bd42783d9e91b2d20b);
             
         
 
-        marker_8e759827babc970cd508dc94703604c5.bindPopup(popup_21cb85e8a2c830e01a67fa52c6193673)
+        marker_87666c2d13aff75acb8f7a297c72de24.bindPopup(popup_1b38b97e7c24f858aedd933d004f368f)
         ;
 
         
     
     
-            var marker_0683400a0e9798789888ad24c379d49f = L.marker(
+            var marker_aad4d497da63e476b6c2b38171c91f76 = L.marker(
                 [27.633333, 77.583333],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_44a12c190aa4af27e05997ff82384600 = new L.BeautifyIcon.icon(
+            var beautify_icon_429b4a9a143fa00fae21c9d3fc313016 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -940,34 +940,34 @@
   "text": "21",
 }
             )
-            marker_0683400a0e9798789888ad24c379d49f.setIcon(beautify_icon_44a12c190aa4af27e05997ff82384600);
+            marker_aad4d497da63e476b6c2b38171c91f76.setIcon(beautify_icon_429b4a9a143fa00fae21c9d3fc313016);
         
     
-        var popup_5aacb19253b8bea57c116ca12cfe447a = L.popup({
+        var popup_ba7482bdbc3cf63cd6e2f8844874bb0d = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_b5bdc5ca4c6e66bbc5f6d0c064e490e8 = $(`<div id="html_b5bdc5ca4c6e66bbc5f6d0c064e490e8" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Uma Devi<br>     <b>Bhairava:</b> Bhuteshwar<br>     <b>Body Part:</b> Ringlets of hair<br>     <b>Location:</b> Mathura, Uttar Pradesh , India     </div>`)[0];
-                popup_5aacb19253b8bea57c116ca12cfe447a.setContent(html_b5bdc5ca4c6e66bbc5f6d0c064e490e8);
+                var html_0fcc4df45e7dc0b5b4ab5da4065eea00 = $(`<div id="html_0fcc4df45e7dc0b5b4ab5da4065eea00" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Uma Devi<br>     <b>Bhairava:</b> Bhuteshwar<br>     <b>Body Part:</b> Ringlets of hair<br>     <b>Location:</b> Mathura, Uttar Pradesh , India     </div>`)[0];
+                popup_ba7482bdbc3cf63cd6e2f8844874bb0d.setContent(html_0fcc4df45e7dc0b5b4ab5da4065eea00);
             
         
 
-        marker_0683400a0e9798789888ad24c379d49f.bindPopup(popup_5aacb19253b8bea57c116ca12cfe447a)
+        marker_aad4d497da63e476b6c2b38171c91f76.bindPopup(popup_ba7482bdbc3cf63cd6e2f8844874bb0d)
         ;
 
         
     
     
-            var marker_d4d611b775cd2500bc93022c261fdda4 = L.marker(
+            var marker_bbf7e7f69959a12a092c2b4574bf5b12 = L.marker(
                 [26.4876472, 74.5578484],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_6492b72e36a29a2e3c80671a39ac3f12 = new L.BeautifyIcon.icon(
+            var beautify_icon_3c5442939c786b23d92c43af371fe2fd = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -980,34 +980,34 @@
   "text": "22",
 }
             )
-            marker_d4d611b775cd2500bc93022c261fdda4.setIcon(beautify_icon_6492b72e36a29a2e3c80671a39ac3f12);
+            marker_bbf7e7f69959a12a092c2b4574bf5b12.setIcon(beautify_icon_3c5442939c786b23d92c43af371fe2fd);
         
     
-        var popup_e9f73fa3c491f8160d26c7bd4ddc1b55 = L.popup({
+        var popup_e6f4d700c88b0ac59a4dd9336a489784 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_038465c424e520c075f37ecb048b2769 = $(`<div id="html_038465c424e520c075f37ecb048b2769" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Gayatri Devi<br>     <b>Bhairava:</b> Sarvanandeshwar<br>     <b>Body Part:</b> Wrists<br>     <b>Location:</b> Ajmer, Rajasthan, India     </div>`)[0];
-                popup_e9f73fa3c491f8160d26c7bd4ddc1b55.setContent(html_038465c424e520c075f37ecb048b2769);
+                var html_ba62bfc40e048f77c785272f63d3c11c = $(`<div id="html_ba62bfc40e048f77c785272f63d3c11c" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Gayatri Devi<br>     <b>Bhairava:</b> Sarvanandeshwar<br>     <b>Body Part:</b> Wrists<br>     <b>Location:</b> Ajmer, Rajasthan, India     </div>`)[0];
+                popup_e6f4d700c88b0ac59a4dd9336a489784.setContent(html_ba62bfc40e048f77c785272f63d3c11c);
             
         
 
-        marker_d4d611b775cd2500bc93022c261fdda4.bindPopup(popup_e9f73fa3c491f8160d26c7bd4ddc1b55)
+        marker_bbf7e7f69959a12a092c2b4574bf5b12.bindPopup(popup_e6f4d700c88b0ac59a4dd9336a489784)
         ;
 
         
     
     
-            var marker_88b143e84fc55ebbc9b6603778cb1c83 = L.marker(
+            var marker_860cd0e55df0031acdb35296cc770db0 = L.marker(
                 [22.6466537, 75.9926784],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_ee1fafbc0bcad15077156f0b32bd1790 = new L.BeautifyIcon.icon(
+            var beautify_icon_d729fab3156b27a21b9544e65c3505f6 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1020,34 +1020,34 @@
   "text": "23",
 }
             )
-            marker_88b143e84fc55ebbc9b6603778cb1c83.setIcon(beautify_icon_ee1fafbc0bcad15077156f0b32bd1790);
+            marker_860cd0e55df0031acdb35296cc770db0.setIcon(beautify_icon_d729fab3156b27a21b9544e65c3505f6);
         
     
-        var popup_589028043ee3315bba6b1e24a2f10382 = L.popup({
+        var popup_4469b13c63c266e0a3c7d29caba41c6a = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_3911c0e513c05da825054400a5b5a5b0 = $(`<div id="html_3911c0e513c05da825054400a5b5a5b0" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Avanti Devi<br>     <b>Bhairava:</b> Lambkarneshwar<br>     <b>Body Part:</b> Elbow<br>     <b>Location:</b> Ujjaini, Madhya Pradesh, India     </div>`)[0];
-                popup_589028043ee3315bba6b1e24a2f10382.setContent(html_3911c0e513c05da825054400a5b5a5b0);
+                var html_b7d1c0715a5bfa73f13f538e86c39d55 = $(`<div id="html_b7d1c0715a5bfa73f13f538e86c39d55" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Avanti Devi<br>     <b>Bhairava:</b> Lambkarneshwar<br>     <b>Body Part:</b> Elbow<br>     <b>Location:</b> Ujjaini, Madhya Pradesh, India     </div>`)[0];
+                popup_4469b13c63c266e0a3c7d29caba41c6a.setContent(html_b7d1c0715a5bfa73f13f538e86c39d55);
             
         
 
-        marker_88b143e84fc55ebbc9b6603778cb1c83.bindPopup(popup_589028043ee3315bba6b1e24a2f10382)
+        marker_860cd0e55df0031acdb35296cc770db0.bindPopup(popup_4469b13c63c266e0a3c7d29caba41c6a)
         ;
 
         
     
     
-            var marker_fac8796a4f20b2f4e096efd155eaa30a = L.marker(
+            var marker_3e02626a2593e18c88e0b3975975f0ae = L.marker(
                 [22.46378, 73.515694],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_18a66e39a9e13ae1c3c0768af0f98bfe = new L.BeautifyIcon.icon(
+            var beautify_icon_15c5ec22f45dc568ba896bec5602f777 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1060,34 +1060,34 @@
   "text": "24",
 }
             )
-            marker_fac8796a4f20b2f4e096efd155eaa30a.setIcon(beautify_icon_18a66e39a9e13ae1c3c0768af0f98bfe);
+            marker_3e02626a2593e18c88e0b3975975f0ae.setIcon(beautify_icon_15c5ec22f45dc568ba896bec5602f777);
         
     
-        var popup_e55865103a5aaf31cfc13b82e0302926 = L.popup({
+        var popup_fc601e730d4eec8c8479872be319acf7 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_226aa02c2356417b1e065b8aadf91c54 = $(`<div id="html_226aa02c2356417b1e065b8aadf91c54" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahakali Devi<br>     <b>Bhairava:</b> Batuka Bhairava<br>     <b>Body Part:</b> Right leg toe<br>     <b>Location:</b> Pavagadh Hill, Panchmahal, Gujarat, India     </div>`)[0];
-                popup_e55865103a5aaf31cfc13b82e0302926.setContent(html_226aa02c2356417b1e065b8aadf91c54);
+                var html_162e6fda986babaef588496bf541030a = $(`<div id="html_162e6fda986babaef588496bf541030a" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahakali Devi<br>     <b>Bhairava:</b> Batuka Bhairava<br>     <b>Body Part:</b> Right leg toe<br>     <b>Location:</b> Pavagadh Hill, Panchmahal, Gujarat, India     </div>`)[0];
+                popup_fc601e730d4eec8c8479872be319acf7.setContent(html_162e6fda986babaef588496bf541030a);
             
         
 
-        marker_fac8796a4f20b2f4e096efd155eaa30a.bindPopup(popup_e55865103a5aaf31cfc13b82e0302926)
+        marker_3e02626a2593e18c88e0b3975975f0ae.bindPopup(popup_fc601e730d4eec8c8479872be319acf7)
         ;
 
         
     
     
-            var marker_9498671cb387c64ac5e58da875f43f30 = L.marker(
+            var marker_4f5df685e6222535bdc521d127de0527 = L.marker(
                 [24.3332794, 72.8496191],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_61b5b41f9235fd39bc95df9eecd79982 = new L.BeautifyIcon.icon(
+            var beautify_icon_5c8996203ebf3d3721565c8b8ce0487c = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1100,34 +1100,34 @@
   "text": "25",
 }
             )
-            marker_9498671cb387c64ac5e58da875f43f30.setIcon(beautify_icon_61b5b41f9235fd39bc95df9eecd79982);
+            marker_4f5df685e6222535bdc521d127de0527.setIcon(beautify_icon_5c8996203ebf3d3721565c8b8ce0487c);
         
     
-        var popup_f869bb2a7a4234a7e6daeda2885fc0b7 = L.popup({
+        var popup_3275631a6939f514c8a5385568f83e23 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_e8e92933f12988003db2a703d122e87e = $(`<div id="html_e8e92933f12988003db2a703d122e87e" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Amba<br>     <b>Bhairava:</b> Batuka Bhairava<br>     <b>Body Part:</b> Heart<br>     <b>Location:</b> Banaskantha, Gujarat, India     </div>`)[0];
-                popup_f869bb2a7a4234a7e6daeda2885fc0b7.setContent(html_e8e92933f12988003db2a703d122e87e);
+                var html_87c27116b3a3beefbef6addb18376df8 = $(`<div id="html_87c27116b3a3beefbef6addb18376df8" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Amba<br>     <b>Bhairava:</b> Batuka Bhairava<br>     <b>Body Part:</b> Heart<br>     <b>Location:</b> Banaskantha, Gujarat, India     </div>`)[0];
+                popup_3275631a6939f514c8a5385568f83e23.setContent(html_87c27116b3a3beefbef6addb18376df8);
             
         
 
-        marker_9498671cb387c64ac5e58da875f43f30.bindPopup(popup_f869bb2a7a4234a7e6daeda2885fc0b7)
+        marker_4f5df685e6222535bdc521d127de0527.bindPopup(popup_3275631a6939f514c8a5385568f83e23)
         ;
 
         
     
     
-            var marker_56c6312b62d6e68f209de2d8ebd8b8e6 = L.marker(
+            var marker_aebaaae23d3208fd9a07cbdf82d59ec2 = L.marker(
                 [25.5148718, 65.5193626],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_f2105e3b34907ef694b73355e9f38c85 = new L.BeautifyIcon.icon(
+            var beautify_icon_992fc26c8cb5c2fa63d9b7f27cf56c54 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1140,34 +1140,34 @@
   "text": "26",
 }
             )
-            marker_56c6312b62d6e68f209de2d8ebd8b8e6.setIcon(beautify_icon_f2105e3b34907ef694b73355e9f38c85);
+            marker_aebaaae23d3208fd9a07cbdf82d59ec2.setIcon(beautify_icon_992fc26c8cb5c2fa63d9b7f27cf56c54);
         
     
-        var popup_d13876fadeb4ac04d0a6871ba577dc2c = L.popup({
+        var popup_84114edcc7bbd99ffa03afcdff091215 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_74131d4e0b60ebd05bbddb7fc0fb2bc4 = $(`<div id="html_74131d4e0b60ebd05bbddb7fc0fb2bc4" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kottari Devi<br>     <b>Bhairava:</b> Bhimalochaneshwar<br>     <b>Body Part:</b> Bramharandhra (Part of the head)<br>     <b>Location:</b> Lasbela, Balochistan, Pakistan     </div>`)[0];
-                popup_d13876fadeb4ac04d0a6871ba577dc2c.setContent(html_74131d4e0b60ebd05bbddb7fc0fb2bc4);
+                var html_0f4b7afa5dd679e3adcded735fb56331 = $(`<div id="html_0f4b7afa5dd679e3adcded735fb56331" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kottari Devi<br>     <b>Bhairava:</b> Bhimalochaneshwar<br>     <b>Body Part:</b> Bramharandhra (Part of the head)<br>     <b>Location:</b> Lasbela, Balochistan, Pakistan     </div>`)[0];
+                popup_84114edcc7bbd99ffa03afcdff091215.setContent(html_0f4b7afa5dd679e3adcded735fb56331);
             
         
 
-        marker_56c6312b62d6e68f209de2d8ebd8b8e6.bindPopup(popup_d13876fadeb4ac04d0a6871ba577dc2c)
+        marker_aebaaae23d3208fd9a07cbdf82d59ec2.bindPopup(popup_84114edcc7bbd99ffa03afcdff091215)
         ;
 
         
     
     
-            var marker_897833b1b5a5f749c971e1e6bef64eeb = L.marker(
+            var marker_104fc787b99ff8a9404ca560460ceb34 = L.marker(
                 [20.9101099, 70.365279],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_b91fe3a1f5e2d5e572e72e47192a2118 = new L.BeautifyIcon.icon(
+            var beautify_icon_3a193e21894129a087ea748a4ad18397 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1180,34 +1180,34 @@
   "text": "27",
 }
             )
-            marker_897833b1b5a5f749c971e1e6bef64eeb.setIcon(beautify_icon_b91fe3a1f5e2d5e572e72e47192a2118);
+            marker_104fc787b99ff8a9404ca560460ceb34.setIcon(beautify_icon_3a193e21894129a087ea748a4ad18397);
         
     
-        var popup_6b1b3987f861f46aa526a64db1c05a47 = L.popup({
+        var popup_f1f2db719bd2b10d5f1f6f64e847dd4b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_2fb5904ea7d0ed3f0bdaab329fbe7abf = $(`<div id="html_2fb5904ea7d0ed3f0bdaab329fbe7abf" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Chandrabhaga<br>     <b>Bhairava:</b> Vakratundeshwar<br>     <b>Body Part:</b> Stomach<br>     <b>Location:</b> Veraval, Gir Somnath, Gujarat, India     </div>`)[0];
-                popup_6b1b3987f861f46aa526a64db1c05a47.setContent(html_2fb5904ea7d0ed3f0bdaab329fbe7abf);
+                var html_2c83989393eaaff5fbc6361d671e743f = $(`<div id="html_2c83989393eaaff5fbc6361d671e743f" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Chandrabhaga<br>     <b>Bhairava:</b> Vakratundeshwar<br>     <b>Body Part:</b> Stomach<br>     <b>Location:</b> Veraval, Gir Somnath, Gujarat, India     </div>`)[0];
+                popup_f1f2db719bd2b10d5f1f6f64e847dd4b.setContent(html_2c83989393eaaff5fbc6361d671e743f);
             
         
 
-        marker_897833b1b5a5f749c971e1e6bef64eeb.bindPopup(popup_6b1b3987f861f46aa526a64db1c05a47)
+        marker_104fc787b99ff8a9404ca560460ceb34.bindPopup(popup_f1f2db719bd2b10d5f1f6f64e847dd4b)
         ;
 
         
     
     
-            var marker_021cd580b2ea658f717ab546f0c031b0 = L.marker(
+            var marker_57b311a17cbcf3d1ff7d1dc38495dbaa = L.marker(
                 [20.0112475, 73.7902364],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_269e9a2c3c5443c6f892fabe4e5dd945 = new L.BeautifyIcon.icon(
+            var beautify_icon_5de39d9cc75f4ae9d9cc4c945fb19821 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1220,34 +1220,34 @@
   "text": "28",
 }
             )
-            marker_021cd580b2ea658f717ab546f0c031b0.setIcon(beautify_icon_269e9a2c3c5443c6f892fabe4e5dd945);
+            marker_57b311a17cbcf3d1ff7d1dc38495dbaa.setIcon(beautify_icon_5de39d9cc75f4ae9d9cc4c945fb19821);
         
     
-        var popup_e2e6b7ce38af6395ffa5205688cb5362 = L.popup({
+        var popup_e7891e2a7b70d0300225cf8b2750f4f9 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_47527dd16c603b3d6e16dfa49caee6c2 = $(`<div id="html_47527dd16c603b3d6e16dfa49caee6c2" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Bhadrakali devi<br>     <b>Bhairava:</b> Vikritaksheshwar<br>     <b>Body Part:</b> Chin (2 parts)<br>     <b>Location:</b> Nashik, Maharashtra, India     </div>`)[0];
-                popup_e2e6b7ce38af6395ffa5205688cb5362.setContent(html_47527dd16c603b3d6e16dfa49caee6c2);
+                var html_56e7316ddfdb07e9452a14bf8d4c7a4f = $(`<div id="html_56e7316ddfdb07e9452a14bf8d4c7a4f" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Bhadrakali devi<br>     <b>Bhairava:</b> Vikritaksheshwar<br>     <b>Body Part:</b> Chin (2 parts)<br>     <b>Location:</b> Nashik, Maharashtra, India     </div>`)[0];
+                popup_e7891e2a7b70d0300225cf8b2750f4f9.setContent(html_56e7316ddfdb07e9452a14bf8d4c7a4f);
             
         
 
-        marker_021cd580b2ea658f717ab546f0c031b0.bindPopup(popup_e2e6b7ce38af6395ffa5205688cb5362)
+        marker_57b311a17cbcf3d1ff7d1dc38495dbaa.bindPopup(popup_e7891e2a7b70d0300225cf8b2750f4f9)
         ;
 
         
     
     
-            var marker_7917f2364d19ae5a565f5c5691a0fe91 = L.marker(
+            var marker_d3983e3833946baee2072fa67c45dbf5 = L.marker(
                 [18.0086617, 76.0707924],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_52023cbe5db1c419566d0434c982c07c = new L.BeautifyIcon.icon(
+            var beautify_icon_f9450fea59a0cacc50034c02db84540f = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1260,34 +1260,34 @@
   "text": "29",
 }
             )
-            marker_7917f2364d19ae5a565f5c5691a0fe91.setIcon(beautify_icon_52023cbe5db1c419566d0434c982c07c);
+            marker_d3983e3833946baee2072fa67c45dbf5.setIcon(beautify_icon_f9450fea59a0cacc50034c02db84540f);
         
     
-        var popup_4f1fd40392ea0b7f71f73ad5d233fc22 = L.popup({
+        var popup_3ce485cf5a86fb38aff1974d39e094fe = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_f1439e8c9f8c7ec27b0a182c78f8bcd7 = $(`<div id="html_f1439e8c9f8c7ec27b0a182c78f8bcd7" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Tuljabhavani Devi<br>     <b>Bhairava:</b> Bhairava<br>     <b>Body Part:</b> nan<br>     <b>Location:</b> Dharashiv, Maharashtra, India     </div>`)[0];
-                popup_4f1fd40392ea0b7f71f73ad5d233fc22.setContent(html_f1439e8c9f8c7ec27b0a182c78f8bcd7);
+                var html_32619377ac7d07dcc7adef4b16ac444e = $(`<div id="html_32619377ac7d07dcc7adef4b16ac444e" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Tuljabhavani Devi<br>     <b>Bhairava:</b> Bhairava<br>     <b>Body Part:</b> nan<br>     <b>Location:</b> Dharashiv, Maharashtra, India     </div>`)[0];
+                popup_3ce485cf5a86fb38aff1974d39e094fe.setContent(html_32619377ac7d07dcc7adef4b16ac444e);
             
         
 
-        marker_7917f2364d19ae5a565f5c5691a0fe91.bindPopup(popup_4f1fd40392ea0b7f71f73ad5d233fc22)
+        marker_d3983e3833946baee2072fa67c45dbf5.bindPopup(popup_3ce485cf5a86fb38aff1974d39e094fe)
         ;
 
         
     
     
-            var marker_2b3916636d84cafa96403ed946bd09e8 = L.marker(
+            var marker_30635cf6daebbc5285173310b8814070 = L.marker(
                 [12.9481954, 77.4944019],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_06f7a8fb226ee749222284579643d7d3 = new L.BeautifyIcon.icon(
+            var beautify_icon_396d097d945fe7232aa872c623bcfcbf = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1300,34 +1300,34 @@
   "text": "30",
 }
             )
-            marker_2b3916636d84cafa96403ed946bd09e8.setIcon(beautify_icon_06f7a8fb226ee749222284579643d7d3);
+            marker_30635cf6daebbc5285173310b8814070.setIcon(beautify_icon_396d097d945fe7232aa872c623bcfcbf);
         
     
-        var popup_f1d49e6a5169c663c12839a8bb400e6e = L.popup({
+        var popup_3270a82ae95741f49d63a4faee1c028b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_8e6e38f157786c220c0033c43bfdb3fb = $(`<div id="html_8e6e38f157786c220c0033c43bfdb3fb" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Goddess Tripura Sundari as Rajarajeshwari<br>     <b>Bhairava:</b> Abiru Bhairava<br>     <b>Body Part:</b> Ear (Karnabhaga)<br>     <b>Location:</b> Bengaluru, Karnataka, India      </div>`)[0];
-                popup_f1d49e6a5169c663c12839a8bb400e6e.setContent(html_8e6e38f157786c220c0033c43bfdb3fb);
+                var html_e3e7db1b8809b6df13693f68bafd9540 = $(`<div id="html_e3e7db1b8809b6df13693f68bafd9540" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Goddess Tripura Sundari as Rajarajeshwari<br>     <b>Bhairava:</b> Abiru Bhairava<br>     <b>Body Part:</b> Ear (Karnabhaga)<br>     <b>Location:</b> Bengaluru, Karnataka, India      </div>`)[0];
+                popup_3270a82ae95741f49d63a4faee1c028b.setContent(html_e3e7db1b8809b6df13693f68bafd9540);
             
         
 
-        marker_2b3916636d84cafa96403ed946bd09e8.bindPopup(popup_f1d49e6a5169c663c12839a8bb400e6e)
+        marker_30635cf6daebbc5285173310b8814070.bindPopup(popup_3270a82ae95741f49d63a4faee1c028b)
         ;
 
         
     
     
-            var marker_4ec851133992b443fc90685bc58107df = L.marker(
+            var marker_2c4ea11020a66fe937e3601a7d23f955 = L.marker(
                 [8.1571873, 77.4661628],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_45dcf066c2432e0048721fdf42a784e8 = new L.BeautifyIcon.icon(
+            var beautify_icon_f75da89c5b59e75763f08c5864a1be83 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1340,34 +1340,34 @@
   "text": "31",
 }
             )
-            marker_4ec851133992b443fc90685bc58107df.setIcon(beautify_icon_45dcf066c2432e0048721fdf42a784e8);
+            marker_2c4ea11020a66fe937e3601a7d23f955.setIcon(beautify_icon_f75da89c5b59e75763f08c5864a1be83);
         
     
-        var popup_8723333a6459ce679ed7c58b5acd1501 = L.popup({
+        var popup_7af3106ae2739811ffcad82de77d903b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_d5dbcf5cfb261dc362b7cbe16d640aef = $(`<div id="html_d5dbcf5cfb261dc362b7cbe16d640aef" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Narayani<br>     <b>Bhairava:</b> Sihareshwar<br>     <b>Body Part:</b> Upper teeth<br>     <b>Location:</b> Kanyakumari, Tamil Nadu, India     </div>`)[0];
-                popup_8723333a6459ce679ed7c58b5acd1501.setContent(html_d5dbcf5cfb261dc362b7cbe16d640aef);
+                var html_0192147efc389410dd79f21584b855d4 = $(`<div id="html_0192147efc389410dd79f21584b855d4" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Narayani<br>     <b>Bhairava:</b> Sihareshwar<br>     <b>Body Part:</b> Upper teeth<br>     <b>Location:</b> Kanyakumari, Tamil Nadu, India     </div>`)[0];
+                popup_7af3106ae2739811ffcad82de77d903b.setContent(html_0192147efc389410dd79f21584b855d4);
             
         
 
-        marker_4ec851133992b443fc90685bc58107df.bindPopup(popup_8723333a6459ce679ed7c58b5acd1501)
+        marker_2c4ea11020a66fe937e3601a7d23f955.bindPopup(popup_7af3106ae2739811ffcad82de77d903b)
         ;
 
         
     
     
-            var marker_444b702bb11c4069a306f2353ed870d3 = L.marker(
+            var marker_ee2cae399ca5cf94c464897d2f904fd3 = L.marker(
                 [8.0879641, 77.5467414],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_af2beb3dfddef32e7878981965298e60 = new L.BeautifyIcon.icon(
+            var beautify_icon_3291e57d7687905e066bb6ee8d350d2b = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1380,34 +1380,34 @@
   "text": "32",
 }
             )
-            marker_444b702bb11c4069a306f2353ed870d3.setIcon(beautify_icon_af2beb3dfddef32e7878981965298e60);
+            marker_ee2cae399ca5cf94c464897d2f904fd3.setIcon(beautify_icon_3291e57d7687905e066bb6ee8d350d2b);
         
     
-        var popup_a5e564b8fae724dae36c582b25a1be8d = L.popup({
+        var popup_df284cd2ff6ca07cc6dd663eee29295a = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_5c2b627dec4bd441b4787012037b0ef0 = $(`<div id="html_5c2b627dec4bd441b4787012037b0ef0" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Sarvani<br>     <b>Bhairava:</b> Nimisheshwar<br>     <b>Body Part:</b> Back<br>     <b>Location:</b> Kanniyakumari, Tamil Nadu, India     </div>`)[0];
-                popup_a5e564b8fae724dae36c582b25a1be8d.setContent(html_5c2b627dec4bd441b4787012037b0ef0);
+                var html_820bbc0b72f3cf8c7070ad1e62bd5502 = $(`<div id="html_820bbc0b72f3cf8c7070ad1e62bd5502" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Sarvani<br>     <b>Bhairava:</b> Nimisheshwar<br>     <b>Body Part:</b> Back<br>     <b>Location:</b> Kanniyakumari, Tamil Nadu, India     </div>`)[0];
+                popup_df284cd2ff6ca07cc6dd663eee29295a.setContent(html_820bbc0b72f3cf8c7070ad1e62bd5502);
             
         
 
-        marker_444b702bb11c4069a306f2353ed870d3.bindPopup(popup_a5e564b8fae724dae36c582b25a1be8d)
+        marker_ee2cae399ca5cf94c464897d2f904fd3.bindPopup(popup_df284cd2ff6ca07cc6dd663eee29295a)
         ;
 
         
     
     
-            var marker_75e0ca4fa14dbf1a25be6c927298ce9a = L.marker(
+            var marker_913d65bbe2965f64fd4bc2ad74f436c3 = L.marker(
                 [8.6286105, 81.2007375],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_6434fa11207294b34db68a5715230e42 = new L.BeautifyIcon.icon(
+            var beautify_icon_08fc4c3ffcac608470399824f9ea9b16 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1420,34 +1420,34 @@
   "text": "33",
 }
             )
-            marker_75e0ca4fa14dbf1a25be6c927298ce9a.setIcon(beautify_icon_6434fa11207294b34db68a5715230e42);
+            marker_913d65bbe2965f64fd4bc2ad74f436c3.setIcon(beautify_icon_08fc4c3ffcac608470399824f9ea9b16);
         
     
-        var popup_9dffbfd5d0f15365134fd85a06bf833e = L.popup({
+        var popup_efde06a5551fb86071c4969e82b7ff8e = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_22170ab429b6b9c7bdb3ab67609c0183 = $(`<div id="html_22170ab429b6b9c7bdb3ab67609c0183" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Shankari Devi<br>     <b>Bhairava:</b> Trikoneshwar<br>     <b>Body Part:</b> Groin<br>     <b>Location:</b> Trincomalee, Eastern Province, Srilanka     </div>`)[0];
-                popup_9dffbfd5d0f15365134fd85a06bf833e.setContent(html_22170ab429b6b9c7bdb3ab67609c0183);
+                var html_b58c670fbd04ba477c0ccf4138bf186f = $(`<div id="html_b58c670fbd04ba477c0ccf4138bf186f" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Shankari Devi<br>     <b>Bhairava:</b> Trikoneshwar<br>     <b>Body Part:</b> Groin<br>     <b>Location:</b> Trincomalee, Eastern Province, Srilanka     </div>`)[0];
+                popup_efde06a5551fb86071c4969e82b7ff8e.setContent(html_b58c670fbd04ba477c0ccf4138bf186f);
             
         
 
-        marker_75e0ca4fa14dbf1a25be6c927298ce9a.bindPopup(popup_9dffbfd5d0f15365134fd85a06bf833e)
+        marker_913d65bbe2965f64fd4bc2ad74f436c3.bindPopup(popup_efde06a5551fb86071c4969e82b7ff8e)
         ;
 
         
     
     
-            var marker_1dff0527e2890d1918b2f7e3e39a50ae = L.marker(
+            var marker_5e963943229cb0f5dfededc587432bbf = L.marker(
                 [9.75, 80.166667],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_6af022eb257aa5c84ceae6ce6a3e8b05 = new L.BeautifyIcon.icon(
+            var beautify_icon_3c3b0b9f1f94526c7b6cd81f15b00c0e = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1460,34 +1460,34 @@
   "text": "34",
 }
             )
-            marker_1dff0527e2890d1918b2f7e3e39a50ae.setIcon(beautify_icon_6af022eb257aa5c84ceae6ce6a3e8b05);
+            marker_5e963943229cb0f5dfededc587432bbf.setIcon(beautify_icon_3c3b0b9f1f94526c7b6cd81f15b00c0e);
         
     
-        var popup_69825807c75ebc07cdb0dac4ad9240d4 = L.popup({
+        var popup_efe0852e440487c6b719a682768cadb6 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_380f3b6474d33fd1640aade7a5ff7834 = $(`<div id="html_380f3b6474d33fd1640aade7a5ff7834" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Indrakshi (Nagapooshani / Bhuvaneshvari)<br>     <b>Bhairava:</b> Rakshaseshwar (Nayanair)<br>     <b>Body Part:</b> Silambu (Anklets)<br>     <b>Location:</b> Jaffna Peninsula, Northern Province, Srilanka     </div>`)[0];
-                popup_69825807c75ebc07cdb0dac4ad9240d4.setContent(html_380f3b6474d33fd1640aade7a5ff7834);
+                var html_e106a8202c30ed2f088278cd3e6f2082 = $(`<div id="html_e106a8202c30ed2f088278cd3e6f2082" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Indrakshi (Nagapooshani / Bhuvaneshvari)<br>     <b>Bhairava:</b> Rakshaseshwar (Nayanair)<br>     <b>Body Part:</b> Silambu (Anklets)<br>     <b>Location:</b> Jaffna Peninsula, Northern Province, Srilanka     </div>`)[0];
+                popup_efe0852e440487c6b719a682768cadb6.setContent(html_e106a8202c30ed2f088278cd3e6f2082);
             
         
 
-        marker_1dff0527e2890d1918b2f7e3e39a50ae.bindPopup(popup_69825807c75ebc07cdb0dac4ad9240d4)
+        marker_5e963943229cb0f5dfededc587432bbf.bindPopup(popup_efe0852e440487c6b719a682768cadb6)
         ;
 
         
     
     
-            var marker_def86ac689e85ee125359ec7c5ad7c6e = L.marker(
+            var marker_eefacb16411d7cd76ae3e64291d54b3f = L.marker(
                 [12.9647163, 79.9839686],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_441e136c2e29d3977ac101942e260c60 = new L.BeautifyIcon.icon(
+            var beautify_icon_b5cc505518a0711c9815e2930a7d8a6a = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1500,34 +1500,34 @@
   "text": "35",
 }
             )
-            marker_def86ac689e85ee125359ec7c5ad7c6e.setIcon(beautify_icon_441e136c2e29d3977ac101942e260c60);
+            marker_eefacb16411d7cd76ae3e64291d54b3f.setIcon(beautify_icon_b5cc505518a0711c9815e2930a7d8a6a);
         
     
-        var popup_4d51c68d7d63a988bd531233738da4da = L.popup({
+        var popup_ad7fc4b437cbc918a0e6e5e0da133e4d = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_125f952b64ee1dcf9d6be806e0f3edd7 = $(`<div id="html_125f952b64ee1dcf9d6be806e0f3edd7" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kamakshi Devi (Elavarkuzhali)<br>     <b>Bhairava:</b> Ekambareshwar<br>     <b>Body Part:</b> Odyanam (Navel)<br>     <b>Location:</b> Kanchipuram, Tamil Nadu, India      </div>`)[0];
-                popup_4d51c68d7d63a988bd531233738da4da.setContent(html_125f952b64ee1dcf9d6be806e0f3edd7);
+                var html_d661ac8b110b0e5c7380ea67c8a69f48 = $(`<div id="html_d661ac8b110b0e5c7380ea67c8a69f48" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kamakshi Devi (Elavarkuzhali)<br>     <b>Bhairava:</b> Ekambareshwar<br>     <b>Body Part:</b> Odyanam (Navel)<br>     <b>Location:</b> Kanchipuram, Tamil Nadu, India      </div>`)[0];
+                popup_ad7fc4b437cbc918a0e6e5e0da133e4d.setContent(html_d661ac8b110b0e5c7380ea67c8a69f48);
             
         
 
-        marker_def86ac689e85ee125359ec7c5ad7c6e.bindPopup(popup_4d51c68d7d63a988bd531233738da4da)
+        marker_eefacb16411d7cd76ae3e64291d54b3f.bindPopup(popup_ad7fc4b437cbc918a0e6e5e0da133e4d)
         ;
 
         
     
     
-            var marker_f5fbbe65cd3f12e850453707a3351e04 = L.marker(
+            var marker_9ecdef9a91853b7fd0da9ec03f5672e3 = L.marker(
                 [16.0737808, 78.8727065],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_6d8c1018cf8f43c422362d5bcb88c60b = new L.BeautifyIcon.icon(
+            var beautify_icon_2bb45f90e48bd2904dbda1630e2aa37d = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1540,34 +1540,34 @@
   "text": "36",
 }
             )
-            marker_f5fbbe65cd3f12e850453707a3351e04.setIcon(beautify_icon_6d8c1018cf8f43c422362d5bcb88c60b);
+            marker_9ecdef9a91853b7fd0da9ec03f5672e3.setIcon(beautify_icon_2bb45f90e48bd2904dbda1630e2aa37d);
         
     
-        var popup_4d6b4b78dcb22cc3e97178a8969e71f5 = L.popup({
+        var popup_824300c81235c6b02f0d11fcab15410b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_4e280605dcfdb24d87944b910d071563 = $(`<div id="html_4e280605dcfdb24d87944b910d071563" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Bhramarambika Devi<br>     <b>Bhairava:</b> Mallikarjuna<br>     <b>Body Part:</b> Neck<br>     <b>Location:</b> Nandyal, Andhra Pradesh, India     </div>`)[0];
-                popup_4d6b4b78dcb22cc3e97178a8969e71f5.setContent(html_4e280605dcfdb24d87944b910d071563);
+                var html_904b5fe9f96ca40b65cde6b49d3e279c = $(`<div id="html_904b5fe9f96ca40b65cde6b49d3e279c" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Bhramarambika Devi<br>     <b>Bhairava:</b> Mallikarjuna<br>     <b>Body Part:</b> Neck<br>     <b>Location:</b> Nandyal, Andhra Pradesh, India     </div>`)[0];
+                popup_824300c81235c6b02f0d11fcab15410b.setContent(html_904b5fe9f96ca40b65cde6b49d3e279c);
             
         
 
-        marker_f5fbbe65cd3f12e850453707a3351e04.bindPopup(popup_4d6b4b78dcb22cc3e97178a8969e71f5)
+        marker_9ecdef9a91853b7fd0da9ec03f5672e3.bindPopup(popup_824300c81235c6b02f0d11fcab15410b)
         ;
 
         
     
     
-            var marker_8f00b300c3c22f0d0a3b0b4fa2846cd9 = L.marker(
+            var marker_86970571c7ee3891134690f1c66c2637 = L.marker(
                 [16.791445, 82.059782],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_d3cf5ee02c00fa8b9b998637ac4cbb7d = new L.BeautifyIcon.icon(
+            var beautify_icon_84d33c260735650213d591800a9fdcaf = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1580,34 +1580,34 @@
   "text": "37",
 }
             )
-            marker_8f00b300c3c22f0d0a3b0b4fa2846cd9.setIcon(beautify_icon_d3cf5ee02c00fa8b9b998637ac4cbb7d);
+            marker_86970571c7ee3891134690f1c66c2637.setIcon(beautify_icon_84d33c260735650213d591800a9fdcaf);
         
     
-        var popup_d9ef9a6e6ec1d8cad98a274b4fbe27f1 = L.popup({
+        var popup_2055bcf37b76564f83669a621e53e752 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_aa85ba10892f4b711d51abff42d1dc90 = $(`<div id="html_aa85ba10892f4b711d51abff42d1dc90" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Manikyamba<br>     <b>Bhairava:</b> Bheemeshwar<br>     <b>Body Part:</b> Navel<br>     <b>Location:</b> Draksharamam, Andhra Pradesh, India     </div>`)[0];
-                popup_d9ef9a6e6ec1d8cad98a274b4fbe27f1.setContent(html_aa85ba10892f4b711d51abff42d1dc90);
+                var html_b80b1c686644f61aad2500f2eaf2a3b7 = $(`<div id="html_b80b1c686644f61aad2500f2eaf2a3b7" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Manikyamba<br>     <b>Bhairava:</b> Bheemeshwar<br>     <b>Body Part:</b> Navel<br>     <b>Location:</b> Draksharamam, Andhra Pradesh, India     </div>`)[0];
+                popup_2055bcf37b76564f83669a621e53e752.setContent(html_b80b1c686644f61aad2500f2eaf2a3b7);
             
         
 
-        marker_8f00b300c3c22f0d0a3b0b4fa2846cd9.bindPopup(popup_d9ef9a6e6ec1d8cad98a274b4fbe27f1)
+        marker_86970571c7ee3891134690f1c66c2637.bindPopup(popup_2055bcf37b76564f83669a621e53e752)
         ;
 
         
     
     
-            var marker_dd3697570a28e069ffe7caf4e37252f6 = L.marker(
+            var marker_9ff700813411911839faa6a29f468271 = L.marker(
                 [17.120459, 82.1842504],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_aacf32d37b034e05401a5d05022e331c = new L.BeautifyIcon.icon(
+            var beautify_icon_15d19dd7f8d82a3eda16a2c566a971c9 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1620,34 +1620,34 @@
   "text": "38",
 }
             )
-            marker_dd3697570a28e069ffe7caf4e37252f6.setIcon(beautify_icon_aacf32d37b034e05401a5d05022e331c);
+            marker_9ff700813411911839faa6a29f468271.setIcon(beautify_icon_15d19dd7f8d82a3eda16a2c566a971c9);
         
     
-        var popup_3b3ab2497aa20808f963e5b846d66ccc = L.popup({
+        var popup_b3d3c2350a1cd448c5f02d67b5eb5108 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_4a5790ac6bf4ac31c66f7a618fce0348 = $(`<div id="html_4a5790ac6bf4ac31c66f7a618fce0348" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Puruhutika<br>     <b>Bhairava:</b> Durvaseshwar<br>     <b>Body Part:</b> Hip part<br>     <b>Location:</b> Kakinada, Andhra Pradesh, India     </div>`)[0];
-                popup_3b3ab2497aa20808f963e5b846d66ccc.setContent(html_4a5790ac6bf4ac31c66f7a618fce0348);
+                var html_d7a7ee5be521c240510ca461cbb74513 = $(`<div id="html_d7a7ee5be521c240510ca461cbb74513" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Puruhutika<br>     <b>Bhairava:</b> Durvaseshwar<br>     <b>Body Part:</b> Hip part<br>     <b>Location:</b> Kakinada, Andhra Pradesh, India     </div>`)[0];
+                popup_b3d3c2350a1cd448c5f02d67b5eb5108.setContent(html_d7a7ee5be521c240510ca461cbb74513);
             
         
 
-        marker_dd3697570a28e069ffe7caf4e37252f6.bindPopup(popup_3b3ab2497aa20808f963e5b846d66ccc)
+        marker_9ff700813411911839faa6a29f468271.bindPopup(popup_b3d3c2350a1cd448c5f02d67b5eb5108)
         ;
 
         
     
     
-            var marker_181347cfba7bb4dab1ce0df45a6dc7da = L.marker(
+            var marker_5b50083937130d0f23458a90bb3d0256 = L.marker(
                 [18.9247414, 81.4819364],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_43e6075d0c7f7791dfa6caad4c87def3 = new L.BeautifyIcon.icon(
+            var beautify_icon_b09ca678002e796fee9b61f074fa338a = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1660,34 +1660,34 @@
   "text": "39",
 }
             )
-            marker_181347cfba7bb4dab1ce0df45a6dc7da.setIcon(beautify_icon_43e6075d0c7f7791dfa6caad4c87def3);
+            marker_5b50083937130d0f23458a90bb3d0256.setIcon(beautify_icon_b09ca678002e796fee9b61f074fa338a);
         
     
-        var popup_4fb4e362e3de0c466fb7cd7deefa2a6c = L.popup({
+        var popup_17dfae2e6f0a67e5d5beae6ff5cab95e = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_3fbb141cd5aa8977662ca8067d5ebefb = $(`<div id="html_3fbb141cd5aa8977662ca8067d5ebefb" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Danteshwari Devi<br>     <b>Bhairava:</b> Kapala Bhairava<br>     <b>Body Part:</b> Tooth<br>     <b>Location:</b> Bastar, Chhattisgarh, India     </div>`)[0];
-                popup_4fb4e362e3de0c466fb7cd7deefa2a6c.setContent(html_3fbb141cd5aa8977662ca8067d5ebefb);
+                var html_adbf06c6b3a0a907ee9bd9dbc6e786ff = $(`<div id="html_adbf06c6b3a0a907ee9bd9dbc6e786ff" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Danteshwari Devi<br>     <b>Bhairava:</b> Kapala Bhairava<br>     <b>Body Part:</b> Tooth<br>     <b>Location:</b> Bastar, Chhattisgarh, India     </div>`)[0];
+                popup_17dfae2e6f0a67e5d5beae6ff5cab95e.setContent(html_adbf06c6b3a0a907ee9bd9dbc6e786ff);
             
         
 
-        marker_181347cfba7bb4dab1ce0df45a6dc7da.bindPopup(popup_4fb4e362e3de0c466fb7cd7deefa2a6c)
+        marker_5b50083937130d0f23458a90bb3d0256.bindPopup(popup_17dfae2e6f0a67e5d5beae6ff5cab95e)
         ;
 
         
     
     
-            var marker_ed3f1d5e25c09efd431ffe889f946997 = L.marker(
+            var marker_8851be0714c1fd107f0ad50e54db970f = L.marker(
                 [19.2415887, 84.5215237],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_2599133bdcb352a7ef4177207784005f = new L.BeautifyIcon.icon(
+            var beautify_icon_5497ed1dd8bbd87394e1f4c8e0465377 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1700,34 +1700,34 @@
   "text": "40",
 }
             )
-            marker_ed3f1d5e25c09efd431ffe889f946997.setIcon(beautify_icon_2599133bdcb352a7ef4177207784005f);
+            marker_8851be0714c1fd107f0ad50e54db970f.setIcon(beautify_icon_5497ed1dd8bbd87394e1f4c8e0465377);
         
     
-        var popup_6bd6ac5358c8f6014283eb343f59f800 = L.popup({
+        var popup_77476ff58bca312e9844c13805dab852 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_297b35c7400aa1bf7f95f58f384b7b7b = $(`<div id="html_297b35c7400aa1bf7f95f58f384b7b7b" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Tara Tarini Devi<br>     <b>Bhairava:</b> Tumbeshwar<br>     <b>Body Part:</b> Breast<br>     <b>Location:</b> Ganjam, Odisha, India     </div>`)[0];
-                popup_6bd6ac5358c8f6014283eb343f59f800.setContent(html_297b35c7400aa1bf7f95f58f384b7b7b);
+                var html_f137c21ec5935080eb52bcf68beb3a5e = $(`<div id="html_f137c21ec5935080eb52bcf68beb3a5e" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Tara Tarini Devi<br>     <b>Bhairava:</b> Tumbeshwar<br>     <b>Body Part:</b> Breast<br>     <b>Location:</b> Ganjam, Odisha, India     </div>`)[0];
+                popup_77476ff58bca312e9844c13805dab852.setContent(html_f137c21ec5935080eb52bcf68beb3a5e);
             
         
 
-        marker_ed3f1d5e25c09efd431ffe889f946997.bindPopup(popup_6bd6ac5358c8f6014283eb343f59f800)
+        marker_8851be0714c1fd107f0ad50e54db970f.bindPopup(popup_77476ff58bca312e9844c13805dab852)
         ;
 
         
     
     
-            var marker_0e4b216832879868bb78f8a11806a32b = L.marker(
+            var marker_8a0a74848c13200373f2ed7bb9612f5b = L.marker(
                 [19.8343066, 85.6853295],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_919bb73dfebbbf9509da195385d4be88 = new L.BeautifyIcon.icon(
+            var beautify_icon_55891b61dc1eefb6aabfdf32d29575d1 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1740,34 +1740,34 @@
   "text": "41",
 }
             )
-            marker_0e4b216832879868bb78f8a11806a32b.setIcon(beautify_icon_919bb73dfebbbf9509da195385d4be88);
+            marker_8a0a74848c13200373f2ed7bb9612f5b.setIcon(beautify_icon_55891b61dc1eefb6aabfdf32d29575d1);
         
     
-        var popup_e682c9d8c6541bfe473b6faeec3da8d3 = L.popup({
+        var popup_ed941fc9fcea46c92ae9617804d1f1ae = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_55f24c4e2fdb0592352c67f638b2e7de = $(`<div id="html_55f24c4e2fdb0592352c67f638b2e7de" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Vimala Devi<br>     <b>Bhairava:</b> Jagannatheshwar<br>     <b>Body Part:</b> Foot<br>     <b>Location:</b> Puri, Odisha, India     </div>`)[0];
-                popup_e682c9d8c6541bfe473b6faeec3da8d3.setContent(html_55f24c4e2fdb0592352c67f638b2e7de);
+                var html_c09670af3827494a84c6c120d8f502b5 = $(`<div id="html_c09670af3827494a84c6c120d8f502b5" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Vimala Devi<br>     <b>Bhairava:</b> Jagannatheshwar<br>     <b>Body Part:</b> Foot<br>     <b>Location:</b> Puri, Odisha, India     </div>`)[0];
+                popup_ed941fc9fcea46c92ae9617804d1f1ae.setContent(html_c09670af3827494a84c6c120d8f502b5);
             
         
 
-        marker_0e4b216832879868bb78f8a11806a32b.bindPopup(popup_e682c9d8c6541bfe473b6faeec3da8d3)
+        marker_8a0a74848c13200373f2ed7bb9612f5b.bindPopup(popup_ed941fc9fcea46c92ae9617804d1f1ae)
         ;
 
         
     
     
-            var marker_684a53c35ddb87caf1a6b5a555e5853c = L.marker(
+            var marker_24fde2546f4204c2b6586f559caf2b30 = L.marker(
                 [20.8522696, 86.3385714],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_3132a85f08c48d9ef5e8561bdd03a5e3 = new L.BeautifyIcon.icon(
+            var beautify_icon_e66172ad76260240f42c4a7ffb476e63 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1780,34 +1780,34 @@
   "text": "42",
 }
             )
-            marker_684a53c35ddb87caf1a6b5a555e5853c.setIcon(beautify_icon_3132a85f08c48d9ef5e8561bdd03a5e3);
+            marker_24fde2546f4204c2b6586f559caf2b30.setIcon(beautify_icon_e66172ad76260240f42c4a7ffb476e63);
         
     
-        var popup_94ca4ef6c8c79ff0d99e91bf81b68db7 = L.popup({
+        var popup_b52c46c18902a3512dada18dfacb5fd1 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_2e9090709c27a1d440ebcaaa901b2de4 = $(`<div id="html_2e9090709c27a1d440ebcaaa901b2de4" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Biraja Devi<br>     <b>Bhairava:</b> Varaheshwar (Baraha)<br>     <b>Body Part:</b> Navel<br>     <b>Location:</b> Jajpur, Odisha, India     </div>`)[0];
-                popup_94ca4ef6c8c79ff0d99e91bf81b68db7.setContent(html_2e9090709c27a1d440ebcaaa901b2de4);
+                var html_a37e984bc50338d0536d2cf9b3415318 = $(`<div id="html_a37e984bc50338d0536d2cf9b3415318" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Biraja Devi<br>     <b>Bhairava:</b> Varaheshwar (Baraha)<br>     <b>Body Part:</b> Navel<br>     <b>Location:</b> Jajpur, Odisha, India     </div>`)[0];
+                popup_b52c46c18902a3512dada18dfacb5fd1.setContent(html_a37e984bc50338d0536d2cf9b3415318);
             
         
 
-        marker_684a53c35ddb87caf1a6b5a555e5853c.bindPopup(popup_94ca4ef6c8c79ff0d99e91bf81b68db7)
+        marker_24fde2546f4204c2b6586f559caf2b30.bindPopup(popup_b52c46c18902a3512dada18dfacb5fd1)
         ;
 
         
     
     
-            var marker_a05dbbba9f917706a20fbff6a5c9a628 = L.marker(
+            var marker_2c2f4f77037895e1856253ce2d2c128e = L.marker(
                 [22.2905507, 87.9158659],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_be54dacd2ce63ee11df9ed02ea39a0c6 = new L.BeautifyIcon.icon(
+            var beautify_icon_6097d9a29f1fed8651cb26017039a421 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1820,34 +1820,34 @@
   "text": "43",
 }
             )
-            marker_a05dbbba9f917706a20fbff6a5c9a628.setIcon(beautify_icon_be54dacd2ce63ee11df9ed02ea39a0c6);
+            marker_2c2f4f77037895e1856253ce2d2c128e.setIcon(beautify_icon_6097d9a29f1fed8651cb26017039a421);
         
     
-        var popup_a226993ec5f68bf08f99310ce69bd0d9 = L.popup({
+        var popup_3feabb4578821e178c435fede230d3f2 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_e9ab220e52bac8f98a6fdc4f9366ea71 = $(`<div id="html_e9ab220e52bac8f98a6fdc4f9366ea71" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kapalini Devi (Bhimarupa) also known as Bargabhima Devi<br>     <b>Bhairava:</b> Sarvanandeshwar<br>     <b>Body Part:</b> Left ankle<br>     <b>Location:</b> East Medinipur, West Bengal, India     </div>`)[0];
-                popup_a226993ec5f68bf08f99310ce69bd0d9.setContent(html_e9ab220e52bac8f98a6fdc4f9366ea71);
+                var html_d8228cd2c21fc608c9f9710098370b45 = $(`<div id="html_d8228cd2c21fc608c9f9710098370b45" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kapalini Devi (Bhimarupa) also known as Bargabhima Devi<br>     <b>Bhairava:</b> Sarvanandeshwar<br>     <b>Body Part:</b> Left ankle<br>     <b>Location:</b> East Medinipur, West Bengal, India     </div>`)[0];
+                popup_3feabb4578821e178c435fede230d3f2.setContent(html_d8228cd2c21fc608c9f9710098370b45);
             
         
 
-        marker_a05dbbba9f917706a20fbff6a5c9a628.bindPopup(popup_a226993ec5f68bf08f99310ce69bd0d9)
+        marker_2c2f4f77037895e1856253ce2d2c128e.bindPopup(popup_3feabb4578821e178c435fede230d3f2)
         ;
 
         
     
     
-            var marker_5f869ecda49a8615dd19a531d1a228fc = L.marker(
+            var marker_a701a00f2d7e857e5eb68df3a1462eef = L.marker(
                 [22.7300386, 87.8684678],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_fbb62277872ed64c293f749919562ba0 = new L.BeautifyIcon.icon(
+            var beautify_icon_ff2af1fb70291774932a05ee50139b2c = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1860,34 +1860,34 @@
   "text": "44",
 }
             )
-            marker_5f869ecda49a8615dd19a531d1a228fc.setIcon(beautify_icon_fbb62277872ed64c293f749919562ba0);
+            marker_a701a00f2d7e857e5eb68df3a1462eef.setIcon(beautify_icon_ff2af1fb70291774932a05ee50139b2c);
         
     
-        var popup_c90781f373c65f59f6424503fdf872de = L.popup({
+        var popup_fdf6a1eb8cacca4407c043300091ac22 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_3b0c3be48c3f6030b53259dbe97a3cfe = $(`<div id="html_3b0c3be48c3f6030b53259dbe97a3cfe" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kumari Devi<br>     <b>Bhairava:</b> Ghanteshwar<br>     <b>Body Part:</b> Right Shoulder<br>     <b>Location:</b> Hooghly, West Bengal, India     </div>`)[0];
-                popup_c90781f373c65f59f6424503fdf872de.setContent(html_3b0c3be48c3f6030b53259dbe97a3cfe);
+                var html_062af10f471547c12721d76906f3edc6 = $(`<div id="html_062af10f471547c12721d76906f3edc6" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kumari Devi<br>     <b>Bhairava:</b> Ghanteshwar<br>     <b>Body Part:</b> Right Shoulder<br>     <b>Location:</b> Hooghly, West Bengal, India     </div>`)[0];
+                popup_fdf6a1eb8cacca4407c043300091ac22.setContent(html_062af10f471547c12721d76906f3edc6);
             
         
 
-        marker_5f869ecda49a8615dd19a531d1a228fc.bindPopup(popup_c90781f373c65f59f6424503fdf872de)
+        marker_a701a00f2d7e857e5eb68df3a1462eef.bindPopup(popup_fdf6a1eb8cacca4407c043300091ac22)
         ;
 
         
     
     
-            var marker_0697138fd518e3d3ca2d15a635058f8c = L.marker(
+            var marker_63e15614100379482c5a0edfb23c7c8b = L.marker(
                 [22.600002, 88.361268],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_dbad30b487bf15b793755858edfe466f = new L.BeautifyIcon.icon(
+            var beautify_icon_1c174256ff5dc8774611da1a41ddc207 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1900,34 +1900,34 @@
   "text": "45",
 }
             )
-            marker_0697138fd518e3d3ca2d15a635058f8c.setIcon(beautify_icon_dbad30b487bf15b793755858edfe466f);
+            marker_63e15614100379482c5a0edfb23c7c8b.setIcon(beautify_icon_1c174256ff5dc8774611da1a41ddc207);
         
     
-        var popup_d1d0eab14c3caac8ed713e998128da17 = L.popup({
+        var popup_42374538a428bf71328d1acc4ffa05da = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_50345ae1575c18a2817872e8e4bedcb0 = $(`<div id="html_50345ae1575c18a2817872e8e4bedcb0" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Dhakeshwari (a form of Katyayini Mahishasurmardini Durga)<br>     <b>Bhairava:</b> Shiva<br>     <b>Body Part:</b> Gem of Sati's Crown<br>     <b>Location:</b> Kumartoli, Kolkata, West Bengal, India     </div>`)[0];
-                popup_d1d0eab14c3caac8ed713e998128da17.setContent(html_50345ae1575c18a2817872e8e4bedcb0);
+                var html_a0901ce87238d94a33a2f584e1847915 = $(`<div id="html_a0901ce87238d94a33a2f584e1847915" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Dhakeshwari (a form of Katyayini Mahishasurmardini Durga)<br>     <b>Bhairava:</b> Shiva<br>     <b>Body Part:</b> Gem of Sati's Crown<br>     <b>Location:</b> Kumartoli, Kolkata, West Bengal, India     </div>`)[0];
+                popup_42374538a428bf71328d1acc4ffa05da.setContent(html_a0901ce87238d94a33a2f584e1847915);
             
         
 
-        marker_0697138fd518e3d3ca2d15a635058f8c.bindPopup(popup_d1d0eab14c3caac8ed713e998128da17)
+        marker_63e15614100379482c5a0edfb23c7c8b.bindPopup(popup_42374538a428bf71328d1acc4ffa05da)
         ;
 
         
     
     
-            var marker_b26fb454a2d68a2a2e8621a1ac6984fa = L.marker(
+            var marker_e36688a0d254cf81966768160634c265 = L.marker(
                 [22.5153313, 88.3477052],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_68d160967336db7d83082f92d11292ae = new L.BeautifyIcon.icon(
+            var beautify_icon_6d2601a7554069c696d39727ca3a427c = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1940,34 +1940,34 @@
   "text": "46",
 }
             )
-            marker_b26fb454a2d68a2a2e8621a1ac6984fa.setIcon(beautify_icon_68d160967336db7d83082f92d11292ae);
+            marker_e36688a0d254cf81966768160634c265.setIcon(beautify_icon_6d2601a7554069c696d39727ca3a427c);
         
     
-        var popup_6c6b3bca1fca29ae2d1142729f70fc8e = L.popup({
+        var popup_369b365d6bbf90aaddb81f8d11ddf2ff = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_e861ed72fb0a7d28f2de856f0da8e614 = $(`<div id="html_e861ed72fb0a7d28f2de856f0da8e614" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kali Devi<br>     <b>Bhairava:</b> Nakuleshwar<br>     <b>Body Part:</b> Right toes<br>     <b>Location:</b> Kalighat, Kolkata, West Bengal, India     </div>`)[0];
-                popup_6c6b3bca1fca29ae2d1142729f70fc8e.setContent(html_e861ed72fb0a7d28f2de856f0da8e614);
+                var html_3fc143b0a1f2a4b934b1018f65972d1b = $(`<div id="html_3fc143b0a1f2a4b934b1018f65972d1b" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kali Devi<br>     <b>Bhairava:</b> Nakuleshwar<br>     <b>Body Part:</b> Right toes<br>     <b>Location:</b> Kalighat, Kolkata, West Bengal, India     </div>`)[0];
+                popup_369b365d6bbf90aaddb81f8d11ddf2ff.setContent(html_3fc143b0a1f2a4b934b1018f65972d1b);
             
         
 
-        marker_b26fb454a2d68a2a2e8621a1ac6984fa.bindPopup(popup_6c6b3bca1fca29ae2d1142729f70fc8e)
+        marker_e36688a0d254cf81966768160634c265.bindPopup(popup_369b365d6bbf90aaddb81f8d11ddf2ff)
         ;
 
         
     
     
-            var marker_a7656f6a4a70005be683760bdf64f1e3 = L.marker(
+            var marker_6b1920ac517b77017ae357b076c2c7ab = L.marker(
                 [22.295552, 89.103878],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_5e1d2950197b0f99fecffba0ed5776d1 = new L.BeautifyIcon.icon(
+            var beautify_icon_7706e54424c5cbdb7ff501f2300a47ee = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -1980,34 +1980,34 @@
   "text": "47",
 }
             )
-            marker_a7656f6a4a70005be683760bdf64f1e3.setIcon(beautify_icon_5e1d2950197b0f99fecffba0ed5776d1);
+            marker_6b1920ac517b77017ae357b076c2c7ab.setIcon(beautify_icon_7706e54424c5cbdb7ff501f2300a47ee);
         
     
-        var popup_dfda3f074bc3039173e3f6dc51bf5d54 = L.popup({
+        var popup_f15ed2dbfb74462b78f41a50fcd9305c = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_aa4adbb76dc18d95cc44ee44146566c0 = $(`<div id="html_aa4adbb76dc18d95cc44ee44146566c0" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jashoreshwari<br>     <b>Bhairava:</b> Chandeshwar<br>     <b>Body Part:</b> Palms of hands and soles of the feet<br>     <b>Location:</b> Ishwaripur, Satkhira, Bangladesh     </div>`)[0];
-                popup_dfda3f074bc3039173e3f6dc51bf5d54.setContent(html_aa4adbb76dc18d95cc44ee44146566c0);
+                var html_d860d471a54b0d96feb96a795190824a = $(`<div id="html_d860d471a54b0d96feb96a795190824a" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jashoreshwari<br>     <b>Bhairava:</b> Chandeshwar<br>     <b>Body Part:</b> Palms of hands and soles of the feet<br>     <b>Location:</b> Ishwaripur, Satkhira, Bangladesh     </div>`)[0];
+                popup_f15ed2dbfb74462b78f41a50fcd9305c.setContent(html_d860d471a54b0d96feb96a795190824a);
             
         
 
-        marker_a7656f6a4a70005be683760bdf64f1e3.bindPopup(popup_dfda3f074bc3039173e3f6dc51bf5d54)
+        marker_6b1920ac517b77017ae357b076c2c7ab.bindPopup(popup_f15ed2dbfb74462b78f41a50fcd9305c)
         ;
 
         
     
     
-            var marker_2951e4b3202624481782e577464e0a4a = L.marker(
+            var marker_8500752a024dd2272da08d300b920b92 = L.marker(
                 [22.83713, 90.273742],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_d836090c1c85d92ef4e5db5d94a2748d = new L.BeautifyIcon.icon(
+            var beautify_icon_f6022b986eddcf304ee1f54e00a7ade3 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2020,34 +2020,34 @@
   "text": "48",
 }
             )
-            marker_2951e4b3202624481782e577464e0a4a.setIcon(beautify_icon_d836090c1c85d92ef4e5db5d94a2748d);
+            marker_8500752a024dd2272da08d300b920b92.setIcon(beautify_icon_f6022b986eddcf304ee1f54e00a7ade3);
         
     
-        var popup_9d1c91f5107117b79f0c1b060a3c9815 = L.popup({
+        var popup_d8dab1c8f0b242e8ff98d30f8004d5c1 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_1e5b14216351dc1f65aa4c69609bdabb = $(`<div id="html_1e5b14216351dc1f65aa4c69609bdabb" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Sugandha<br>     <b>Bhairava:</b> Trayambakeshwar<br>     <b>Body Part:</b> Nose<br>     <b>Location:</b> Shikarpur, Barisal, Bangladesh     </div>`)[0];
-                popup_9d1c91f5107117b79f0c1b060a3c9815.setContent(html_1e5b14216351dc1f65aa4c69609bdabb);
+                var html_d44400eb7e5e5152d2b91af035106abc = $(`<div id="html_d44400eb7e5e5152d2b91af035106abc" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Sugandha<br>     <b>Bhairava:</b> Trayambakeshwar<br>     <b>Body Part:</b> Nose<br>     <b>Location:</b> Shikarpur, Barisal, Bangladesh     </div>`)[0];
+                popup_d8dab1c8f0b242e8ff98d30f8004d5c1.setContent(html_d44400eb7e5e5152d2b91af035106abc);
             
         
 
-        marker_2951e4b3202624481782e577464e0a4a.bindPopup(popup_9d1c91f5107117b79f0c1b060a3c9815)
+        marker_8500752a024dd2272da08d300b920b92.bindPopup(popup_d8dab1c8f0b242e8ff98d30f8004d5c1)
         ;
 
         
     
     
-            var marker_4e702d9a3eb34d3fd85cfebc47f8ad5c = L.marker(
+            var marker_f29aca9fa80d8d7017fa9468686b5f21 = L.marker(
                 [22.4225445, 91.7312913],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_8d5557c4050fefd75ae26721779fb534 = new L.BeautifyIcon.icon(
+            var beautify_icon_a3a33b64706b9f26dfee20a9dcc8dad0 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2060,34 +2060,34 @@
   "text": "49",
 }
             )
-            marker_4e702d9a3eb34d3fd85cfebc47f8ad5c.setIcon(beautify_icon_8d5557c4050fefd75ae26721779fb534);
+            marker_f29aca9fa80d8d7017fa9468686b5f21.setIcon(beautify_icon_a3a33b64706b9f26dfee20a9dcc8dad0);
         
     
-        var popup_4841ce120246d66e4adbffe5a7aa9185 = L.popup({
+        var popup_41b3b3eae14017e1024b68e0d01f1e00 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_dc0cbc164be10ad807a944803ec97f99 = $(`<div id="html_dc0cbc164be10ad807a944803ec97f99" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Chattal Bhawani Devi<br>     <b>Bhairava:</b> Chandrashekhar<br>     <b>Body Part:</b> upper teeth<br>     <b>Location:</b> Chittagong, Bangladesh     </div>`)[0];
-                popup_4841ce120246d66e4adbffe5a7aa9185.setContent(html_dc0cbc164be10ad807a944803ec97f99);
+                var html_f272669efe6f1202e78ab9a6337e371a = $(`<div id="html_f272669efe6f1202e78ab9a6337e371a" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Chattal Bhawani Devi<br>     <b>Bhairava:</b> Chandrashekhar<br>     <b>Body Part:</b> upper teeth<br>     <b>Location:</b> Chittagong, Bangladesh     </div>`)[0];
+                popup_41b3b3eae14017e1024b68e0d01f1e00.setContent(html_f272669efe6f1202e78ab9a6337e371a);
             
         
 
-        marker_4e702d9a3eb34d3fd85cfebc47f8ad5c.bindPopup(popup_4841ce120246d66e4adbffe5a7aa9185)
+        marker_f29aca9fa80d8d7017fa9468686b5f21.bindPopup(popup_41b3b3eae14017e1024b68e0d01f1e00)
         ;
 
         
     
     
-            var marker_d9ded87b3e855ca28dda564a3c31b316 = L.marker(
+            var marker_e173f621ee4cf7da632ee586c35bf4c9 = L.marker(
                 [23.5416162, 91.4917593],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_b3083433224913911622bf0142a5d231 = new L.BeautifyIcon.icon(
+            var beautify_icon_48f99cf60f6fa4c8ee0f04b171c736a1 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2100,34 +2100,34 @@
   "text": "50",
 }
             )
-            marker_d9ded87b3e855ca28dda564a3c31b316.setIcon(beautify_icon_b3083433224913911622bf0142a5d231);
+            marker_e173f621ee4cf7da632ee586c35bf4c9.setIcon(beautify_icon_48f99cf60f6fa4c8ee0f04b171c736a1);
         
     
-        var popup_7704a65dc06202bcb184d270d978f31d = L.popup({
+        var popup_050a188ae6dc266c825648de2b0af705 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_aac20e30dc6ad742b2989031a836844e = $(`<div id="html_aac20e30dc6ad742b2989031a836844e" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Goddess Tripura Sundari as Rajarajeshwari à¤¤à¤°à¤¤à¤¾à¤ à¤®à¤¾à¤¤à¤¾ à¤®à¤¹à¤¾à¤²à¤à¥à¤·à¤®à¥ à¤®à¤¹à¤¾à¤¸à¤°à¤¸à¥à¤µà¤¤à¥ à¤®à¤¹à¤¾à¤¦à¥à¤°à¥à¤à¤¾ à¤à¤à¤¤à¤®à¥à¤¬à¤¾ à¥¤<br>     <b>Bhairava:</b> Aanand Bhairava<br>     <b>Body Part:</b> nan<br>     <b>Location:</b> Gomati, Tripura, India     </div>`)[0];
-                popup_7704a65dc06202bcb184d270d978f31d.setContent(html_aac20e30dc6ad742b2989031a836844e);
+                var html_de24ccc10161fff1040f3647cf394207 = $(`<div id="html_de24ccc10161fff1040f3647cf394207" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Goddess Tripura Sundari as Rajarajeshwari à¤¤à¤°à¤¤à¤¾à¤ à¤®à¤¾à¤¤à¤¾ à¤®à¤¹à¤¾à¤²à¤à¥à¤·à¤®à¥ à¤®à¤¹à¤¾à¤¸à¤°à¤¸à¥à¤µà¤¤à¥ à¤®à¤¹à¤¾à¤¦à¥à¤°à¥à¤à¤¾ à¤à¤à¤¤à¤®à¥à¤¬à¤¾ à¥¤<br>     <b>Bhairava:</b> Aanand Bhairava<br>     <b>Body Part:</b> nan<br>     <b>Location:</b> Gomati, Tripura, India     </div>`)[0];
+                popup_050a188ae6dc266c825648de2b0af705.setContent(html_de24ccc10161fff1040f3647cf394207);
             
         
 
-        marker_d9ded87b3e855ca28dda564a3c31b316.bindPopup(popup_7704a65dc06202bcb184d270d978f31d)
+        marker_e173f621ee4cf7da632ee586c35bf4c9.bindPopup(popup_050a188ae6dc266c825648de2b0af705)
         ;
 
         
     
     
-            var marker_37b132bcb7b9cf92a86de70bfb5b460b = L.marker(
+            var marker_f8813e7d0b7a4056fad06434399fa49e = L.marker(
                 [23.5416162, 91.4917593],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_8055d66b760beee2120cdf9d82da7022 = new L.BeautifyIcon.icon(
+            var beautify_icon_4d0ee537faa26fa0c3347545a19903c7 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2140,34 +2140,34 @@
   "text": "51",
 }
             )
-            marker_37b132bcb7b9cf92a86de70bfb5b460b.setIcon(beautify_icon_8055d66b760beee2120cdf9d82da7022);
+            marker_f8813e7d0b7a4056fad06434399fa49e.setIcon(beautify_icon_4d0ee537faa26fa0c3347545a19903c7);
         
     
-        var popup_bf19249b72886b9c71775b063780e150 = L.popup({
+        var popup_21898c0f707209f1d432ae48240fc748 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_da8a437f0f0df5f328a50a0e409ecf58 = $(`<div id="html_da8a437f0f0df5f328a50a0e409ecf58" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Raja Rajeshwari Lalita Tripura Sundari (Third mahavidya) (main form of Parvati)<br>     <b>Bhairava:</b> Tripureshwar<br>     <b>Body Part:</b> Right leg<br>     <b>Location:</b> Gomati, Tripura, India     </div>`)[0];
-                popup_bf19249b72886b9c71775b063780e150.setContent(html_da8a437f0f0df5f328a50a0e409ecf58);
+                var html_4b5d50204117b3484dfaf0a2a43a40b4 = $(`<div id="html_4b5d50204117b3484dfaf0a2a43a40b4" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Raja Rajeshwari Lalita Tripura Sundari (Third mahavidya) (main form of Parvati)<br>     <b>Bhairava:</b> Tripureshwar<br>     <b>Body Part:</b> Right leg<br>     <b>Location:</b> Gomati, Tripura, India     </div>`)[0];
+                popup_21898c0f707209f1d432ae48240fc748.setContent(html_4b5d50204117b3484dfaf0a2a43a40b4);
             
         
 
-        marker_37b132bcb7b9cf92a86de70bfb5b460b.bindPopup(popup_bf19249b72886b9c71775b063780e150)
+        marker_f8813e7d0b7a4056fad06434399fa49e.bindPopup(popup_21898c0f707209f1d432ae48240fc748)
         ;
 
         
     
     
-            var marker_ea49e7edde44610db79c248cc94f726b = L.marker(
+            var marker_05b567e056412006b0018b2206997ace = L.marker(
                 [25.5, 92.25],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_111563d67730c0b2216fdf2afed7bef0 = new L.BeautifyIcon.icon(
+            var beautify_icon_f2d1e899b1cc7c8866030162b6b99a1b = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2180,34 +2180,34 @@
   "text": "52",
 }
             )
-            marker_ea49e7edde44610db79c248cc94f726b.setIcon(beautify_icon_111563d67730c0b2216fdf2afed7bef0);
+            marker_05b567e056412006b0018b2206997ace.setIcon(beautify_icon_f2d1e899b1cc7c8866030162b6b99a1b);
         
     
-        var popup_ae331f2628283cea5adac2f6e35bdcf5 = L.popup({
+        var popup_32009a8f0b7a91e9b3b963d76c98c6e6 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_f99a428311953af2584d5e86e35b7a22 = $(`<div id="html_f99a428311953af2584d5e86e35b7a22" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jayanti Devi<br>     <b>Bhairava:</b> Kramadishwar<br>     <b>Body Part:</b> Left thigh<br>     <b>Location:</b> Jaintia Hills, Meghalaya, India     </div>`)[0];
-                popup_ae331f2628283cea5adac2f6e35bdcf5.setContent(html_f99a428311953af2584d5e86e35b7a22);
+                var html_511fc5115664c75a37fe498a4539d9c2 = $(`<div id="html_511fc5115664c75a37fe498a4539d9c2" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jayanti Devi<br>     <b>Bhairava:</b> Kramadishwar<br>     <b>Body Part:</b> Left thigh<br>     <b>Location:</b> Jaintia Hills, Meghalaya, India     </div>`)[0];
+                popup_32009a8f0b7a91e9b3b963d76c98c6e6.setContent(html_511fc5115664c75a37fe498a4539d9c2);
             
         
 
-        marker_ea49e7edde44610db79c248cc94f726b.bindPopup(popup_ae331f2628283cea5adac2f6e35bdcf5)
+        marker_05b567e056412006b0018b2206997ace.bindPopup(popup_32009a8f0b7a91e9b3b963d76c98c6e6)
         ;
 
         
     
     
-            var marker_e4a79bc036a1d4e5749c8a5b5ca139c4 = L.marker(
+            var marker_050738abbb83ea37158c8c75bf492f70 = L.marker(
                 [26.167514, 91.71107],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_9160bbd35ec467b08555a0c5488b068f = new L.BeautifyIcon.icon(
+            var beautify_icon_fb36c7bf92f19ac3dbaa94fa6b0f8378 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2220,34 +2220,34 @@
   "text": "53",
 }
             )
-            marker_e4a79bc036a1d4e5749c8a5b5ca139c4.setIcon(beautify_icon_9160bbd35ec467b08555a0c5488b068f);
+            marker_050738abbb83ea37158c8c75bf492f70.setIcon(beautify_icon_fb36c7bf92f19ac3dbaa94fa6b0f8378);
         
     
-        var popup_54e2e5e34da90ac412f76e850c62e316 = L.popup({
+        var popup_865ca64a96a6eeea80113bf2ed53a96b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_b1bcbb8acc21b66ad1984eb1c1dede3b = $(`<div id="html_b1bcbb8acc21b66ad1984eb1c1dede3b" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kamakhya Devi<br>     <b>Bhairava:</b> Umanandeshwar or Bhayanandeshwar<br>     <b>Body Part:</b> Genitals<br>     <b>Location:</b> Guwahati, Assam, India     </div>`)[0];
-                popup_54e2e5e34da90ac412f76e850c62e316.setContent(html_b1bcbb8acc21b66ad1984eb1c1dede3b);
+                var html_f2ddb5efa3d1a9155f89aff9cd04d7df = $(`<div id="html_f2ddb5efa3d1a9155f89aff9cd04d7df" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kamakhya Devi<br>     <b>Bhairava:</b> Umanandeshwar or Bhayanandeshwar<br>     <b>Body Part:</b> Genitals<br>     <b>Location:</b> Guwahati, Assam, India     </div>`)[0];
+                popup_865ca64a96a6eeea80113bf2ed53a96b.setContent(html_f2ddb5efa3d1a9155f89aff9cd04d7df);
             
         
 
-        marker_e4a79bc036a1d4e5749c8a5b5ca139c4.bindPopup(popup_54e2e5e34da90ac412f76e850c62e316)
+        marker_050738abbb83ea37158c8c75bf492f70.bindPopup(popup_865ca64a96a6eeea80113bf2ed53a96b)
         ;
 
         
     
     
-            var marker_85abc1cba586d22494d2ee681e2da3c2 = L.marker(
+            var marker_e06d9f54763ace2631577e6cebcd696f = L.marker(
                 [26.5241586, 88.7197513],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_292e41f17ec2a67d8f8911551eb10da0 = new L.BeautifyIcon.icon(
+            var beautify_icon_00450e1f3fb69943163039c9df41bd52 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2260,34 +2260,34 @@
   "text": "54",
 }
             )
-            marker_85abc1cba586d22494d2ee681e2da3c2.setIcon(beautify_icon_292e41f17ec2a67d8f8911551eb10da0);
+            marker_e06d9f54763ace2631577e6cebcd696f.setIcon(beautify_icon_00450e1f3fb69943163039c9df41bd52);
         
     
-        var popup_55b524185acba3740e4bf9fabef3ba8c = L.popup({
+        var popup_ee08dbe2766350ff4e2761acb00e2b61 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_fbdc3e7b552171395789e3d68796b9f1 = $(`<div id="html_fbdc3e7b552171395789e3d68796b9f1" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Bhramari Devi<br>     <b>Bhairava:</b> Ambareshwar<br>     <b>Body Part:</b> Left leg<br>     <b>Location:</b> Jalpaiguri, West Bengal, India     </div>`)[0];
-                popup_55b524185acba3740e4bf9fabef3ba8c.setContent(html_fbdc3e7b552171395789e3d68796b9f1);
+                var html_73d00bfc7a93e958c0d4315833c2ac45 = $(`<div id="html_73d00bfc7a93e958c0d4315833c2ac45" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Bhramari Devi<br>     <b>Bhairava:</b> Ambareshwar<br>     <b>Body Part:</b> Left leg<br>     <b>Location:</b> Jalpaiguri, West Bengal, India     </div>`)[0];
+                popup_ee08dbe2766350ff4e2761acb00e2b61.setContent(html_73d00bfc7a93e958c0d4315833c2ac45);
             
         
 
-        marker_85abc1cba586d22494d2ee681e2da3c2.bindPopup(popup_55b524185acba3740e4bf9fabef3ba8c)
+        marker_e06d9f54763ace2631577e6cebcd696f.bindPopup(popup_ee08dbe2766350ff4e2761acb00e2b61)
         ;
 
         
     
     
-            var marker_01b6bfd16e39fac2e0aedbaaf05638f7 = L.marker(
+            var marker_36c27fbc8a5f4771d93a51df9c622e66 = L.marker(
                 [24.932011, 88.795077],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_8d18eb15696fb538a3016c32e5345bb7 = new L.BeautifyIcon.icon(
+            var beautify_icon_8a18acc18feb2a4cae5cff154aaa9edd = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2300,34 +2300,34 @@
   "text": "55",
 }
             )
-            marker_01b6bfd16e39fac2e0aedbaaf05638f7.setIcon(beautify_icon_8d18eb15696fb538a3016c32e5345bb7);
+            marker_36c27fbc8a5f4771d93a51df9c622e66.setIcon(beautify_icon_8a18acc18feb2a4cae5cff154aaa9edd);
         
     
-        var popup_47f69ef7af28b0349994c1ce66d7311c = L.popup({
+        var popup_adb62120b6caa63a0aa50e392f5c7a2c = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_73bd09aef65b2dce32da376c38e2fd00 = $(`<div id="html_73bd09aef65b2dce32da376c38e2fd00" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahalakshmi<br>     <b>Bhairava:</b> Sambaranandeshwar<br>     <b>Body Part:</b> Neck<br>     <b>Location:</b> Joinpur, Bangladesh     </div>`)[0];
-                popup_47f69ef7af28b0349994c1ce66d7311c.setContent(html_73bd09aef65b2dce32da376c38e2fd00);
+                var html_d70a923daa1dfb9802c7f0301b4b476c = $(`<div id="html_d70a923daa1dfb9802c7f0301b4b476c" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahalakshmi<br>     <b>Bhairava:</b> Sambaranandeshwar<br>     <b>Body Part:</b> Neck<br>     <b>Location:</b> Joinpur, Bangladesh     </div>`)[0];
+                popup_adb62120b6caa63a0aa50e392f5c7a2c.setContent(html_d70a923daa1dfb9802c7f0301b4b476c);
             
         
 
-        marker_01b6bfd16e39fac2e0aedbaaf05638f7.bindPopup(popup_47f69ef7af28b0349994c1ce66d7311c)
+        marker_36c27fbc8a5f4771d93a51df9c622e66.bindPopup(popup_adb62120b6caa63a0aa50e392f5c7a2c)
         ;
 
         
     
     
-            var marker_39ea6a0b0383c8a3ce43fac7c03aeef9 = L.marker(
+            var marker_392acf410cc3c13936edb5e2f393fa9c = L.marker(
                 [24.6354046, 89.4281833],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_fc6583e438f8eb80932428e207142ebe = new L.BeautifyIcon.icon(
+            var beautify_icon_fc06d6ff4bf09bff3dc6b02f82777c90 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2340,34 +2340,34 @@
   "text": "56",
 }
             )
-            marker_39ea6a0b0383c8a3ce43fac7c03aeef9.setIcon(beautify_icon_fc6583e438f8eb80932428e207142ebe);
+            marker_392acf410cc3c13936edb5e2f393fa9c.setIcon(beautify_icon_fc06d6ff4bf09bff3dc6b02f82777c90);
         
     
-        var popup_7fb80d44f1c9725b19c3838736ac85ae = L.popup({
+        var popup_629f66da37a1ca9761c0e9efd0a7c0d3 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_0d8500dfbb7cae91603ca0c052387e31 = $(`<div id="html_0d8500dfbb7cae91603ca0c052387e31" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Aparna Devi<br>     <b>Bhairava:</b> Vamaneshwar<br>     <b>Body Part:</b> Left anklet (ornament)<br>     <b>Location:</b> Bogra , Rajshahi Division, Bangladesh     </div>`)[0];
-                popup_7fb80d44f1c9725b19c3838736ac85ae.setContent(html_0d8500dfbb7cae91603ca0c052387e31);
+                var html_d5cbb7454df3589e01ece2d412e87307 = $(`<div id="html_d5cbb7454df3589e01ece2d412e87307" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Aparna Devi<br>     <b>Bhairava:</b> Vamaneshwar<br>     <b>Body Part:</b> Left anklet (ornament)<br>     <b>Location:</b> Bogra , Rajshahi Division, Bangladesh     </div>`)[0];
+                popup_629f66da37a1ca9761c0e9efd0a7c0d3.setContent(html_d5cbb7454df3589e01ece2d412e87307);
             
         
 
-        marker_39ea6a0b0383c8a3ce43fac7c03aeef9.bindPopup(popup_7fb80d44f1c9725b19c3838736ac85ae)
+        marker_392acf410cc3c13936edb5e2f393fa9c.bindPopup(popup_629f66da37a1ca9761c0e9efd0a7c0d3)
         ;
 
         
     
     
-            var marker_dcb44f0db874aa9d9b437d6d7a97b374 = L.marker(
+            var marker_3469e32307eb9aece55283f94d613754 = L.marker(
                 [24.098644, 88.255929],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_ea5c0793a4fc86f15f9e5494f48ee04d = new L.BeautifyIcon.icon(
+            var beautify_icon_e74fce44a7ae41e9e37238570f05c39a = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2380,34 +2380,34 @@
   "text": "57",
 }
             )
-            marker_dcb44f0db874aa9d9b437d6d7a97b374.setIcon(beautify_icon_ea5c0793a4fc86f15f9e5494f48ee04d);
+            marker_3469e32307eb9aece55283f94d613754.setIcon(beautify_icon_e74fce44a7ae41e9e37238570f05c39a);
         
     
-        var popup_575dcba0c2fa305378dac3cdd0612b0e = L.popup({
+        var popup_b7d1923884cee73f352e74776124ff5c = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_a4504ed2fd423aace8faf90e96909cc2 = $(`<div id="html_a4504ed2fd423aace8faf90e96909cc2" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Vimala Devi<br>     <b>Bhairava:</b> Sanvarteshwar<br>     <b>Body Part:</b> Crown<br>     <b>Location:</b> Murshidabad, West Bengal, India     </div>`)[0];
-                popup_575dcba0c2fa305378dac3cdd0612b0e.setContent(html_a4504ed2fd423aace8faf90e96909cc2);
+                var html_31e17c6d40c32e60827583de30d15c30 = $(`<div id="html_31e17c6d40c32e60827583de30d15c30" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Vimala Devi<br>     <b>Bhairava:</b> Sanvarteshwar<br>     <b>Body Part:</b> Crown<br>     <b>Location:</b> Murshidabad, West Bengal, India     </div>`)[0];
+                popup_b7d1923884cee73f352e74776124ff5c.setContent(html_31e17c6d40c32e60827583de30d15c30);
             
         
 
-        marker_dcb44f0db874aa9d9b437d6d7a97b374.bindPopup(popup_575dcba0c2fa305378dac3cdd0612b0e)
+        marker_3469e32307eb9aece55283f94d613754.bindPopup(popup_b7d1923884cee73f352e74776124ff5c)
         ;
 
         
     
     
-            var marker_363ae38be145f362e198bab18a81c5e0 = L.marker(
+            var marker_a28473993a048cb74bb4dc30c65e54f2 = L.marker(
                 [24.2966075, 87.835306],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_3a5e96910747b4050372cedb27367779 = new L.BeautifyIcon.icon(
+            var beautify_icon_b0b27de9f6344123235454ff8d7f6a3e = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2420,34 +2420,34 @@
   "text": "58",
 }
             )
-            marker_363ae38be145f362e198bab18a81c5e0.setIcon(beautify_icon_3a5e96910747b4050372cedb27367779);
+            marker_a28473993a048cb74bb4dc30c65e54f2.setIcon(beautify_icon_b0b27de9f6344123235454ff8d7f6a3e);
         
     
-        var popup_3a4381edd944f09e2c141085537ea879 = L.popup({
+        var popup_fea90c31df7350280e23cecdb23b023b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_7782bc120603036ba515c84b0ba7c915 = $(`<div id="html_7782bc120603036ba515c84b0ba7c915" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kalika Devi<br>     <b>Bhairava:</b> Jogeshwar<br>     <b>Body Part:</b> Stomach/Nauli<br>     <b>Location:</b> Birbhum, West Bengal, India      </div>`)[0];
-                popup_3a4381edd944f09e2c141085537ea879.setContent(html_7782bc120603036ba515c84b0ba7c915);
+                var html_408994777fe3a2e1b20895ef1580b8e8 = $(`<div id="html_408994777fe3a2e1b20895ef1580b8e8" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Kalika Devi<br>     <b>Bhairava:</b> Jogeshwar<br>     <b>Body Part:</b> Stomach/Nauli<br>     <b>Location:</b> Birbhum, West Bengal, India      </div>`)[0];
+                popup_fea90c31df7350280e23cecdb23b023b.setContent(html_408994777fe3a2e1b20895ef1580b8e8);
             
         
 
-        marker_363ae38be145f362e198bab18a81c5e0.bindPopup(popup_3a4381edd944f09e2c141085537ea879)
+        marker_a28473993a048cb74bb4dc30c65e54f2.bindPopup(popup_fea90c31df7350280e23cecdb23b023b)
         ;
 
         
     
     
-            var marker_604f63ebee47e8c573ffee15e2b2e4a2 = L.marker(
+            var marker_62d8fd7162cc3b031dc56784df3138fe = L.marker(
                 [24.1763069, 87.7859569],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_580cc634467dfd16ff0764e168a39fd2 = new L.BeautifyIcon.icon(
+            var beautify_icon_f98f67c33f8eb9b4bebdb6b5614b2cf1 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2460,34 +2460,34 @@
   "text": "59",
 }
             )
-            marker_604f63ebee47e8c573ffee15e2b2e4a2.setIcon(beautify_icon_580cc634467dfd16ff0764e168a39fd2);
+            marker_62d8fd7162cc3b031dc56784df3138fe.setIcon(beautify_icon_f98f67c33f8eb9b4bebdb6b5614b2cf1);
         
     
-        var popup_96ac28f8e7666d2bae2c4b2689502a5b = L.popup({
+        var popup_bd0144cea9a47ff2eb04f0db28062d2a = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_87e80bd241d9afafc1ceac670200cd61 = $(`<div id="html_87e80bd241d9afafc1ceac670200cd61" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Maa Tara (second mahavidya) (main form of Parvati)<br>     <b>Bhairava:</b> Chandrachuda Bhairava<br>     <b>Body Part:</b> Third eye<br>     <b>Location:</b> Birbhum, West Bengal, India     </div>`)[0];
-                popup_96ac28f8e7666d2bae2c4b2689502a5b.setContent(html_87e80bd241d9afafc1ceac670200cd61);
+                var html_14d04440648f7e50e32a0afd7d57addf = $(`<div id="html_14d04440648f7e50e32a0afd7d57addf" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Maa Tara (second mahavidya) (main form of Parvati)<br>     <b>Bhairava:</b> Chandrachuda Bhairava<br>     <b>Body Part:</b> Third eye<br>     <b>Location:</b> Birbhum, West Bengal, India     </div>`)[0];
+                popup_bd0144cea9a47ff2eb04f0db28062d2a.setContent(html_14d04440648f7e50e32a0afd7d57addf);
             
         
 
-        marker_604f63ebee47e8c573ffee15e2b2e4a2.bindPopup(popup_96ac28f8e7666d2bae2c4b2689502a5b)
+        marker_62d8fd7162cc3b031dc56784df3138fe.bindPopup(popup_bd0144cea9a47ff2eb04f0db28062d2a)
         ;
 
         
     
     
-            var marker_ca648c35d7333af4dd33502b2fc3cbae = L.marker(
+            var marker_eed730a48fce82316530bf30130979a6 = L.marker(
                 [23.8152993, 87.8000825],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_1cfadc54521774afb0cf4af9a4964e2b = new L.BeautifyIcon.icon(
+            var beautify_icon_c30b8428f24bb9d7fe8a1e54f0c23526 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2500,34 +2500,34 @@
   "text": "60",
 }
             )
-            marker_ca648c35d7333af4dd33502b2fc3cbae.setIcon(beautify_icon_1cfadc54521774afb0cf4af9a4964e2b);
+            marker_eed730a48fce82316530bf30130979a6.setIcon(beautify_icon_c30b8428f24bb9d7fe8a1e54f0c23526);
         
     
-        var popup_b6cc3d791eba9c5aabf60c54f631e2cc = L.popup({
+        var popup_628f081359fa36fa904a2fa800359119 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_c0c67e144f2c4837bd5791cd83c2c4ca = $(`<div id="html_c0c67e144f2c4837bd5791cd83c2c4ca" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Phullara Devi<br>     <b>Bhairava:</b> Vishveshwar<br>     <b>Body Part:</b> Lips<br>     <b>Location:</b> Labhpur, Birbhum, West Bengal, India     </div>`)[0];
-                popup_b6cc3d791eba9c5aabf60c54f631e2cc.setContent(html_c0c67e144f2c4837bd5791cd83c2c4ca);
+                var html_c8063110d3ba6149af0ec81dadcadedd = $(`<div id="html_c8063110d3ba6149af0ec81dadcadedd" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Phullara Devi<br>     <b>Bhairava:</b> Vishveshwar<br>     <b>Body Part:</b> Lips<br>     <b>Location:</b> Labhpur, Birbhum, West Bengal, India     </div>`)[0];
+                popup_628f081359fa36fa904a2fa800359119.setContent(html_c8063110d3ba6149af0ec81dadcadedd);
             
         
 
-        marker_ca648c35d7333af4dd33502b2fc3cbae.bindPopup(popup_b6cc3d791eba9c5aabf60c54f631e2cc)
+        marker_eed730a48fce82316530bf30130979a6.bindPopup(popup_628f081359fa36fa904a2fa800359119)
         ;
 
         
     
     
-            var marker_14a9dfdfffe010ce8cefaf2884815903 = L.marker(
+            var marker_43772a1f5ab08782814646f2148a981f = L.marker(
                 [23.7008699, 88.0473103],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_0d28270d080dc5bf83675f885e4efec7 = new L.BeautifyIcon.icon(
+            var beautify_icon_81a1946cb09aeee368aa9bf36436df78 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2540,34 +2540,34 @@
   "text": "61",
 }
             )
-            marker_14a9dfdfffe010ce8cefaf2884815903.setIcon(beautify_icon_0d28270d080dc5bf83675f885e4efec7);
+            marker_43772a1f5ab08782814646f2148a981f.setIcon(beautify_icon_81a1946cb09aeee368aa9bf36436df78);
         
     
-        var popup_d4796d42456956e26d6a21746e67067b = L.popup({
+        var popup_5304e11de8f8865df4a7223c531c2961 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_340fb0de5a79177a8d79e6d359810ebc = $(`<div id="html_340fb0de5a79177a8d79e6d359810ebc" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Goddess Bahuladevi<br>     <b>Bhairava:</b> Bhirukeshwar[27]<br>     <b>Body Part:</b> Left arm<br>     <b>Location:</b> Purba Bardhaman, West Bengal, India     </div>`)[0];
-                popup_d4796d42456956e26d6a21746e67067b.setContent(html_340fb0de5a79177a8d79e6d359810ebc);
+                var html_1ea0be2890da85c0fc88bfea8a285f9e = $(`<div id="html_1ea0be2890da85c0fc88bfea8a285f9e" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Goddess Bahuladevi<br>     <b>Bhairava:</b> Bhirukeshwar[27]<br>     <b>Body Part:</b> Left arm<br>     <b>Location:</b> Purba Bardhaman, West Bengal, India     </div>`)[0];
+                popup_5304e11de8f8865df4a7223c531c2961.setContent(html_1ea0be2890da85c0fc88bfea8a285f9e);
             
         
 
-        marker_14a9dfdfffe010ce8cefaf2884815903.bindPopup(popup_d4796d42456956e26d6a21746e67067b)
+        marker_43772a1f5ab08782814646f2148a981f.bindPopup(popup_5304e11de8f8865df4a7223c531c2961)
         ;
 
         
     
     
-            var marker_1216c3741bf867ae509a136f5b2986fb = L.marker(
+            var marker_5ad92d5f3e02f4709957c9a119b7fee7 = L.marker(
                 [23.2495714, 87.8681751],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_c301ad321a5e5d79ad63cc9a0d14c4ff = new L.BeautifyIcon.icon(
+            var beautify_icon_f80f6f7e160447f2e22d490907cf9338 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2580,34 +2580,34 @@
   "text": "62",
 }
             )
-            marker_1216c3741bf867ae509a136f5b2986fb.setIcon(beautify_icon_c301ad321a5e5d79ad63cc9a0d14c4ff);
+            marker_5ad92d5f3e02f4709957c9a119b7fee7.setIcon(beautify_icon_f80f6f7e160447f2e22d490907cf9338);
         
     
-        var popup_df1716c1a966597ad49fd467e7b088f1 = L.popup({
+        var popup_51419b3b6620073da1909149ca258509 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_f683aa779d8ae6786950a0ae7bb1a602 = $(`<div id="html_f683aa779d8ae6786950a0ae7bb1a602" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jogadya Devi<br>     <b>Bhairava:</b> Ksheerkantakeshwar<br>     <b>Body Part:</b> Great toe<br>     <b>Location:</b> Purba Bardhaman, West Bengal, India      </div>`)[0];
-                popup_df1716c1a966597ad49fd467e7b088f1.setContent(html_f683aa779d8ae6786950a0ae7bb1a602);
+                var html_6d62614eb8c253357b89de212ee4f42f = $(`<div id="html_6d62614eb8c253357b89de212ee4f42f" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jogadya Devi<br>     <b>Bhairava:</b> Ksheerkantakeshwar<br>     <b>Body Part:</b> Great toe<br>     <b>Location:</b> Purba Bardhaman, West Bengal, India      </div>`)[0];
+                popup_51419b3b6620073da1909149ca258509.setContent(html_6d62614eb8c253357b89de212ee4f42f);
             
         
 
-        marker_1216c3741bf867ae509a136f5b2986fb.bindPopup(popup_df1716c1a966597ad49fd467e7b088f1)
+        marker_5ad92d5f3e02f4709957c9a119b7fee7.bindPopup(popup_51419b3b6620073da1909149ca258509)
         ;
 
         
     
     
-            var marker_280586791f87b50041a4cbeeb33b91f2 = L.marker(
+            var marker_e05dc6eab4c7e5906fe39f4303b3a497 = L.marker(
                 [23.4926217, 87.7371023],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_66dfd017307f9ea6e6f4d0ca6506d687 = new L.BeautifyIcon.icon(
+            var beautify_icon_346f3a1c5b07cde5c962bab57beace06 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2620,34 +2620,34 @@
   "text": "63",
 }
             )
-            marker_280586791f87b50041a4cbeeb33b91f2.setIcon(beautify_icon_66dfd017307f9ea6e6f4d0ca6506d687);
+            marker_e05dc6eab4c7e5906fe39f4303b3a497.setIcon(beautify_icon_346f3a1c5b07cde5c962bab57beace06);
         
     
-        var popup_f049d9d1c9959c83c4776f0a1bd98f51 = L.popup({
+        var popup_98115167821027598b046d4b3f57a29b = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_e4d24bab48bfb0fee3fb599ed7a2d297 = $(`<div id="html_e4d24bab48bfb0fee3fb599ed7a2d297" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mangal Chandika<br>     <b>Bhairava:</b> Kapilambareshwar<br>     <b>Body Part:</b> Right wrist<br>     <b>Location:</b> Purba Bardhaman, West Bengal, India     </div>`)[0];
-                popup_f049d9d1c9959c83c4776f0a1bd98f51.setContent(html_e4d24bab48bfb0fee3fb599ed7a2d297);
+                var html_a986af0ab59eee5f04512073fd969ab3 = $(`<div id="html_a986af0ab59eee5f04512073fd969ab3" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mangal Chandika<br>     <b>Bhairava:</b> Kapilambareshwar<br>     <b>Body Part:</b> Right wrist<br>     <b>Location:</b> Purba Bardhaman, West Bengal, India     </div>`)[0];
+                popup_98115167821027598b046d4b3f57a29b.setContent(html_a986af0ab59eee5f04512073fd969ab3);
             
         
 
-        marker_280586791f87b50041a4cbeeb33b91f2.bindPopup(popup_f049d9d1c9959c83c4776f0a1bd98f51)
+        marker_e05dc6eab4c7e5906fe39f4303b3a497.bindPopup(popup_98115167821027598b046d4b3f57a29b)
         ;
 
         
     
     
-            var marker_9b8f193112a5ea5077a08c00e4f350ae = L.marker(
+            var marker_8db706aac1c2983d7be2121872fcfbd3 = L.marker(
                 [23.661154, 87.6962424],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_7a966e9ea0e54d467e538a486b068fc1 = new L.BeautifyIcon.icon(
+            var beautify_icon_0c6a5974fd170a460062961c3852239c = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2660,34 +2660,34 @@
   "text": "64",
 }
             )
-            marker_9b8f193112a5ea5077a08c00e4f350ae.setIcon(beautify_icon_7a966e9ea0e54d467e538a486b068fc1);
+            marker_8db706aac1c2983d7be2121872fcfbd3.setIcon(beautify_icon_0c6a5974fd170a460062961c3852239c);
         
     
-        var popup_4c0ed2e7ccc10a120add3b0882b48e7c = L.popup({
+        var popup_2fe51532a4dffdb91c80c93f6502a21e = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_1bba54d03a4a20ecae96cb84ddf296bf = $(`<div id="html_1bba54d03a4a20ecae96cb84ddf296bf" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Devgarbha Devi<br>     <b>Bhairava:</b> Rurunatheshwar<br>     <b>Body Part:</b> waist<br>     <b>Location:</b> Bolpur, Birbhum, West Bengal, India     </div>`)[0];
-                popup_4c0ed2e7ccc10a120add3b0882b48e7c.setContent(html_1bba54d03a4a20ecae96cb84ddf296bf);
+                var html_47cccae86a29a0b6c2414aa4bdd000c2 = $(`<div id="html_47cccae86a29a0b6c2414aa4bdd000c2" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Devgarbha Devi<br>     <b>Bhairava:</b> Rurunatheshwar<br>     <b>Body Part:</b> waist<br>     <b>Location:</b> Bolpur, Birbhum, West Bengal, India     </div>`)[0];
+                popup_2fe51532a4dffdb91c80c93f6502a21e.setContent(html_47cccae86a29a0b6c2414aa4bdd000c2);
             
         
 
-        marker_9b8f193112a5ea5077a08c00e4f350ae.bindPopup(popup_4c0ed2e7ccc10a120add3b0882b48e7c)
+        marker_8db706aac1c2983d7be2121872fcfbd3.bindPopup(popup_2fe51532a4dffdb91c80c93f6502a21e)
         ;
 
         
     
     
-            var marker_58296d2a4ad278756c3d1cef94d81788 = L.marker(
+            var marker_1bb8bfe2460d11d79c515182a3376704 = L.marker(
                 [23.9496876, 87.6829354],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_96dacd9a5a73429f4887684fc04a2a15 = new L.BeautifyIcon.icon(
+            var beautify_icon_564b3bca89a038994b76b523c45d3be1 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2700,34 +2700,34 @@
   "text": "65",
 }
             )
-            marker_58296d2a4ad278756c3d1cef94d81788.setIcon(beautify_icon_96dacd9a5a73429f4887684fc04a2a15);
+            marker_1bb8bfe2460d11d79c515182a3376704.setIcon(beautify_icon_564b3bca89a038994b76b523c45d3be1);
         
     
-        var popup_fd78d484e60dd1c947a2a6dec52600c1 = L.popup({
+        var popup_ed435f464e201dd466e1b7b2ba576cd2 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_1ed4b6b7cd9162ff1b3dabf5d51455cc = $(`<div id="html_1ed4b6b7cd9162ff1b3dabf5d51455cc" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Nandini<br>     <b>Bhairava:</b> Nandikeshwar<br>     <b>Body Part:</b> Necklace<br>     <b>Location:</b> Birbhum, West Bengal, India     </div>`)[0];
-                popup_fd78d484e60dd1c947a2a6dec52600c1.setContent(html_1ed4b6b7cd9162ff1b3dabf5d51455cc);
+                var html_ae42dec439d329677a211f057d69ed0b = $(`<div id="html_ae42dec439d329677a211f057d69ed0b" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Nandini<br>     <b>Bhairava:</b> Nandikeshwar<br>     <b>Body Part:</b> Necklace<br>     <b>Location:</b> Birbhum, West Bengal, India     </div>`)[0];
+                popup_ed435f464e201dd466e1b7b2ba576cd2.setContent(html_ae42dec439d329677a211f057d69ed0b);
             
         
 
-        marker_58296d2a4ad278756c3d1cef94d81788.bindPopup(popup_fd78d484e60dd1c947a2a6dec52600c1)
+        marker_1bb8bfe2460d11d79c515182a3376704.bindPopup(popup_ed435f464e201dd466e1b7b2ba576cd2)
         ;
 
         
     
     
-            var marker_317bd21072c67124a4f29a7501080a41 = L.marker(
+            var marker_10cb6a53c3b5c74f15b34a0d116c56bd = L.marker(
                 [23.9080538, 87.5277255],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_c96118fcaba8969a05aa597c2a8ffbd8 = new L.BeautifyIcon.icon(
+            var beautify_icon_371d745a539d3f033522a1b0ff05e092 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2740,34 +2740,34 @@
   "text": "66",
 }
             )
-            marker_317bd21072c67124a4f29a7501080a41.setIcon(beautify_icon_c96118fcaba8969a05aa597c2a8ffbd8);
+            marker_10cb6a53c3b5c74f15b34a0d116c56bd.setIcon(beautify_icon_371d745a539d3f033522a1b0ff05e092);
         
     
-        var popup_609de8f22e7d24574b438ec6d2ead1b1 = L.popup({
+        var popup_f8ea23ae5809e0b2aca270c84b2d5022 = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_bf77885f5fb2228a7a9f301022254c84 = $(`<div id="html_bf77885f5fb2228a7a9f301022254c84" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahishamardini devi<br>     <b>Bhairava:</b> Vakranatheshwar<br>     <b>Body Part:</b> Portion between the eyebrows<br>     <b>Location:</b> Siuri, Birbhum, West Bengal, India     </div>`)[0];
-                popup_609de8f22e7d24574b438ec6d2ead1b1.setContent(html_bf77885f5fb2228a7a9f301022254c84);
+                var html_cdc527e95f3f0912d993e5088c4c99a4 = $(`<div id="html_cdc527e95f3f0912d993e5088c4c99a4" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Mahishamardini devi<br>     <b>Bhairava:</b> Vakranatheshwar<br>     <b>Body Part:</b> Portion between the eyebrows<br>     <b>Location:</b> Siuri, Birbhum, West Bengal, India     </div>`)[0];
+                popup_f8ea23ae5809e0b2aca270c84b2d5022.setContent(html_cdc527e95f3f0912d993e5088c4c99a4);
             
         
 
-        marker_317bd21072c67124a4f29a7501080a41.bindPopup(popup_609de8f22e7d24574b438ec6d2ead1b1)
+        marker_10cb6a53c3b5c74f15b34a0d116c56bd.bindPopup(popup_f8ea23ae5809e0b2aca270c84b2d5022)
         ;
 
         
     
     
-            var marker_3dcf9f6d57fc70983d538ed06f967c39 = L.marker(
+            var marker_ecddefbca86c3cfc00a90cb71b0668f6 = L.marker(
                 [24.3284257, 86.7182506],
                 {
 }
-            ).addTo(map_97967ef378f3080dbe643b8b0befa98d);
+            ).addTo(map_6f4f700f5e957bcc2ad6a0f46e56173e);
         
     
-            var beautify_icon_3df925719a889f1d4946bf2f64194cd4 = new L.BeautifyIcon.icon(
+            var beautify_icon_89ec417778e20b209eb3df25246df316 = new L.BeautifyIcon.icon(
                 {
   "iconShape": "marker",
   "borderWidth": 3,
@@ -2780,21 +2780,21 @@
   "text": "67",
 }
             )
-            marker_3dcf9f6d57fc70983d538ed06f967c39.setIcon(beautify_icon_3df925719a889f1d4946bf2f64194cd4);
+            marker_ecddefbca86c3cfc00a90cb71b0668f6.setIcon(beautify_icon_89ec417778e20b209eb3df25246df316);
         
     
-        var popup_8700d4eb0651ab0f5127da37785ae16d = L.popup({
+        var popup_936e9475be55f96a93dc1965e4420cca = L.popup({
   "maxWidth": 300,
 });
 
         
             
-                var html_82a69af3a922f0f6a2d24b2e392f0bbc = $(`<div id="html_82a69af3a922f0f6a2d24b2e392f0bbc" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jayadurga Devi<br>     <b>Bhairava:</b> Baidyanath<br>     <b>Body Part:</b> Heart<br>     <b>Location:</b> Deoghar, Jharkhand, India     </div>`)[0];
-                popup_8700d4eb0651ab0f5127da37785ae16d.setContent(html_82a69af3a922f0f6a2d24b2e392f0bbc);
+                var html_070ca0ea6dccec1a11cf984416e576ac = $(`<div id="html_070ca0ea6dccec1a11cf984416e576ac" style="width: 100.0%; height: 100.0%;">     <b>Shakti:</b> Jayadurga Devi<br>     <b>Bhairava:</b> Baidyanath<br>     <b>Body Part:</b> Heart<br>     <b>Location:</b> Deoghar, Jharkhand, India     </div>`)[0];
+                popup_936e9475be55f96a93dc1965e4420cca.setContent(html_070ca0ea6dccec1a11cf984416e576ac);
             
         
 
-        marker_3dcf9f6d57fc70983d538ed06f967c39.bindPopup(popup_8700d4eb0651ab0f5127da37785ae16d)
+        marker_ecddefbca86c3cfc00a90cb71b0668f6.bindPopup(popup_936e9475be55f96a93dc1965e4420cca)
         ;
 
         
