@@ -1,1 +1,3 @@
 # SpatialAnalysisofSacredSites
+
+The Shakti Pithas represent one of Hinduism's most significant sacred geographical networks, consisting of temples and shrines dedicated to the divine feminine energy. According to Hindu mythology, these sacred sites emerged from the tragic tale of Sati and Shiva, where after Sati's self-immolation at her father Daksha's yajna, Lord Shiva carried her body while performing the cosmic tandava dance across the universe. To restore cosmic balance and calm the grieving Shiva, Lord Vishnu used his Sudarshana Chakra to dismember Sati's body, with the various parts falling at different locations across the Indian subcontinent.
