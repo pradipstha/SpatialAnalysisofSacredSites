@@ -6,5 +6,9 @@ The Shakti Pithas represent one of Hinduism's most significant sacred geographic
 
 Using Local Indicators of Spatial Association (LISA), I analyzed 67 locations to examine their spatial clustering behavior in the context of sacred geography. The results reveal that these sites do not occur at random but instead exhibit significant regional-scale spatial autocorrelation. This suggests that specific geographic areas gained prominence through culturally and historically embedded processes. The clustering patterns highlight how sacred landscapes—though rooted in mythological narratives—are influenced by tangible socio-spatial dynamics. This analysis underscores the non-random organization of sacred sites, reflecting long-term interactions between cultural memory, geographic context, and regional symbolism in the construction and persistence of sacred geographies.
 
-![image](https://github.com/user-attachments/assets/73bbebf0-5649-4105-9aed-0c9fcc02865f) | ![image](https://github.com/user-attachments/assets/643b720a-96ad-473c-867d-ab19b0a8e737)
+<p align="center">
+  <img src="https://github.com/user-attachments/assets/73bbebf0-5649-4105-9aed-0c9fcc02865f" width="45%" />
+  <img src="https://github.com/user-attachments/assets/643b720a-96ad-473c-867d-ab19b0a8e737" width="45%" />
+</p>
+
 
