@@ -1,0 +1,1551 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3e68ecc5f1fcf32000ca0d12d533ecd9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+</head>
+<body>
+    
+    
+
+
+<div style="position: fixed; top: 10px; left: 50%; transform: translateX(-50%); 
+     z-index: 9999; font-family: 'Noto Serif', serif; font-size: 20px; font-weight: bold; background-color: white; padding: 10px; opacity: 0.9;">
+     Mapping the Sacred: LISA Cluster Map of Shakti Pithas <br>
+</div>
+
+<div style="position: fixed; bottom: 30px; left: 75%; transform: translateX(-50%); 
+     z-index: 9999; font-size: 12px; background-color: white; padding: 10px; opacity: 0.9; width: 300px;">
+     <b>What This Map Shows</b><br>
+     <span style="color:green;">Green (HH)</span>: Locations where high-density points cluster together.<br>
+     <span style="color:lightblue;">LightBlue (LL)</span>: Locations where low-density points cluster together.<br>
+     <span style="color:orange;">Orange (LH)</span>: Outliers where low values are surrounded by high values.<br>
+     <span style="color:pink;">Pink (HL)</span>: Outliers where high values are surrounded by low values.<br>
+</div>
+    
+            <div class="folium-map" id="map_3e68ecc5f1fcf32000ca0d12d533ecd9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3e68ecc5f1fcf32000ca0d12d533ecd9 = L.map(
+                "map_3e68ecc5f1fcf32000ca0d12d533ecd9",
+                {
+                    center: [25.0, 85.0],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 5,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_39eb038c3c2f5a0a0ee83b30e6ee2718 = L.tileLayer(
+                "https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 20,
+  "maxNativeZoom": 20,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors \u0026copy; \u003ca href=\"https://carto.com/attributions\"\u003eCARTO\u003c/a\u003e",
+  "subdomains": "abcd",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_39eb038c3c2f5a0a0ee83b30e6ee2718.addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+            var circle_marker_80664bce7f6d4311f32c50e278ad51d3 = L.circleMarker(
+                [23.8152993, 87.8000825],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_8f7304b0e3274b4fb112d27d58d8e784 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_126fc51f0248a9b30bd4024223eee5ff = $(`<div id="html_126fc51f0248a9b30bd4024223eee5ff" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.60<br>Location: Labhpur, Birbhum, West Bengal, India<br></div>`)[0];
+                popup_8f7304b0e3274b4fb112d27d58d8e784.setContent(html_126fc51f0248a9b30bd4024223eee5ff);
+            
+        
+
+        circle_marker_80664bce7f6d4311f32c50e278ad51d3.bindPopup(popup_8f7304b0e3274b4fb112d27d58d8e784)
+        ;
+
+        
+    
+    
+            var circle_marker_c11cd8886623fb484d0ad1980eaad865 = L.circleMarker(
+                [23.7008699, 88.0473103],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_1100cfcc428ad45ab5664d66c8bc5022 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ff35fd49bc9483aaec3b9be259e5bdcd = $(`<div id="html_ff35fd49bc9483aaec3b9be259e5bdcd" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.61<br>Location: Purba Bardhaman, West Bengal, India<br></div>`)[0];
+                popup_1100cfcc428ad45ab5664d66c8bc5022.setContent(html_ff35fd49bc9483aaec3b9be259e5bdcd);
+            
+        
+
+        circle_marker_c11cd8886623fb484d0ad1980eaad865.bindPopup(popup_1100cfcc428ad45ab5664d66c8bc5022)
+        ;
+
+        
+    
+    
+            var circle_marker_2991c83b8065cc73ecc86c5ae526eed4 = L.circleMarker(
+                [23.9080538, 87.5277255],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_73a21cdfd809408a91e061b9d38c6a84 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_410da97dad96dee4e0e4d1b4e186fbaf = $(`<div id="html_410da97dad96dee4e0e4d1b4e186fbaf" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.59<br>Location: Siuri, Birbhum, West Bengal, India<br></div>`)[0];
+                popup_73a21cdfd809408a91e061b9d38c6a84.setContent(html_410da97dad96dee4e0e4d1b4e186fbaf);
+            
+        
+
+        circle_marker_2991c83b8065cc73ecc86c5ae526eed4.bindPopup(popup_73a21cdfd809408a91e061b9d38c6a84)
+        ;
+
+        
+    
+    
+            var circle_marker_012d69d7e7732f6343d3961cef7d1cd0 = L.circleMarker(
+                [22.6466537, 75.9926784],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_626e871880b3392315bb6d72e7c5aa7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_59e102140000cc61ec792c13b3447f1e = $(`<div id="html_59e102140000cc61ec792c13b3447f1e" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 0.73<br>Location: Ujjaini, Madhya Pradesh, India<br></div>`)[0];
+                popup_626e871880b3392315bb6d72e7c5aa7f.setContent(html_59e102140000cc61ec792c13b3447f1e);
+            
+        
+
+        circle_marker_012d69d7e7732f6343d3961cef7d1cd0.bindPopup(popup_626e871880b3392315bb6d72e7c5aa7f)
+        ;
+
+        
+    
+    
+            var circle_marker_2a1520c30cb6bad162e1284167792883 = L.circleMarker(
+                [24.6354046, 89.4281833],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_932e29cd6213fce01c2621a94a192483 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8d7eb7f63e2d7d77ba12a2981f06aeed = $(`<div id="html_8d7eb7f63e2d7d77ba12a2981f06aeed" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.67<br>Location: Bogra , Rajshahi Division, Bangladesh<br></div>`)[0];
+                popup_932e29cd6213fce01c2621a94a192483.setContent(html_8d7eb7f63e2d7d77ba12a2981f06aeed);
+            
+        
+
+        circle_marker_2a1520c30cb6bad162e1284167792883.bindPopup(popup_932e29cd6213fce01c2621a94a192483)
+        ;
+
+        
+    
+    
+            var circle_marker_084d447b18c6ff4570c6724635d70dbc = L.circleMarker(
+                [20.8522696, 86.3385714],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_2e6fb3680b3a16a7ffc813f741357840 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ee062386e15435d3be2827e6fafe5917 = $(`<div id="html_ee062386e15435d3be2827e6fafe5917" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.16<br>Location: Jajpur, Odisha, India<br></div>`)[0];
+                popup_2e6fb3680b3a16a7ffc813f741357840.setContent(html_ee062386e15435d3be2827e6fafe5917);
+            
+        
+
+        circle_marker_084d447b18c6ff4570c6724635d70dbc.bindPopup(popup_2e6fb3680b3a16a7ffc813f741357840)
+        ;
+
+        
+    
+    
+            var circle_marker_cced808ae26dcba1e6bd5d18b89c5fb0 = L.circleMarker(
+                [28.9481332, 83.900569],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_e2176ec8f0a0ddb52129600056881fa1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3283d489d13f5ecde4a1228336858c82 = $(`<div id="html_3283d489d13f5ecde4a1228336858c82" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.35<br>Location: Mustang, Nepal<br></div>`)[0];
+                popup_e2176ec8f0a0ddb52129600056881fa1.setContent(html_3283d489d13f5ecde4a1228336858c82);
+            
+        
+
+        circle_marker_cced808ae26dcba1e6bd5d18b89c5fb0.bindPopup(popup_e2176ec8f0a0ddb52129600056881fa1)
+        ;
+
+        
+    
+    
+            var circle_marker_3a42a4a37e5c1e60f07db3438bcdafdf = L.circleMarker(
+                [20.0112475, 73.7902364],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_02a9f13d6e56976bb92ebedcfd1cee53 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_2ae2f48ec77d07048f92b50c37eaafc0 = $(`<div id="html_2ae2f48ec77d07048f92b50c37eaafc0" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 1.21<br>Location: Nashik, Maharashtra, India<br></div>`)[0];
+                popup_02a9f13d6e56976bb92ebedcfd1cee53.setContent(html_2ae2f48ec77d07048f92b50c37eaafc0);
+            
+        
+
+        circle_marker_3a42a4a37e5c1e60f07db3438bcdafdf.bindPopup(popup_02a9f13d6e56976bb92ebedcfd1cee53)
+        ;
+
+        
+    
+    
+            var circle_marker_5c917d71a557c5efb50debfda98ea46f = L.circleMarker(
+                [25.5148718, 65.5193626],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_ecd8e8da5472ee0b0dcc9e312f405274 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_49d386605e78e4702a069e21fc4c47a2 = $(`<div id="html_49d386605e78e4702a069e21fc4c47a2" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 2.60<br>Location: Lasbela, Balochistan, Pakistan<br></div>`)[0];
+                popup_ecd8e8da5472ee0b0dcc9e312f405274.setContent(html_49d386605e78e4702a069e21fc4c47a2);
+            
+        
+
+        circle_marker_5c917d71a557c5efb50debfda98ea46f.bindPopup(popup_ecd8e8da5472ee0b0dcc9e312f405274)
+        ;
+
+        
+    
+    
+            var circle_marker_ea230529fa39c71d7d8ff33e01d7f7dc = L.circleMarker(
+                [25.5, 92.25],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_6820c0040b57b0c77bebd0bd1c5831f9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c246d94d82c6c4be3ce82083ce391e2 = $(`<div id="html_5c246d94d82c6c4be3ce82083ce391e2" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.11<br>Location: Jaintia Hills, Meghalaya, India<br></div>`)[0];
+                popup_6820c0040b57b0c77bebd0bd1c5831f9.setContent(html_5c246d94d82c6c4be3ce82083ce391e2);
+            
+        
+
+        circle_marker_ea230529fa39c71d7d8ff33e01d7f7dc.bindPopup(popup_6820c0040b57b0c77bebd0bd1c5831f9)
+        ;
+
+        
+    
+    
+            var circle_marker_a786d7fa2af6201f5acb190e22b94bf7 = L.circleMarker(
+                [22.295552, 89.103878],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_8ef882095fcb65c3f5fd8323987a2607 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_51c0b539df64206a4148108ff686116b = $(`<div id="html_51c0b539df64206a4148108ff686116b" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.57<br>Location: Ishwaripur, Satkhira, Bangladesh<br></div>`)[0];
+                popup_8ef882095fcb65c3f5fd8323987a2607.setContent(html_51c0b539df64206a4148108ff686116b);
+            
+        
+
+        circle_marker_a786d7fa2af6201f5acb190e22b94bf7.bindPopup(popup_8ef882095fcb65c3f5fd8323987a2607)
+        ;
+
+        
+    
+    
+            var circle_marker_4fcaddfa09a25e4c96c76115169dcfed = L.circleMarker(
+                [32.0768665, 76.2985872],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_82ce248d90824d521338d80e0b471673 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e4cbbfcb969d80b563eadbbbdc9da910 = $(`<div id="html_e4cbbfcb969d80b563eadbbbdc9da910" style="width: 100.0%; height: 100.0%;">Cluster: 4<br>Moran's I: -0.12<br>Location: Kangra, Himachal Pradesh, India<br></div>`)[0];
+                popup_82ce248d90824d521338d80e0b471673.setContent(html_e4cbbfcb969d80b563eadbbbdc9da910);
+            
+        
+
+        circle_marker_4fcaddfa09a25e4c96c76115169dcfed.bindPopup(popup_82ce248d90824d521338d80e0b471673)
+        ;
+
+        
+    
+    
+            var circle_marker_cf48b49625b58fba0c0ae1677e18f1f1 = L.circleMarker(
+                [22.5153313, 88.3477052],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_8c97005b03bcc5c19ba15dbc3ef4b21e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02a1334c4e7edc1726906749e6bb3654 = $(`<div id="html_02a1334c4e7edc1726906749e6bb3654" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.65<br>Location: Kalighat, Kolkata, West Bengal, India<br></div>`)[0];
+                popup_8c97005b03bcc5c19ba15dbc3ef4b21e.setContent(html_02a1334c4e7edc1726906749e6bb3654);
+            
+        
+
+        circle_marker_cf48b49625b58fba0c0ae1677e18f1f1.bindPopup(popup_8c97005b03bcc5c19ba15dbc3ef4b21e)
+        ;
+
+        
+    
+    
+            var circle_marker_34756c8916ce6d2f5de530d799914573 = L.circleMarker(
+                [26.167514, 91.71107],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_77bf6698d60cb49261203d4f07eca009 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_06efa57d41f52b76030ef3ec6448ce2a = $(`<div id="html_06efa57d41f52b76030ef3ec6448ce2a" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.12<br>Location: Guwahati, Assam, India<br></div>`)[0];
+                popup_77bf6698d60cb49261203d4f07eca009.setContent(html_06efa57d41f52b76030ef3ec6448ce2a);
+            
+        
+
+        circle_marker_34756c8916ce6d2f5de530d799914573.bindPopup(popup_77bf6698d60cb49261203d4f07eca009)
+        ;
+
+        
+    
+    
+            var circle_marker_41bb2094a06f76e9d1753c6a25d12d66 = L.circleMarker(
+                [23.661154, 87.6962424],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_0213cdc03fbb7dbdbbf61a8931d98425 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b9bf75579f2f1d7f77f3d603ea6d74c7 = $(`<div id="html_b9bf75579f2f1d7f77f3d603ea6d74c7" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.60<br>Location: Bolpur, Birbhum, West Bengal, India<br></div>`)[0];
+                popup_0213cdc03fbb7dbdbbf61a8931d98425.setContent(html_b9bf75579f2f1d7f77f3d603ea6d74c7);
+            
+        
+
+        circle_marker_41bb2094a06f76e9d1753c6a25d12d66.bindPopup(popup_0213cdc03fbb7dbdbbf61a8931d98425)
+        ;
+
+        
+    
+    
+            var circle_marker_999979cfee97fcaf2461f318e72e8fd5 = L.circleMarker(
+                [8.0879641, 77.5467414],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_df9ec4ecc334da86e14b54eeed1a5dfd = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6534449db72c64315cdc58baab2828b3 = $(`<div id="html_6534449db72c64315cdc58baab2828b3" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 1.14<br>Location: Kanniyakumari, Tamil Nadu, India<br></div>`)[0];
+                popup_df9ec4ecc334da86e14b54eeed1a5dfd.setContent(html_6534449db72c64315cdc58baab2828b3);
+            
+        
+
+        circle_marker_999979cfee97fcaf2461f318e72e8fd5.bindPopup(popup_df9ec4ecc334da86e14b54eeed1a5dfd)
+        ;
+
+        
+    
+    
+            var circle_marker_dec3b83f14b092752052c63deeaa3467 = L.circleMarker(
+                [32.085182, 76.511784],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_171ed6a5ee7500c576290a70bcfc5d42 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_151814191a6fbd7d316a350b13bbd019 = $(`<div id="html_151814191a6fbd7d316a350b13bbd019" style="width: 100.0%; height: 100.0%;">Cluster: 4<br>Moran's I: -0.11<br>Location: Kangra, Himachal Pradesh, India<br></div>`)[0];
+                popup_171ed6a5ee7500c576290a70bcfc5d42.setContent(html_151814191a6fbd7d316a350b13bbd019);
+            
+        
+
+        circle_marker_dec3b83f14b092752052c63deeaa3467.bindPopup(popup_171ed6a5ee7500c576290a70bcfc5d42)
+        ;
+
+        
+    
+    
+            var circle_marker_4703d6fcf01a68ac1a48e848b9d8ba4e = L.circleMarker(
+                [24.098644, 88.255929],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_2f7e57f7955a56d2716cf457d3503907 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b46bc209cf853ccb2a00eea4d53fc11b = $(`<div id="html_b46bc209cf853ccb2a00eea4d53fc11b" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.60<br>Location: Murshidabad, West Bengal, India<br></div>`)[0];
+                popup_2f7e57f7955a56d2716cf457d3503907.setContent(html_b46bc209cf853ccb2a00eea4d53fc11b);
+            
+        
+
+        circle_marker_4703d6fcf01a68ac1a48e848b9d8ba4e.bindPopup(popup_2f7e57f7955a56d2716cf457d3503907)
+        ;
+
+        
+    
+    
+            var circle_marker_9857a47a9580d911c593c8f148cce3e3 = L.circleMarker(
+                [22.7300386, 87.8684678],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_ded734f4edaf29dfceeab34b08454921 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_c588b9a3eb12445b13c6cbcb94839402 = $(`<div id="html_c588b9a3eb12445b13c6cbcb94839402" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.67<br>Location: Hooghly, West Bengal, India<br></div>`)[0];
+                popup_ded734f4edaf29dfceeab34b08454921.setContent(html_c588b9a3eb12445b13c6cbcb94839402);
+            
+        
+
+        circle_marker_9857a47a9580d911c593c8f148cce3e3.bindPopup(popup_ded734f4edaf29dfceeab34b08454921)
+        ;
+
+        
+    
+    
+            var circle_marker_be375885cdda3fa5bd4a9b9d8f9e476d = L.circleMarker(
+                [26.5241586, 88.7197513],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_72a1704837769ee9e2d4a57f4fc27a8e = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_842a3c6760545ec2295aea4695d7e821 = $(`<div id="html_842a3c6760545ec2295aea4695d7e821" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.27<br>Location: Jalpaiguri, West Bengal, India<br></div>`)[0];
+                popup_72a1704837769ee9e2d4a57f4fc27a8e.setContent(html_842a3c6760545ec2295aea4695d7e821);
+            
+        
+
+        circle_marker_be375885cdda3fa5bd4a9b9d8f9e476d.bindPopup(popup_72a1704837769ee9e2d4a57f4fc27a8e)
+        ;
+
+        
+    
+    
+            var circle_marker_489984ca88f8bdcaf9a19499ccb59b1d = L.circleMarker(
+                [31.0678394, 81.3119303],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_f4bf025c20b05c78686c13928b3d4769 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c511dab94a48d7d80e203f6981cd4bc = $(`<div id="html_5c511dab94a48d7d80e203f6981cd4bc" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.35<br>Location:  Mount Kailash, Tibet, China<br></div>`)[0];
+                popup_f4bf025c20b05c78686c13928b3d4769.setContent(html_5c511dab94a48d7d80e203f6981cd4bc);
+            
+        
+
+        circle_marker_489984ca88f8bdcaf9a19499ccb59b1d.bindPopup(popup_f4bf025c20b05c78686c13928b3d4769)
+        ;
+
+        
+    
+    
+            var circle_marker_b66f69d93ec22dcb5a662ef5485104da = L.circleMarker(
+                [26.4876472, 74.5578484],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_cb9d911def2536979a499db7c994ab08 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1fab3fbc5e565113945a89a9d83887a3 = $(`<div id="html_1fab3fbc5e565113945a89a9d83887a3" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 0.62<br>Location: Ajmer, Rajasthan, India<br></div>`)[0];
+                popup_cb9d911def2536979a499db7c994ab08.setContent(html_1fab3fbc5e565113945a89a9d83887a3);
+            
+        
+
+        circle_marker_b66f69d93ec22dcb5a662ef5485104da.bindPopup(popup_cb9d911def2536979a499db7c994ab08)
+        ;
+
+        
+    
+    
+            var circle_marker_b8015d3ffa65192f411180c989c76c36 = L.circleMarker(
+                [26.727514, 85.925666],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_1359ccc1791ee91d1f6dcd8d26c45eff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_5c616ef94105de677ad0e2cb28b5ebcc = $(`<div id="html_5c616ef94105de677ad0e2cb28b5ebcc" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.10<br>Location: Janakpur, Madhesh Province, Nepal<br></div>`)[0];
+                popup_1359ccc1791ee91d1f6dcd8d26c45eff.setContent(html_5c616ef94105de677ad0e2cb28b5ebcc);
+            
+        
+
+        circle_marker_b8015d3ffa65192f411180c989c76c36.bindPopup(popup_1359ccc1791ee91d1f6dcd8d26c45eff)
+        ;
+
+        
+    
+    
+            var circle_marker_316cc051e38103f697ad24dd880af7b4 = L.circleMarker(
+                [9.75, 80.166667],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_b01e714ab9c6dd684bad0ab0899adaa5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ac6040e9a8ee8cc1f32957bd94e815bc = $(`<div id="html_ac6040e9a8ee8cc1f32957bd94e815bc" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 1.03<br>Location: Jaffna Peninsula, Northern Province, Srilanka<br></div>`)[0];
+                popup_b01e714ab9c6dd684bad0ab0899adaa5.setContent(html_ac6040e9a8ee8cc1f32957bd94e815bc);
+            
+        
+
+        circle_marker_316cc051e38103f697ad24dd880af7b4.bindPopup(popup_b01e714ab9c6dd684bad0ab0899adaa5)
+        ;
+
+        
+    
+    
+            var circle_marker_6ef8b7c1c58571aed0238e7633aef587 = L.circleMarker(
+                [27.6939205, 85.3255087],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_37c0cded240c1562c8d7c4e809e25897 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_f1924cb278355279ca7182b37ff48a45 = $(`<div id="html_f1924cb278355279ca7182b37ff48a45" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.12<br>Location: Kathmandu, Nepal<br></div>`)[0];
+                popup_37c0cded240c1562c8d7c4e809e25897.setContent(html_f1924cb278355279ca7182b37ff48a45);
+            
+        
+
+        circle_marker_6ef8b7c1c58571aed0238e7633aef587.bindPopup(popup_37c0cded240c1562c8d7c4e809e25897)
+        ;
+
+        
+    
+    
+            var circle_marker_3ed6f2d56a0e375cccc582295666077f = L.circleMarker(
+                [22.4225445, 91.7312913],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_18554fa1b366e7f1f1c320ee132be19d = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d8ae70cf573d002c081ebe0a410de7b7 = $(`<div id="html_d8ae70cf573d002c081ebe0a410de7b7" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.14<br>Location: Chittagong, Bangladesh<br></div>`)[0];
+                popup_18554fa1b366e7f1f1c320ee132be19d.setContent(html_d8ae70cf573d002c081ebe0a410de7b7);
+            
+        
+
+        circle_marker_3ed6f2d56a0e375cccc582295666077f.bindPopup(popup_18554fa1b366e7f1f1c320ee132be19d)
+        ;
+
+        
+    
+    
+            var circle_marker_f2b1e4c2ab58e18a28cf7f1ec3b78352 = L.circleMarker(
+                [29.235032, 80.1023068],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_870605ab509cd8253520e15dbdb8a721 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_76c61b3faa202099e3231c0f8a95e56d = $(`<div id="html_76c61b3faa202099e3231c0f8a95e56d" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.18<br>Location: Champawat, Uttarakhand, India<br></div>`)[0];
+                popup_870605ab509cd8253520e15dbdb8a721.setContent(html_76c61b3faa202099e3231c0f8a95e56d);
+            
+        
+
+        circle_marker_f2b1e4c2ab58e18a28cf7f1ec3b78352.bindPopup(popup_870605ab509cd8253520e15dbdb8a721)
+        ;
+
+        
+    
+    
+            var circle_marker_11508cc71fff4c93bc816c7662511c98 = L.circleMarker(
+                [20.9101099, 70.365279],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_cec79ee985a278fab194903960d0c091 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eb53eabedba8daf3c9ef210c684ac6ac = $(`<div id="html_eb53eabedba8daf3c9ef210c684ac6ac" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 1.90<br>Location: Veraval, Gir Somnath, Gujarat, India<br></div>`)[0];
+                popup_cec79ee985a278fab194903960d0c091.setContent(html_eb53eabedba8daf3c9ef210c684ac6ac);
+            
+        
+
+        circle_marker_11508cc71fff4c93bc816c7662511c98.bindPopup(popup_cec79ee985a278fab194903960d0c091)
+        ;
+
+        
+    
+    
+            var circle_marker_517eaa4115710da6a15e4c0f15426d52 = L.circleMarker(
+                [25.4426926, 81.8691114],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_9247813de3c856ca7cb4ae60e3d31161 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_97f66803dda4e6adc6bff2cbf9e9ed2d = $(`<div id="html_97f66803dda4e6adc6bff2cbf9e9ed2d" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.09<br>Location: Prayagraj, Uttar Pradesh, India<br></div>`)[0];
+                popup_9247813de3c856ca7cb4ae60e3d31161.setContent(html_97f66803dda4e6adc6bff2cbf9e9ed2d);
+            
+        
+
+        circle_marker_517eaa4115710da6a15e4c0f15426d52.bindPopup(popup_9247813de3c856ca7cb4ae60e3d31161)
+        ;
+
+        
+    
+    
+            var circle_marker_1d8838d638ef5889409366d86236b749 = L.circleMarker(
+                [29.9693747, 76.8482787],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_11fe3ab0664a115383537a31719a2e3c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4c3d49d3af32ef006516df3e4a5d64ba = $(`<div id="html_4c3d49d3af32ef006516df3e4a5d64ba" style="width: 100.0%; height: 100.0%;">Cluster: 4<br>Moran's I: -0.01<br>Location: Kurukshetra, Haryana, India<br></div>`)[0];
+                popup_11fe3ab0664a115383537a31719a2e3c.setContent(html_4c3d49d3af32ef006516df3e4a5d64ba);
+            
+        
+
+        circle_marker_1d8838d638ef5889409366d86236b749.bindPopup(popup_11fe3ab0664a115383537a31719a2e3c)
+        ;
+
+        
+    
+    
+            var circle_marker_573c38c782bf66056db97caeb1ef9879 = L.circleMarker(
+                [24.260444, 80.7592749],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_1b2b95d366dd6a9f9e9d82568f5778d8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_81bfe796b1cd73b39dc74993bae77dd8 = $(`<div id="html_81bfe796b1cd73b39dc74993bae77dd8" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.15<br>Location: Maihar, Madhya Pradesh, India<br></div>`)[0];
+                popup_1b2b95d366dd6a9f9e9d82568f5778d8.setContent(html_81bfe796b1cd73b39dc74993bae77dd8);
+            
+        
+
+        circle_marker_573c38c782bf66056db97caeb1ef9879.bindPopup(popup_1b2b95d366dd6a9f9e9d82568f5778d8)
+        ;
+
+        
+    
+    
+            var circle_marker_e300170bfe57e7e603c2d89a776ea51a = L.circleMarker(
+                [23.9496876, 87.6829354],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_d4f573c4f994e41578c6462b702debc9 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_ecafe5ada9832ede4aad4a5662df9111 = $(`<div id="html_ecafe5ada9832ede4aad4a5662df9111" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.60<br>Location: Birbhum, West Bengal, India<br></div>`)[0];
+                popup_d4f573c4f994e41578c6462b702debc9.setContent(html_ecafe5ada9832ede4aad4a5662df9111);
+            
+        
+
+        circle_marker_e300170bfe57e7e603c2d89a776ea51a.bindPopup(popup_d4f573c4f994e41578c6462b702debc9)
+        ;
+
+        
+    
+    
+            var circle_marker_a7d5e7086180cfaf8523ba79446cb1ce = L.circleMarker(
+                [31.3380959, 76.7611631],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_836ceeaebbfb7b8d7074ed333d9ce12c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_eeccf3ebf6cef5f20fd96b5233a927ee = $(`<div id="html_eeccf3ebf6cef5f20fd96b5233a927ee" style="width: 100.0%; height: 100.0%;">Cluster: 4<br>Moran's I: -0.10<br>Location: Bilaspur, Himachal Pradesh, India<br></div>`)[0];
+                popup_836ceeaebbfb7b8d7074ed333d9ce12c.setContent(html_eeccf3ebf6cef5f20fd96b5233a927ee);
+            
+        
+
+        circle_marker_a7d5e7086180cfaf8523ba79446cb1ce.bindPopup(popup_836ceeaebbfb7b8d7074ed333d9ce12c)
+        ;
+
+        
+    
+    
+            var circle_marker_34830a0431b416ae147f1101e44b6833 = L.circleMarker(
+                [22.670465, 81.7588417],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_3df6438b90d87f5d67be8faf59a64e2c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_3c9188f33553123f91e776904dfce838 = $(`<div id="html_3c9188f33553123f91e776904dfce838" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.15<br>Location: Anuppur, Madhya Pradesh, India<br></div>`)[0];
+                popup_3df6438b90d87f5d67be8faf59a64e2c.setContent(html_3c9188f33553123f91e776904dfce838);
+            
+        
+
+        circle_marker_34830a0431b416ae147f1101e44b6833.bindPopup(popup_3df6438b90d87f5d67be8faf59a64e2c)
+        ;
+
+        
+    
+    
+            var circle_marker_59076c19f5e964f09d56f012155a5a11 = L.circleMarker(
+                [16.0737808, 78.8727065],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_aee5b225230ac20b29208d7033485ba4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_878dc02cb21b749d64753f9d84ba6668 = $(`<div id="html_878dc02cb21b749d64753f9d84ba6668" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 1.02<br>Location: Nandyal, Andhra Pradesh, India<br></div>`)[0];
+                popup_aee5b225230ac20b29208d7033485ba4.setContent(html_878dc02cb21b749d64753f9d84ba6668);
+            
+        
+
+        circle_marker_59076c19f5e964f09d56f012155a5a11.bindPopup(popup_aee5b225230ac20b29208d7033485ba4)
+        ;
+
+        
+    
+    
+            var circle_marker_eff3b9e6d6f7a71f8902cf9e561d81c1 = L.circleMarker(
+                [8.1571873, 77.4661628],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_961dcedbac3c6249bdad5950a4e778d4 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_85516436ad5b11b4665ba25298db1d01 = $(`<div id="html_85516436ad5b11b4665ba25298db1d01" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 1.20<br>Location: Kanyakumari, Tamil Nadu, India<br></div>`)[0];
+                popup_961dcedbac3c6249bdad5950a4e778d4.setContent(html_85516436ad5b11b4665ba25298db1d01);
+            
+        
+
+        circle_marker_eff3b9e6d6f7a71f8902cf9e561d81c1.bindPopup(popup_961dcedbac3c6249bdad5950a4e778d4)
+        ;
+
+        
+    
+    
+            var circle_marker_781b1b7958e7decbac07a9ff85bdb189 = L.circleMarker(
+                [22.83713, 90.273742],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_140950ca6b4aa1814a62b0ea8a31e3c1 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_02b0afd9767ff1f93d1a90e3a8e580e2 = $(`<div id="html_02b0afd9767ff1f93d1a90e3a8e580e2" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.51<br>Location: Shikarpur, Barisal, Bangladesh<br></div>`)[0];
+                popup_140950ca6b4aa1814a62b0ea8a31e3c1.setContent(html_02b0afd9767ff1f93d1a90e3a8e580e2);
+            
+        
+
+        circle_marker_781b1b7958e7decbac07a9ff85bdb189.bindPopup(popup_140950ca6b4aa1814a62b0ea8a31e3c1)
+        ;
+
+        
+    
+    
+            var circle_marker_50b35efadef9069ad0209a9ac7f516bd = L.circleMarker(
+                [23.5416162, 91.4917593],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_8d10ef83da8f139acb9c732eecaa9871 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a81ff707725de4c6fb36b8d3e77b84cc = $(`<div id="html_a81ff707725de4c6fb36b8d3e77b84cc" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.34<br>Location: Gomati, Tripura, India<br></div>`)[0];
+                popup_8d10ef83da8f139acb9c732eecaa9871.setContent(html_a81ff707725de4c6fb36b8d3e77b84cc);
+            
+        
+
+        circle_marker_50b35efadef9069ad0209a9ac7f516bd.bindPopup(popup_8d10ef83da8f139acb9c732eecaa9871)
+        ;
+
+        
+    
+    
+            var circle_marker_a69b2ea022a6df1c35ca1c53c3aa7298 = L.circleMarker(
+                [23.4926217, 87.7371023],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_cd4b9e6c22cd5db95d1a92b81e673f7f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_97ec24cd66974098c662b9529a0f8cf7 = $(`<div id="html_97ec24cd66974098c662b9529a0f8cf7" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.60<br>Location: Purba Bardhaman, West Bengal, India<br></div>`)[0];
+                popup_cd4b9e6c22cd5db95d1a92b81e673f7f.setContent(html_97ec24cd66974098c662b9529a0f8cf7);
+            
+        
+
+        circle_marker_a69b2ea022a6df1c35ca1c53c3aa7298.bindPopup(popup_cd4b9e6c22cd5db95d1a92b81e673f7f)
+        ;
+
+        
+    
+    
+            var circle_marker_37cdfe3562eedf8a43319c0e1ea26179 = L.circleMarker(
+                [25.3719338, 82.9414272],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_128e3091fb7b38498bdc53931ec079f5 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cc1f4dad7693a834fba486e36d94356b = $(`<div id="html_cc1f4dad7693a834fba486e36d94356b" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.08<br>Location: Varanasi, Uttar Pradesh, India<br></div>`)[0];
+                popup_128e3091fb7b38498bdc53931ec079f5.setContent(html_cc1f4dad7693a834fba486e36d94356b);
+            
+        
+
+        circle_marker_37cdfe3562eedf8a43319c0e1ea26179.bindPopup(popup_128e3091fb7b38498bdc53931ec079f5)
+        ;
+
+        
+    
+    
+            var circle_marker_9d12ab217583b4bb8bdcf57d72af72ed = L.circleMarker(
+                [22.2905507, 87.9158659],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_df63da994d747483f1fb607477295b14 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fbfed0418175ef71a27bc1822f968dd3 = $(`<div id="html_fbfed0418175ef71a27bc1822f968dd3" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.62<br>Location: East Medinipur, West Bengal, India<br></div>`)[0];
+                popup_df63da994d747483f1fb607477295b14.setContent(html_fbfed0418175ef71a27bc1822f968dd3);
+            
+        
+
+        circle_marker_9d12ab217583b4bb8bdcf57d72af72ed.bindPopup(popup_df63da994d747483f1fb607477295b14)
+        ;
+
+        
+    
+    
+            var circle_marker_bce0ced4b9c07fdd9d95eba10994f69f = L.circleMarker(
+                [27.2154447, 77.4986962],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_96533b94b308c34960a45b40a2590b5c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_26ad90ca7f8d51ab37f9190672ec65c2 = $(`<div id="html_26ad90ca7f8d51ab37f9190672ec65c2" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 0.26<br>Location: Bharatpur, Rajasthan, India<br></div>`)[0];
+                popup_96533b94b308c34960a45b40a2590b5c.setContent(html_26ad90ca7f8d51ab37f9190672ec65c2);
+            
+        
+
+        circle_marker_bce0ced4b9c07fdd9d95eba10994f69f.bindPopup(popup_96533b94b308c34960a45b40a2590b5c)
+        ;
+
+        
+    
+    
+            var circle_marker_9c0493d71fdb65c2474729a65d293cbd = L.circleMarker(
+                [27.633333, 77.583333],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_b0d6a226f25ddfdfb1af8ffc52755bd8 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_e968eb9ca69aa6c9383884f0583934e7 = $(`<div id="html_e968eb9ca69aa6c9383884f0583934e7" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 0.23<br>Location: Mathura, Uttar Pradesh , India<br></div>`)[0];
+                popup_b0d6a226f25ddfdfb1af8ffc52755bd8.setContent(html_e968eb9ca69aa6c9383884f0583934e7);
+            
+        
+
+        circle_marker_9c0493d71fdb65c2474729a65d293cbd.bindPopup(popup_b0d6a226f25ddfdfb1af8ffc52755bd8)
+        ;
+
+        
+    
+    
+            var circle_marker_3cc4de47cc838c32b10754a4dc421084 = L.circleMarker(
+                [31.2922311, 75.5678878],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_edec0ad1f2149a4cdb4bb544ea7f7313 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_cf6f06dae8fe1e32c1ed05f73020103d = $(`<div id="html_cf6f06dae8fe1e32c1ed05f73020103d" style="width: 100.0%; height: 100.0%;">Cluster: 4<br>Moran's I: -0.10<br>Location: Jalandhar, Punjab, India<br></div>`)[0];
+                popup_edec0ad1f2149a4cdb4bb544ea7f7313.setContent(html_cf6f06dae8fe1e32c1ed05f73020103d);
+            
+        
+
+        circle_marker_3cc4de47cc838c32b10754a4dc421084.bindPopup(popup_edec0ad1f2149a4cdb4bb544ea7f7313)
+        ;
+
+        
+    
+    
+            var circle_marker_4566092e4990d4f10e622a664e58ef8f = L.circleMarker(
+                [24.3284257, 86.7182506],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_28d9d5eafc4068f55f139297456f6089 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_9c9d16a9bd39f77a693c0952dacb54f2 = $(`<div id="html_9c9d16a9bd39f77a693c0952dacb54f2" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.45<br>Location: Deoghar, Jharkhand, India<br></div>`)[0];
+                popup_28d9d5eafc4068f55f139297456f6089.setContent(html_9c9d16a9bd39f77a693c0952dacb54f2);
+            
+        
+
+        circle_marker_4566092e4990d4f10e622a664e58ef8f.bindPopup(popup_28d9d5eafc4068f55f139297456f6089)
+        ;
+
+        
+    
+    
+            var circle_marker_6c2bd636b12cbd3715de4d975c275317 = L.circleMarker(
+                [12.9647163, 79.9839686],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_4f3d0f151b83466c0da5522cfeb062b2 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a76ff33e55c38f3f8a7b56bdad91b631 = $(`<div id="html_a76ff33e55c38f3f8a7b56bdad91b631" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 1.13<br>Location: Kanchipuram, Tamil Nadu, India <br></div>`)[0];
+                popup_4f3d0f151b83466c0da5522cfeb062b2.setContent(html_a76ff33e55c38f3f8a7b56bdad91b631);
+            
+        
+
+        circle_marker_6c2bd636b12cbd3715de4d975c275317.bindPopup(popup_4f3d0f151b83466c0da5522cfeb062b2)
+        ;
+
+        
+    
+    
+            var circle_marker_b7ed7e6a430b0bbebd9eb8e3383809f3 = L.circleMarker(
+                [23.2495714, 87.8681751],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_fae1f1bb929fa4cbc2b4a28e16f537ff = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_41f851abdf2d91d7e79f9bacf474ab77 = $(`<div id="html_41f851abdf2d91d7e79f9bacf474ab77" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.66<br>Location: Purba Bardhaman, West Bengal, India <br></div>`)[0];
+                popup_fae1f1bb929fa4cbc2b4a28e16f537ff.setContent(html_41f851abdf2d91d7e79f9bacf474ab77);
+            
+        
+
+        circle_marker_b7ed7e6a430b0bbebd9eb8e3383809f3.bindPopup(popup_fae1f1bb929fa4cbc2b4a28e16f537ff)
+        ;
+
+        
+    
+    
+            var circle_marker_0329ca9142f6be314aa8cfa40e675d01 = L.circleMarker(
+                [17.120459, 82.1842504],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_b7d73cc041b43eb1ed94d89af3e1a328 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8dbfff6894f44521d61800215bca5cea = $(`<div id="html_8dbfff6894f44521d61800215bca5cea" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.17<br>Location: Kakinada, Andhra Pradesh, India<br></div>`)[0];
+                popup_b7d73cc041b43eb1ed94d89af3e1a328.setContent(html_8dbfff6894f44521d61800215bca5cea);
+            
+        
+
+        circle_marker_0329ca9142f6be314aa8cfa40e675d01.bindPopup(popup_b7d73cc041b43eb1ed94d89af3e1a328)
+        ;
+
+        
+    
+    
+            var circle_marker_f8631329cfbd4603ed622b7b54a1b3dd = L.circleMarker(
+                [24.3332794, 72.8496191],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_9366a6026ecda9ab7fde331bbad2093f = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_a98a21ea0cc879c5207995af029cfedf = $(`<div id="html_a98a21ea0cc879c5207995af029cfedf" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 0.61<br>Location: Banaskantha, Gujarat, India<br></div>`)[0];
+                popup_9366a6026ecda9ab7fde331bbad2093f.setContent(html_a98a21ea0cc879c5207995af029cfedf);
+            
+        
+
+        circle_marker_f8631329cfbd4603ed622b7b54a1b3dd.bindPopup(popup_9366a6026ecda9ab7fde331bbad2093f)
+        ;
+
+        
+    
+    
+            var circle_marker_c8da90253ae981783fc8f1ff21dbb4bc = L.circleMarker(
+                [18.9247414, 81.4819364],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_7cb70d5cc597d96edaeeb01f2c15614c = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_fe9aae2e29394655695056cbc1cc0ce7 = $(`<div id="html_fe9aae2e29394655695056cbc1cc0ce7" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.21<br>Location: Bastar, Chhattisgarh, India<br></div>`)[0];
+                popup_7cb70d5cc597d96edaeeb01f2c15614c.setContent(html_fe9aae2e29394655695056cbc1cc0ce7);
+            
+        
+
+        circle_marker_c8da90253ae981783fc8f1ff21dbb4bc.bindPopup(popup_7cb70d5cc597d96edaeeb01f2c15614c)
+        ;
+
+        
+    
+    
+            var circle_marker_74c9eda861c61ed9db35e0cc6a1a4eaa = L.circleMarker(
+                [19.2415887, 84.5215237],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_5094d1c1eddcdb0bd44406f78ff3fc62 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_05a754f5856f845f4f4343cad8840b2c = $(`<div id="html_05a754f5856f845f4f4343cad8840b2c" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.20<br>Location: Ganjam, Odisha, India<br></div>`)[0];
+                popup_5094d1c1eddcdb0bd44406f78ff3fc62.setContent(html_05a754f5856f845f4f4343cad8840b2c);
+            
+        
+
+        circle_marker_74c9eda861c61ed9db35e0cc6a1a4eaa.bindPopup(popup_5094d1c1eddcdb0bd44406f78ff3fc62)
+        ;
+
+        
+    
+    
+            var circle_marker_4d00b0dbe1eec462780c76ebc9a1750c = L.circleMarker(
+                [24.2966075, 87.835306],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_c2657920cd000912cdb6931628f6b19b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b8a01246744703bf4d47dc0f91662905 = $(`<div id="html_b8a01246744703bf4d47dc0f91662905" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.59<br>Location: Birbhum, West Bengal, India <br></div>`)[0];
+                popup_c2657920cd000912cdb6931628f6b19b.setContent(html_b8a01246744703bf4d47dc0f91662905);
+            
+        
+
+        circle_marker_4d00b0dbe1eec462780c76ebc9a1750c.bindPopup(popup_c2657920cd000912cdb6931628f6b19b)
+        ;
+
+        
+    
+    
+            var circle_marker_db2ad75b05f4c2061cfd76d14ad62970 = L.circleMarker(
+                [19.8343066, 85.6853295],
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_72c99b00d2a5fe48a7caa9c91772ab45 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_1648fe4ed848677f32965d8ca49ecf87 = $(`<div id="html_1648fe4ed848677f32965d8ca49ecf87" style="width: 100.0%; height: 100.0%;">Cluster: 2<br>Moran's I: -0.11<br>Location: Puri, Odisha, India<br></div>`)[0];
+                popup_72c99b00d2a5fe48a7caa9c91772ab45.setContent(html_1648fe4ed848677f32965d8ca49ecf87);
+            
+        
+
+        circle_marker_db2ad75b05f4c2061cfd76d14ad62970.bindPopup(popup_72c99b00d2a5fe48a7caa9c91772ab45)
+        ;
+
+        
+    
+    
+            var circle_marker_a7a26a1d92bcae59c2e41c5131236acb = L.circleMarker(
+                [8.6286105, 81.2007375],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_113807ea74c7ba7386b8b0de780023e3 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0faa52594dfee16fecef5b21f4837253 = $(`<div id="html_0faa52594dfee16fecef5b21f4837253" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 1.26<br>Location: Trincomalee, Eastern Province, Srilanka<br></div>`)[0];
+                popup_113807ea74c7ba7386b8b0de780023e3.setContent(html_0faa52594dfee16fecef5b21f4837253);
+            
+        
+
+        circle_marker_a7a26a1d92bcae59c2e41c5131236acb.bindPopup(popup_113807ea74c7ba7386b8b0de780023e3)
+        ;
+
+        
+    
+    
+            var circle_marker_eab9c815d5680d142597d4c0a49f2f44 = L.circleMarker(
+                [24.932011, 88.795077],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_38cac4b88c806f14f70f906116728a99 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0867cdf38192f36eeb45ec743f9aa4c2 = $(`<div id="html_0867cdf38192f36eeb45ec743f9aa4c2" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.59<br>Location: Joinpur, Bangladesh<br></div>`)[0];
+                popup_38cac4b88c806f14f70f906116728a99.setContent(html_0867cdf38192f36eeb45ec743f9aa4c2);
+            
+        
+
+        circle_marker_eab9c815d5680d142597d4c0a49f2f44.bindPopup(popup_38cac4b88c806f14f70f906116728a99)
+        ;
+
+        
+    
+    
+            var circle_marker_a548a2e6fc734c62b0b001059a7b659a = L.circleMarker(
+                [22.600002, 88.361268],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_58874abe7622e2658fad4d92b0680e30 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_d7460115628a03d04c177ad9b59d9fd9 = $(`<div id="html_d7460115628a03d04c177ad9b59d9fd9" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.66<br>Location: Kumartoli, Kolkata, West Bengal, India<br></div>`)[0];
+                popup_58874abe7622e2658fad4d92b0680e30.setContent(html_d7460115628a03d04c177ad9b59d9fd9);
+            
+        
+
+        circle_marker_a548a2e6fc734c62b0b001059a7b659a.bindPopup(popup_58874abe7622e2658fad4d92b0680e30)
+        ;
+
+        
+    
+    
+            var circle_marker_b02b83c35571d2f9f388c52b76cbf71b = L.circleMarker(
+                [24.1763069, 87.7859569],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_14580e92a718475c4054e25630d89573 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_6cd904b8dbddb7f64e95f90b33d4f3a9 = $(`<div id="html_6cd904b8dbddb7f64e95f90b33d4f3a9" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.59<br>Location: Birbhum, West Bengal, India<br></div>`)[0];
+                popup_14580e92a718475c4054e25630d89573.setContent(html_6cd904b8dbddb7f64e95f90b33d4f3a9);
+            
+        
+
+        circle_marker_b02b83c35571d2f9f388c52b76cbf71b.bindPopup(popup_14580e92a718475c4054e25630d89573)
+        ;
+
+        
+    
+    
+            var circle_marker_40a413fdde3331e60a62361b553f0717 = L.circleMarker(
+                [31.8025756, 76.1046491],
+                {"bubblingMouseEvents": true, "color": "pink", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "pink", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_deceb5bc5f4eb69d458bcba2beec3dac = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0e64b1cdd44911c55ab0056d16e1bac0 = $(`<div id="html_0e64b1cdd44911c55ab0056d16e1bac0" style="width: 100.0%; height: 100.0%;">Cluster: 4<br>Moran's I: -0.14<br>Location: Una, Himachal Pradesh, India<br></div>`)[0];
+                popup_deceb5bc5f4eb69d458bcba2beec3dac.setContent(html_0e64b1cdd44911c55ab0056d16e1bac0);
+            
+        
+
+        circle_marker_40a413fdde3331e60a62361b553f0717.bindPopup(popup_deceb5bc5f4eb69d458bcba2beec3dac)
+        ;
+
+        
+    
+    
+            var circle_marker_04202b0443d526385f0446f4fa073dbd = L.circleMarker(
+                [22.46378, 73.515694],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_b2f542c1eaf1bd12bc9cf1e13753c052 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_8b0cfc530e6d8003b57dfac93cc635a0 = $(`<div id="html_8b0cfc530e6d8003b57dfac93cc635a0" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 0.67<br>Location: Pavagadh Hill, Panchmahal, Gujarat, India<br></div>`)[0];
+                popup_b2f542c1eaf1bd12bc9cf1e13753c052.setContent(html_8b0cfc530e6d8003b57dfac93cc635a0);
+            
+        
+
+        circle_marker_04202b0443d526385f0446f4fa073dbd.bindPopup(popup_b2f542c1eaf1bd12bc9cf1e13753c052)
+        ;
+
+        
+    
+    
+            var circle_marker_f9dfb3e8d2de1ceb4737bcd24e52685e = L.circleMarker(
+                [25.560317, 84.6632139],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_e436e6d1211551113458aab63d05c437 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_0d150c0840e80b1a45d0fdfcc7acd8a2 = $(`<div id="html_0d150c0840e80b1a45d0fdfcc7acd8a2" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.07<br>Location: Bhojpur, Bihar, India<br></div>`)[0];
+                popup_e436e6d1211551113458aab63d05c437.setContent(html_0d150c0840e80b1a45d0fdfcc7acd8a2);
+            
+        
+
+        circle_marker_f9dfb3e8d2de1ceb4737bcd24e52685e.bindPopup(popup_e436e6d1211551113458aab63d05c437)
+        ;
+
+        
+    
+    
+            var circle_marker_fce3e677d0ab01d65a320dc68cbaa738 = L.circleMarker(
+                [18.0086617, 76.0707924],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_c8c94916a172a650cab9edce7208b770 = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_4706ccd65b2e5a65ef6f220c9815a21c = $(`<div id="html_4706ccd65b2e5a65ef6f220c9815a21c" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 1.38<br>Location: Dharashiv, Maharashtra, India<br></div>`)[0];
+                popup_c8c94916a172a650cab9edce7208b770.setContent(html_4706ccd65b2e5a65ef6f220c9815a21c);
+            
+        
+
+        circle_marker_fce3e677d0ab01d65a320dc68cbaa738.bindPopup(popup_c8c94916a172a650cab9edce7208b770)
+        ;
+
+        
+    
+    
+            var circle_marker_404b67048c0c62f0fff0de6adaf7a5c3 = L.circleMarker(
+                [23.5416162, 91.4917593],
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_0d0b1b58ecff64c98256acf3f6c0648b = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_b48a4ec5627ca01b014d38c1a325f89b = $(`<div id="html_b48a4ec5627ca01b014d38c1a325f89b" style="width: 100.0%; height: 100.0%;">Cluster: 1<br>Moran's I: 0.34<br>Location: Gomati, Tripura, India<br></div>`)[0];
+                popup_0d0b1b58ecff64c98256acf3f6c0648b.setContent(html_b48a4ec5627ca01b014d38c1a325f89b);
+            
+        
+
+        circle_marker_404b67048c0c62f0fff0de6adaf7a5c3.bindPopup(popup_0d0b1b58ecff64c98256acf3f6c0648b)
+        ;
+
+        
+    
+    
+            var circle_marker_d4b27a2741d5adfcb924286e22f71572 = L.circleMarker(
+                [12.9481954, 77.4944019],
+                {"bubblingMouseEvents": true, "color": "lightblue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "lightblue", "fillOpacity": 0.6, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(map_3e68ecc5f1fcf32000ca0d12d533ecd9);
+        
+    
+        var popup_651b8c066114af05de7ae21e79bf53cc = L.popup({
+  "maxWidth": "100%",
+});
+
+        
+            
+                var html_dafb36670e01c77d384d19af504f2045 = $(`<div id="html_dafb36670e01c77d384d19af504f2045" style="width: 100.0%; height: 100.0%;">Cluster: 3<br>Moran's I: 1.40<br>Location: Bengaluru, Karnataka, India <br></div>`)[0];
+                popup_651b8c066114af05de7ae21e79bf53cc.setContent(html_dafb36670e01c77d384d19af504f2045);
+            
+        
+
+        circle_marker_d4b27a2741d5adfcb924286e22f71572.bindPopup(popup_651b8c066114af05de7ae21e79bf53cc)
+        ;
+
+        
+    
+</script>
+</html>
