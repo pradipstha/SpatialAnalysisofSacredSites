@@ -4,6 +4,8 @@ The Shakti Pithas represent one of Hinduism's most significant sacred geographic
 
 These locations span across present-day India, Bangladesh, Nepal, Pakistan, Sri Lanka, Bhutan, and parts of Southern Tibet, creating a vast network of interconnected sacred spaces. Each Shakti Pitha is associated with a specific body part of the goddess and is accompanied by a manifestation of Lord Shiva as Bhairava. 
 
+The spatial clustering patterns reflect the concept of sacred geography in Hindu tradition, where certain landscapes become sanctified through mythological narratives and ritual practices. Local Indicators of Spatial Autocorrelation (LISA) results demonstrate that Shakti Pithas follow this sacralization process at a regional scale, with clustering patterns suggesting that certain geographic areas became particularly significant. The spatial autocorrelation indicates that the distribution of these sites is influenced by shared cultural, historical, and geographical factors rather than random placement.
+
 ![image](https://github.com/user-attachments/assets/e88f6224-d0c9-4574-87bf-7472af369159)
 
 
